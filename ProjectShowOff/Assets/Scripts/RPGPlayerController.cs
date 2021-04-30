@@ -15,6 +15,7 @@ public class RPGPlayerController : MonoBehaviour
     public void Awake()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
+        navMeshAgent.updateRotation = false;
     }
 
     private void Update()
@@ -24,8 +25,14 @@ public class RPGPlayerController : MonoBehaviour
             RaycastHit hit;
 
             if (Physics.Raycast(ray, out hit)) {
+                // navMeshAgent.velocity = new Vector3();
                 navMeshAgent.SetDestination(hit.point);
             }
         }
+    }
+
+    void LateUpdate()
+    {
+        // transform.rotation = Quaternion.LookRotation(navMeshAgent.velocity.normalized);
     }
 }
