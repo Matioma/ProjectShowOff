@@ -41,34 +41,19 @@ public class Camera3rdPerson : MonoBehaviour
         yRotation = Mathf.Clamp(yRotation, -90f, 90f);
 
 
-        Debug.Log(yRotation);
-
-
+        //Rotate the camera around the target
         transform.RotateAround(targetBody.position, Vector3.up, yRotation);
-        targetBody.Rotate(Vector3.up, yRotation);
-
-        Quaternion offsetRotationQuaternion = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
-
-
-        transform.position =Vector3.Lerp(transform.position, targetBody.position + offsetRotationQuaternion * offset, followSensitivity);
-
-
-
-        //transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
-
-        //targetBody.Rotate(Vector3.up * mouseX);
-
-        //float yRotation = mouseX * rotationSensitivity;
-
-
-        //Vector3 rotation = transform.rotation.eulerAngles;
-
-
-        //transform.rotation = Quaternion.Euler(rotation.x, rotation.y + yRotation, rotation.z);
-        //Vector3 newoffset = transform.rotation * offset;
-
-        //transform.position = targetBody.position + newoffset;
         
+        
+        //Compute the new rotated offset from the target
+        Quaternion offsetRotationQuaternion = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
+        transform.position = Vector3.Lerp(transform.position, targetBody.position + offsetRotationQuaternion*offset, 1);
+
+        //Make the target rotate in camera Direction
+        Vector3 lookDirectionTarget = targetBody.position + transform.forward;
+        lookDirectionTarget.y = targetBody.position.y;
+        targetBody.LookAt(lookDirectionTarget);
+       
     }
 
 }
