@@ -35,7 +35,8 @@ public class RPGPlayerController : MonoBehaviour
             RaycastHit hit;
 
             if (Physics.Raycast(ray, out hit)) {
-                navMeshAgent.SetDestination(hit.point);
+                if(CanReachPosition(hit.point))
+                    navMeshAgent.SetDestination(hit.point);
             }
         }
 
@@ -49,6 +50,12 @@ public class RPGPlayerController : MonoBehaviour
                 StopCasting();
             }
         }
+    }
+
+    bool CanReachPosition(Vector3 position) {
+        NavMeshPath path = new NavMeshPath();
+        navMeshAgent.CalculatePath(position, path);
+        return path.status == NavMeshPathStatus.PathComplete;
     }
 
     void StartCasting() {
