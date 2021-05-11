@@ -3204,6 +3204,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WASDRPGCam
       objectReference: {fileID: 0}
+    - target: {fileID: 8482430376130162471, guid: cf04d05221a203c4b8911a2ff3aaf0b5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8482430377160108778, guid: cf04d05221a203c4b8911a2ff3aaf0b5, type: 3}
       propertyPath: speed
       value: 8
