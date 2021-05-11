@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
-public class WASDPlayerController : MonoBehaviour
+public class WASDController : MonoBehaviour
 {
     CharacterController controller;
 

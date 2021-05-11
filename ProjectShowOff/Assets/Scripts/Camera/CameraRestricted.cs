@@ -40,7 +40,6 @@ public class CameraRestricted : MonoBehaviour
 
         initialPosition = transform.position;
         initialRotation = transform.rotation;
-        //objectTransform = transform;
     }
 
     private void Update()
