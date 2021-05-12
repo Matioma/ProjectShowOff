@@ -14,8 +14,8 @@ public class PushableObject : MonoBehaviour
 
     void Start()
     {
-        rigidbody = GetComponent<Rigidbody>();
-        rigidbody.drag = drag;
+        //rigidbody = GetComponent<Rigidbody>();
+        //rigidbody.drag = drag;
         rigidbody.constraints = RigidbodyConstraints.FreezeRotation;
     }
 
