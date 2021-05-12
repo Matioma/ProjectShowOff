@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RabbitController : WASDController
+public class RabbitController : CharachterModel
 {
 
     public float jumpSpeed = 8.0f;

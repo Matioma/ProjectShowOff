@@ -34,12 +34,17 @@ public class CameraRestricted : MonoBehaviour
     Quaternion initialRotation;
 
 
+    Player playerModel;
+
     private void Start()
     {
         offset = transform.position - targetBody.position;
 
         initialPosition = transform.position;
         initialRotation = transform.rotation;
+
+        playerModel = FindObjectOfType<Player>();
+        playerModel.onSwitchCharacter.AddListener(UpdateFollowedCharacter);
     }
 
     private void Update()
@@ -63,5 +68,15 @@ public class CameraRestricted : MonoBehaviour
 
         Quaternion offsetQuaternion = Quaternion.Euler(xRotation, yRotation, 0);
         transform.position = targetBody.position + offsetQuaternion*offset;
+    }
+
+    public void UpdateFollowedCharacter() {
+        targetBody = playerModel.ControlledCharacter.transform;
+        Debug.Log("Test");
+    }
+
+    private void OnDestroy()
+    {
+        playerModel.onSwitchCharacter.RemoveListener(UpdateFollowedCharacter);
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
-public class WASDController : MonoBehaviour, ICharacterController
+public class CharachterModel : MonoBehaviour, ICharacterController
 {
     protected CharacterController controller;
 
@@ -44,12 +44,17 @@ public class WASDController : MonoBehaviour, ICharacterController
 
     public void Move(Vector3 direction)
     {
-        if (controller.isGrounded)
-        {
-            moveDirection = direction*speed;
+        //if (controller.isGrounded)
+        //{
+
+        Vector3 xyDirection = direction * speed;
+            moveDirection.x = xyDirection.x;
+        moveDirection.z = xyDirection.z;
+            
+
             //moveDirection = transform.right * Input.GetAxis("Horizontal") + transform.forward * Input.GetAxis("Vertical");
             //moveDirection *= speed;
-        }
+        //}
     }
 
 }

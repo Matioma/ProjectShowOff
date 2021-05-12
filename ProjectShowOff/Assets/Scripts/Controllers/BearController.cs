@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BearController : WASDController
+public class BearController : CharachterModel
 {
     [SerializeField]
     float pushPower;

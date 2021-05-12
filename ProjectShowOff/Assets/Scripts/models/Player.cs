@@ -1,18 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Player : MonoBehaviour
 {
     [SerializeField]
-    WASDController rabbitController; 
+    CharachterModel rabbitController; 
     [SerializeField] 
-    WASDController bearController;
+    CharachterModel bearController;
    
     [SerializeField]
-    ICharacterController controlledCharacter;
+    CharachterModel controlledCharacter;
 
-    public ICharacterController ControlledCharacter { 
+    [SerializeField]
+    public UnityEvent onSwitchCharacter;
+    public CharachterModel ControlledCharacter { 
         get { return controlledCharacter; } 
         private set { } 
     }
@@ -25,15 +28,14 @@ public class Player : MonoBehaviour
 
     public void SwitchCharacter() {
         controlledCharacter.Move(Vector3.zero);
-        if(controlledCharacter == (ICharacterController)rabbitController)
+        if(controlledCharacter == rabbitController)
         {
-
             controlledCharacter = bearController;
-            return;
         }
-        if (controlledCharacter == (ICharacterController)bearController) {
+        else if (controlledCharacter == bearController) {
             controlledCharacter = rabbitController;
-            return;
+       
         }
+        onSwitchCharacter?.Invoke();
     }
 }
