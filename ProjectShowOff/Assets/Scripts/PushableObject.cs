@@ -5,8 +5,6 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class PushableObject : MonoBehaviour
 {
-    [SerializeField]
-    float mass;
 
     [SerializeField]
     [Tooltip("Increase to make it harder to push the object")]
@@ -17,8 +15,13 @@ public class PushableObject : MonoBehaviour
     void Start()
     {
         rigidbody = GetComponent<Rigidbody>();
-        rigidbody.mass = mass;
         rigidbody.drag = drag;
         rigidbody.constraints = RigidbodyConstraints.FreezeRotation;
+    }
+
+    private void OnValidate()
+    {
+        //Debug.Log(drag);
+        GetComponent<Rigidbody>().drag = drag;
     }
 }
