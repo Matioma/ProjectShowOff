@@ -21,6 +21,10 @@ public class PlayerController : MonoBehaviour, ICharacterController
         {
             SpecialAction();
         }
+
+        if (Input.GetKeyDown(KeyCode.X)) {
+            playerModel.SwitchCharacter();
+        }
     }
     public void Move(Vector3 direction)
     {

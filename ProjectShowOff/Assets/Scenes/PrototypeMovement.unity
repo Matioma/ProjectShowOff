@@ -1594,6 +1594,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1595529455}
   m_CullTransparentMesh: 1
+--- !u!114 &1793833124 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2334549629747663001, guid: b7e7326288e687841ab67ad7bbba2c34, type: 3}
+  m_PrefabInstance: {fileID: 8765177280663258296}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abc305a8c92591f4e8f9943731937a4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1812759480
 GameObject:
   m_ObjectHideFlags: 0
@@ -2376,9 +2387,13 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 8102638679887913729, guid: f4de830e9efbaa6409b3c3e8633c10d1, type: 3}
-      propertyPath: rabbitController
+      propertyPath: bearController
       value: 
       objectReference: {fileID: 881094950}
+    - target: {fileID: 8102638679887913729, guid: f4de830e9efbaa6409b3c3e8633c10d1, type: 3}
+      propertyPath: rabbitController
+      value: 
+      objectReference: {fileID: 1793833124}
     - target: {fileID: 8102638679887913731, guid: f4de830e9efbaa6409b3c3e8633c10d1, type: 3}
       propertyPath: m_RootOrder
       value: 15
@@ -2486,7 +2501,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6243128901803473555, guid: b7e7326288e687841ab67ad7bbba2c34, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6243128902919811095, guid: b7e7326288e687841ab67ad7bbba2c34, type: 3}
       propertyPath: m_IsActive
