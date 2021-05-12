@@ -10,7 +10,6 @@ public class Player : MonoBehaviour
     [SerializeField] 
     CharachterModel bearController;
    
-    [SerializeField]
     CharachterModel controlledCharacter;
 
     [SerializeField]

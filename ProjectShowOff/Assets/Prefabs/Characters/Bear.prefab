@@ -60,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 73c176f402d2c2f4d929aa5da7585d17, type: 2}
+  - {fileID: 2100000, guid: d753648ae38c679458fb676bf45a2cab, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -161,6 +161,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   gravity: 20
+  pushPower: 0
 --- !u!1 &5450507577586615890
 GameObject:
   m_ObjectHideFlags: 0

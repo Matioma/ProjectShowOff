@@ -1605,6 +1605,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abc305a8c92591f4e8f9943731937a4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1793833126 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6243128901803473554, guid: b7e7326288e687841ab67ad7bbba2c34, type: 3}
+  m_PrefabInstance: {fileID: 8765177280663258296}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1812759480
 GameObject:
   m_ObjectHideFlags: 0
@@ -2049,11 +2054,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2119458965}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &330422788218016106 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2723778934439330148, guid: a2795fff94e5b8848972f763850f332e, type: 3}
-  m_PrefabInstance: {fileID: 2402999447448391694}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1572211045713192416
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2190,7 +2190,7 @@ PrefabInstance:
     - target: {fileID: 3139855854294302306, guid: 4e7441b6e32f5854cbaa2bb005037280, type: 3}
       propertyPath: targetBody
       value: 
-      objectReference: {fileID: 330422788218016106}
+      objectReference: {fileID: 1793833126}
     - target: {fileID: 3139855854294302307, guid: 4e7441b6e32f5854cbaa2bb005037280, type: 3}
       propertyPath: m_Name
       value: RestrcitedFollowingCamera
