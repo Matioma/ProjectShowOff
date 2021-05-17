@@ -72,7 +72,6 @@ public class CameraRestricted : MonoBehaviour
 
     public void UpdateFollowedCharacter() {
         targetBody = playerModel.ControlledCharacter.transform;
-        Debug.Log("Test");
     }
 
     private void OnDestroy()

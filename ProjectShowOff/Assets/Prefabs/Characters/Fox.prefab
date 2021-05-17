@@ -107,6 +107,7 @@ GameObject:
   - component: {fileID: 3562642945320618778}
   - component: {fileID: 4339667025747889322}
   - component: {fileID: 7185301131663235050}
+  - component: {fileID: 2639395515962379635}
   m_Layer: 0
   m_Name: Fox
   m_TagString: Untagged
@@ -146,7 +147,7 @@ CharacterController:
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.68, z: 0}
 --- !u!114 &7185301131663235050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,6 +164,20 @@ MonoBehaviour:
   gravity: 20
   dashTime: 1
   dashSpeed: 3
+--- !u!136 &2639395515962379635
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3562642945320618779}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.62
+  m_Height: 2.08
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.02, z: 0}
 --- !u!1 &6852743208090324012
 GameObject:
   m_ObjectHideFlags: 0

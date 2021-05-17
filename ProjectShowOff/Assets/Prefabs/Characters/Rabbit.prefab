@@ -138,6 +138,7 @@ GameObject:
   - component: {fileID: 6243128901803473554}
   - component: {fileID: 6623836691494255906}
   - component: {fileID: 2334549629747663001}
+  - component: {fileID: 4781209553091925112}
   m_Layer: 0
   m_Name: Rabbit
   m_TagString: Untagged
@@ -171,13 +172,13 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 2
+  m_Height: 0
   m_Radius: 0.5
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.68, z: 0}
 --- !u!114 &2334549629747663001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,3 +194,17 @@ MonoBehaviour:
   speed: 10
   gravity: 20
   jumpSpeed: 15
+--- !u!136 &4781209553091925112
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6243128901803473555}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.62
+  m_Height: 2.08
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.02, z: 0}
