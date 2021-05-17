@@ -14,9 +14,6 @@ public class CharachterModel : MonoBehaviour, ICharacterController
     protected Vector3 moveDirection = Vector3.zero;
 
 
-    
-
-
     private void Awake()
     {
         controller = GetComponent<CharacterController>();
