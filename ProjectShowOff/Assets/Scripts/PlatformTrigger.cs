@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+[RequireComponent(typeof(BoxCollider))]
+[RequireComponent(typeof(Rigidbody))]
 public class PlatformTrigger : MonoBehaviour
 {
     [SerializeField]
     UnityEvent onPressTrigger;
     [SerializeField]
     UnityEvent onReleaseTrigger;
-
-   
 
     int numPushingObjects;
     int NumPushingObjects {
@@ -24,28 +24,13 @@ public class PlatformTrigger : MonoBehaviour
         }
     }
 
-    //bool triggerPressed;
-    //bool TriggerPressed
-    //{
-    //    get { return triggerPressed; }
-
-    //    set {
-    //        if (triggerPressed == value) return;
-    //        if (value) onPressTrigger?.Invoke(); // if new value is true
-    //        if (!value) onReleaseTrigger?.Invoke(); // if new value is false
-    //        triggerPressed = value; 
-    //    }
-    //}
-
-    void Start()
+    private void Awake()
     {
-        
+        Rigidbody rigidbody = GetComponent<Rigidbody>();
+        rigidbody.useGravity = false;
+        rigidbody.constraints = RigidbodyConstraints.FreezeAll;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-    }
 
     private void OnCollisionEnter(Collision collision)
     {

@@ -182,10 +182,6 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4339667025747889322, guid: 47c5cf8faa3d154408e8a70d30e9e9ea, type: 3}
-      propertyPath: m_Center.y
-      value: 0.58
-      objectReference: {fileID: 0}
     - target: {fileID: 6852743208090324012, guid: 47c5cf8faa3d154408e8a70d30e9e9ea, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -1586,9 +1582,9 @@ GameObject:
   - component: {fileID: 1476219781}
   - component: {fileID: 1476219780}
   - component: {fileID: 1476219779}
+  - component: {fileID: 1476219785}
   - component: {fileID: 1476219783}
   - component: {fileID: 1476219784}
-  - component: {fileID: 1476219785}
   m_Layer: 0
   m_Name: Platform
   m_TagString: Untagged
@@ -1667,7 +1663,7 @@ Transform:
   m_GameObject: {fileID: 1476219778}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -10.356717, y: 0.13, z: 2.0803604}
-  m_LocalScale: {x: 1, y: 0.19032538, z: 1}
+  m_LocalScale: {x: 3.1329, y: 0.19032538, z: 2.8695645}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 15
