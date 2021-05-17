@@ -44,6 +44,7 @@ public class CameraRestricted : MonoBehaviour
         initialRotation = transform.rotation;
 
         playerModel = FindObjectOfType<Player>();
+        targetBody = playerModel.ControlledCharacter.transform;
         playerModel.onSwitchCharacter.AddListener(UpdateFollowedCharacter);
     }
 
@@ -72,7 +73,6 @@ public class CameraRestricted : MonoBehaviour
 
     public void UpdateFollowedCharacter() {
         targetBody = playerModel.ControlledCharacter.transform;
-        Debug.Log("Test");
     }
 
     private void OnDestroy()
