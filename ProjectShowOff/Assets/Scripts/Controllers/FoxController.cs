@@ -18,7 +18,6 @@ public class FoxController : CharachterModel
         lastDirection.y = 0;
         lastDirection.Normalize();
         float startTime = Time.time;
-        Debug.Log(startTime);
         while (Time.time < startTime + dashTime) {
             lastDirection.y = 0.00f;
             moveDirection.y = 0;
