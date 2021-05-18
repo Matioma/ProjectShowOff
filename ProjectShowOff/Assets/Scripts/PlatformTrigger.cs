@@ -32,24 +32,43 @@ public class PlatformTrigger : MonoBehaviour
     }
 
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-
-        if (collision.gameObject.GetComponent<PushableObject>() || 
-            collision.gameObject.GetComponent<CharachterModel>()) {
+        Debug.Log(other.gameObject.name);
+        if (other.gameObject.GetComponent<PushableObject>() ||
+           other.gameObject.GetComponent<CharachterModel>())
+        {
             NumPushingObjects++;
         }
-        //Debug.Log(NumPushingObjects);
     }
 
-    private void OnCollisionExit(Collision collision)
+
+    private void OnTriggerExit(Collider other)
     {
-  
-        if (collision.gameObject.GetComponent<PushableObject>() ||
-           collision.gameObject.GetComponent<CharachterModel>())
+        if (other.gameObject.GetComponent<PushableObject>() ||
+         other.gameObject.GetComponent<CharachterModel>())
         {
             NumPushingObjects--;
         }
+    }
+
+    //private void o(Collision collision)
+    //{
+
+    //    if (collision.gameObject.GetComponent<PushableObject>() || 
+    //        collision.gameObject.GetComponent<CharachterModel>()) {
+    //        NumPushingObjects++;
+    //    }
+    //    Debug.Log(NumPushingObjects);
+    //}
+
+    private void OnCollisionExit(Collision collision)
+    {
+        //if (collision.gameObject.GetComponent<PushableObject>() ||
+        //   collision.gameObject.GetComponent<CharachterModel>())
+        //{
+        //    NumPushingObjects--;
+        //}
         //Debug.Log(NumPushingObjects);
     }
 }
