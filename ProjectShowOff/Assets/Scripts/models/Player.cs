@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -19,9 +20,18 @@ public class Player : MonoBehaviour
     public UnityEvent onDeath;
 
 
+    public void RestartLevel() {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
     public void Die() {
         Debug.Log("Die");
         onDeath?.Invoke();
+    }
+
+    private void Start()
+    {
+        onDeath.AddListener(RestartLevel);
     }
 
     public void SwitchCharacter() {
@@ -29,5 +39,10 @@ public class Player : MonoBehaviour
         selectedCharacterId = (selectedCharacterId + 1) % characterControllers.Count;
         
         onSwitchCharacter?.Invoke();
+    }
+
+    private void OnDestroy()
+    {
+        onDeath.RemoveListener(RestartLevel);
     }
 }
