@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent (typeof(Rigidbody))]
 public class DangerousObstacle : MonoBehaviour
 {
     Player playerModel;
     Rigidbody rigidbody;
+
+    [SerializeField]
+    UnityEvent onCollisionWithCharacter;
 
     void Start()
     {
@@ -23,6 +27,7 @@ public class DangerousObstacle : MonoBehaviour
     {
         CharachterModel charachterModel = collision.gameObject.GetComponent<CharachterModel>();
         if (charachterModel != null) {
+            onCollisionWithCharacter?.Invoke();
             playerModel?.Die();
         }
     }
