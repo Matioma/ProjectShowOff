@@ -5,19 +5,10 @@ using UnityEngine.Events;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField]
-    CharachterModel rabbitController; 
-    [SerializeField] 
-    CharachterModel bearController;
-
 
     [SerializeField]
     List<CharachterModel> characterControllers;
     int selectedCharacterId = 0;
-
-
-   
-    //CharachterModel controlledCharacter;
 
     [SerializeField]
     public UnityEvent onSwitchCharacter;
@@ -25,27 +16,18 @@ public class Player : MonoBehaviour
         get { return characterControllers[selectedCharacterId]; } 
         private set { } 
     }
+    public UnityEvent onDeath;
 
-    private void Start()
-    {
-        //controlledCharacter = rabbitController;
+
+    public void Die() {
+        Debug.Log("Die");
+        onDeath?.Invoke();
     }
 
-
     public void SwitchCharacter() {
-        //controlledCharacter.Move(Vector3.zero);
         ControlledCharacter.Move(Vector3.zero);
         selectedCharacterId = (selectedCharacterId + 1) % characterControllers.Count;
         
-
-        //if(controlledCharacter == rabbitController)
-        //{
-        //    controlledCharacter = bearController;
-        //}
-        //else if (controlledCharacter == bearController) {
-        //    controlledCharacter = rabbitController;
-       
-        //}
         onSwitchCharacter?.Invoke();
     }
 }
