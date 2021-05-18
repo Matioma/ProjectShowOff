@@ -39,7 +39,7 @@ public class PlatformTrigger : MonoBehaviour
             collision.gameObject.GetComponent<CharachterModel>()) {
             NumPushingObjects++;
         }
-        Debug.Log(NumPushingObjects);
+        //Debug.Log(NumPushingObjects);
     }
 
     private void OnCollisionExit(Collision collision)
@@ -50,6 +50,6 @@ public class PlatformTrigger : MonoBehaviour
         {
             NumPushingObjects--;
         }
-        Debug.Log(NumPushingObjects);
+        //Debug.Log(NumPushingObjects);
     }
 }

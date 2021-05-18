@@ -13,6 +13,12 @@ public class CharachterModel : MonoBehaviour, ICharacterController
 
     protected Vector3 moveDirection = Vector3.zero;
 
+    public void AddAceeleration(Vector3 velocity) {
+        moveDirection.y = 0;
+        moveDirection += velocity;
+    }
+
+
 
     private void Awake()
     {
