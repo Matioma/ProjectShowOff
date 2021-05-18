@@ -60,4 +60,13 @@ public class CharachterModel : MonoBehaviour, ICharacterController
         //}
     }
 
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if (hit.normal == Vector3.down) {
+            moveDirection.y = 0;
+        }
+    }
+
+
+
 }
