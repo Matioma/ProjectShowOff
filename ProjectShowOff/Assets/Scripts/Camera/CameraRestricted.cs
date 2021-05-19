@@ -55,7 +55,7 @@ public class CameraRestricted : MonoBehaviour
         yRotation = Mathf.Clamp(yRotation, -maxRotationY, maxRotationY);
 
         float deltaY = Input.GetAxis("Mouse Y") * rotationSensitivity * Time.deltaTime;
-        xRotation += deltaY;
+        xRotation -= deltaY;
         xRotation = Mathf.Clamp(xRotation, -maxRotationX, maxRotationX);
 
 
