@@ -7,13 +7,20 @@ public class FoxController : CharachterModel
     public float dashTime = 1;
     public float dashSpeed = 8.0f;
 
+    bool isDashing = false;
+
+
+
     public override void SpecialAction()
     {
-        StartCoroutine(Dash());
+        if (!isDashing) { 
+            StartCoroutine(Dash());
+        }
     }
 
     IEnumerator Dash()
     {
+        isDashing = true;
         Vector3 lastDirection = moveDirection;
         lastDirection.y = 0;
         lastDirection.Normalize();
@@ -24,7 +31,12 @@ public class FoxController : CharachterModel
             controller.Move(lastDirection * dashSpeed * Time.deltaTime);
             yield return null;
         }
-          
+        isDashing = false;
+    }
 
+
+    IEnumerator dashFinished() {
+        isDashing = false;
+        yield return null;
     }
 }
