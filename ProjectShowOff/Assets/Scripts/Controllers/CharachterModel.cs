@@ -7,15 +7,26 @@ public class CharachterModel : MonoBehaviour, ICharacterController
 {
     protected CharacterController controller;
 
+    public float acceletation = 10;
 
     public float speed = 6.0f;
     public float gravity = 20.0f;
 
-    protected Vector3 moveDirection = Vector3.zero;
+
+    public float drag = 0.8f;
+
+    float currentSpeed = 0;
+
+
+    protected Vector3 velocity = Vector3.zero;
+
+
+
+   // protected Vector3 velocity =Vector3.zero;
 
     public void AddAceeleration(Vector3 velocity) {
-        moveDirection.y = 0;
-        moveDirection += velocity;
+        this.velocity.y = 0;
+        this.velocity += velocity;
     }
 
 
@@ -28,17 +39,9 @@ public class CharachterModel : MonoBehaviour, ICharacterController
 
     private void FixedUpdate()
     {
-        //if (controller.isGrounded)
-        //{
-        //    moveDirection = transform.right * Input.GetAxis("Horizontal") + transform.forward * Input.GetAxis("Vertical");
-        //    moveDirection *= speed;
-
-        //}
-        //SpecialAction();
-
-
-        moveDirection.y -= gravity * Time.deltaTime;
-        controller.Move(moveDirection * Time.deltaTime);
+        velocity.y -= gravity * Time.deltaTime;
+        controller.Move(velocity* Time.deltaTime);
+        //controller.Move(velocity * Time.deltaTime);
     }
 
 
@@ -47,26 +50,42 @@ public class CharachterModel : MonoBehaviour, ICharacterController
 
     public void Move(Vector3 direction)
     {
-        //if (controller.isGrounded)
+        float yVelocity = velocity.y;
+
+        velocity.y = 0;
+        velocity += direction * acceletation;
+        if (direction.sqrMagnitude == 0)
+        {
+            velocity *= drag;
+        }
+
+        //Add new Acceleration
+        if (velocity.sqrMagnitude > speed * speed) {
+            velocity = velocity.normalized * speed;
+        }
+        velocity.y = yVelocity;
+
+
+        ////IF no input
+        //if (direction.sqrMagnitude == 0)
         //{
-
-        Vector3 xyDirection = direction * speed;
-            moveDirection.x = xyDirection.x;
-        moveDirection.z = xyDirection.z;
-            
-
-            //moveDirection = transform.right * Input.GetAxis("Horizontal") + transform.forward * Input.GetAxis("Vertical");
-            //moveDirection *= speed;
+        //    currentSpeed = 0;
         //}
-    }
+
+        //Set the new Direction
+        //Vector3 xyDirection = direction * currentSpeed;
+        //moveDirection.x = xyDirection.x;
+        //moveDirection.z = xyDirection.z;
+
+        ////Accelerate the player
+        //currentSpeed += acceletation * Time.deltaTime;
+        //if (currentSpeed > speed) currentSpeed = speed;
+    } 
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
         if (hit.normal == Vector3.down) {
-            moveDirection.y = 0;
+            velocity.y = 0;
         }
     }
-
-
-
 }

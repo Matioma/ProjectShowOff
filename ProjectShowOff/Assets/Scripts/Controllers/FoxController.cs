@@ -21,13 +21,13 @@ public class FoxController : CharachterModel
     IEnumerator Dash()
     {
         isDashing = true;
-        Vector3 lastDirection = moveDirection;
+        Vector3 lastDirection = velocity;
         lastDirection.y = 0;
         lastDirection.Normalize();
         float startTime = Time.time;
         while (Time.time < startTime + dashTime) {
             lastDirection.y = 0.00f;
-            moveDirection.y = 0;
+            velocity.y = 0;
             controller.Move(lastDirection * dashSpeed * Time.deltaTime);
             yield return null;
         }

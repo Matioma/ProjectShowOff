@@ -11,7 +11,7 @@ public class RabbitController : CharachterModel
     {
         if (controller.isGrounded)
         {
-            moveDirection.y = jumpSpeed;
+            velocity.y = jumpSpeed;
         }
     }
 }
