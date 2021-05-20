@@ -160,10 +160,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd56e57fe4acd654dbd774661ace842f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
+  speed: 9
   gravity: 20
   dashTime: 1
-  dashSpeed: 3
+  dashSpeed: 10
 --- !u!136 &2639395515962379635
 CapsuleCollider:
   m_ObjectHideFlags: 0
