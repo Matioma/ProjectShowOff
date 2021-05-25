@@ -139,6 +139,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 370d806574c11804cb099204ea5e9ce1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onCheckPointReached:
+    m_PersistentCalls:
+      m_Calls: []
+  targetScene: PrototypeMovement
 --- !u!1 &7149081954205145185
 GameObject:
   m_ObjectHideFlags: 0
