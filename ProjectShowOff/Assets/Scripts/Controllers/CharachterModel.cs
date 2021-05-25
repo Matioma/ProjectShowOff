@@ -2,12 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(CharacterController))]
+[RequireComponent(typeof(SphereCollider))]
 public class CharachterModel : MonoBehaviour, ICharacterController
 {
     protected CharacterController controller;
-
-
 
     [Header("movement")]
     public float acceletation = 10;

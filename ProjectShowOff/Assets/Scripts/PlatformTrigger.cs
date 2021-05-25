@@ -34,7 +34,6 @@ public class PlatformTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.gameObject.name);
         if (other.gameObject.GetComponent<PushableObject>() ||
            other.gameObject.GetComponent<CharachterModel>())
         {
