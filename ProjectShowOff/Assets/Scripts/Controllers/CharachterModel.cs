@@ -42,7 +42,6 @@ public class CharachterModel : MonoBehaviour, ICharacterController
     {
         velocity.y -= gravity * Time.deltaTime;
         controller.Move(velocity* Time.deltaTime);
-        //controller.Move(velocity * Time.deltaTime);
     }
 
 
@@ -52,16 +51,22 @@ public class CharachterModel : MonoBehaviour, ICharacterController
     }
 
 
+    void Update() {
+        float y = velocity.y;
+        velocity *= drag;
+        velocity.y = y;
+    }
+
     public void Move(Vector3 direction)
     {
         float yVelocity = velocity.y;
 
         velocity.y = 0;
         velocity += direction * acceletation;
-        if (direction.sqrMagnitude == 0)
-        {
-            velocity *= drag;
-        }
+        //if (direction.sqrMagnitude == 0)
+        //{
+        //    velocity *= drag;
+        //}
 
         //Add new Acceleration
         if (velocity.sqrMagnitude > speed * speed) {
