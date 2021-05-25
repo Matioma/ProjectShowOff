@@ -2,19 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(BoxCollider))]
 public class CheckPoint : MonoBehaviour
 {
+    [SerializeField]
     UnityEvent onCheckPointReached;
     Player playerModel;
 
     int charactersInZone = 0;
 
+    [SerializeField]
+    string targetScene;
+    
+
+
     private void Awake()
     {
         playerModel = FindObjectOfType<Player>();
+
+        onCheckPointReached.AddListener(SaveProgress);
     }
     void CharacterEnterZone() {
         charactersInZone++;
@@ -44,4 +52,12 @@ public class CheckPoint : MonoBehaviour
             }
         }
     }
+
+
+    void SaveProgress()
+    {
+        SceneManager.LoadScene(targetScene);
+    }
+
+
 }
