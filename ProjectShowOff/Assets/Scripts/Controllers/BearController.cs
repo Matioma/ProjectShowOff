@@ -4,21 +4,75 @@ using UnityEngine;
 
 public class BearController : CharachterModel
 {
+
+    [Header("Skill Related")]
     [SerializeField]
     float pushPower;
 
+    [SerializeField]
+    float moveSpeedWhenPushing = 4;
+    float initialmovementSpeed;
+
+    bool bearTriesToPush = false;
+
+
+    PushableObject attachedPushable =null;
+
+    private void Awake()
+    {
+        base.Awake();
+        initialmovementSpeed = speed;
+    }
+
+
+
+    public override void SpecialAction()
+    {
+        bearTriesToPush = true;
+    }
+
+    public override void ReleaseSpecialAction() {
+        bearTriesToPush = false;
+        DetachPushable();
+    }
+
+    void AttachPushable(PushableObject pushable) {
+        pushable.transform.parent = transform;
+        attachedPushable = pushable;
+        speed = moveSpeedWhenPushing;
+    }
+
+    void DetachPushable()
+    {
+        if (attachedPushable == null) return;
+        attachedPushable.transform.parent = attachedPushable.GetInitialParent;
+        attachedPushable = null;
+        speed = initialmovementSpeed;
+    }
+
+
+
     void OnControllerColliderHit(ControllerColliderHit hit) {
-        Rigidbody body = hit.collider.attachedRigidbody;
+        if (!bearTriesToPush) return;
+        if (attachedPushable != null) return;
 
-        if (body == null || body.isKinematic) {
-            return;
+
+        PushableObject pushableObject = hit.gameObject.GetComponent<PushableObject>();
+        if (pushableObject!=null) {
+            AttachPushable(pushableObject);
         }
-        if (hit.moveDirection.y < -0.3) {
-            return;
-        }
+        
+        //Rigidbody body = hit.collider.attachedRigidbody;
 
-        Vector3 pushDir = new Vector3(hit.moveDirection.x, 0, hit.moveDirection.z);
+        //if (body == null || body.isKinematic) {
+        //    return;
+        //}
+        //if (hit.moveDirection.y < -0.3) {
+        //    return;
+        //}
 
-        body.velocity = pushDir * pushPower;
+        //Vector3 pushDir = new Vector3(hit.moveDirection.x, 0, hit.moveDirection.z);
+
+        //body.velocity = pushDir * pushPower;
     }
 }

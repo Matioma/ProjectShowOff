@@ -12,6 +12,7 @@ public class CharachterModel : MonoBehaviour, ICharacterController
     [Header("movement")]
     public float acceletation = 10;
     public float speed = 6.0f;
+
     public float gravity = 20.0f;
 
     [Range(0,1)]
@@ -33,7 +34,7 @@ public class CharachterModel : MonoBehaviour, ICharacterController
 
 
 
-    private void Awake()
+    protected void Awake()
     {
         controller = GetComponent<CharacterController>();
     }

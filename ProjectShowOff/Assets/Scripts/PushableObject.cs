@@ -12,11 +12,16 @@ public class PushableObject : MonoBehaviour
 
     Rigidbody rigidbody;
 
+    Transform initialParent;
+    public Transform GetInitialParent{
+        get{ return initialParent; }
+    }
+    
     void Start()
     {
-        rigidbody = GetComponent<Rigidbody>();
-        //rigidbody.drag = drag;
-        rigidbody.constraints = RigidbodyConstraints.FreezeRotation;
+        initialParent = transform.parent;
+        //rigidbody = GetComponent<Rigidbody>();
+        //rigidbody.constraints = RigidbodyConstraints.FreezeRotation;
     }
 
     private void OnValidate()
