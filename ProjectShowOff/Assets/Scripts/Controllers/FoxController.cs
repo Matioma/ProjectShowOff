@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class FoxController : CharachterModel
 {
+
+    [Header("Skill Related")]
     public float dashTime = 1;
     public float dashSpeed = 8.0f;
 

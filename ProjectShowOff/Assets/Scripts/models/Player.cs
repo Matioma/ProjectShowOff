@@ -6,6 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
+    int score;
+    public void AddScore(int amount) {
+        score += amount;
+    }
+
+
 
     [SerializeField]
     List<CharachterModel> characterControllers;

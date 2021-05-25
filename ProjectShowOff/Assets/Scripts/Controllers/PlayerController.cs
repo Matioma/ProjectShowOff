@@ -22,6 +22,10 @@ public class PlayerController : MonoBehaviour, ICharacterController
             SpecialAction();
         }
 
+        if (Input.GetKeyUp(KeyCode.Space)) {
+            ReleaseSpecialAction();
+        }
+
         if (Input.GetKeyDown(KeyCode.X)) {
             playerModel.SwitchCharacter();
         }
@@ -34,5 +38,9 @@ public class PlayerController : MonoBehaviour, ICharacterController
     public void SpecialAction()
     {
         playerModel.ControlledCharacter.SpecialAction();
+    }
+
+    public void ReleaseSpecialAction() {
+        playerModel.ControlledCharacter.ReleaseSpecialAction();
     }
 }
