@@ -47,6 +47,10 @@ public class CharachterModel : MonoBehaviour, ICharacterController
 
 
     public virtual void SpecialAction() {}
+    public void ReleaseSpecialAction(){
+        Debug.Log("character Released");
+    }
+
 
     public void Move(Vector3 direction)
     {
@@ -88,4 +92,6 @@ public class CharachterModel : MonoBehaviour, ICharacterController
             velocity.y = 0;
         }
     }
+
+ 
 }
