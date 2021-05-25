@@ -7,12 +7,14 @@ public class CharachterModel : MonoBehaviour, ICharacterController
 {
     protected CharacterController controller;
 
-    public float acceletation = 10;
 
+
+    [Header("movement")]
+    public float acceletation = 10;
     public float speed = 6.0f;
     public float gravity = 20.0f;
 
-
+    [Range(0,1)]
     public float drag = 0.8f;
 
     float currentSpeed = 0;
@@ -47,8 +49,7 @@ public class CharachterModel : MonoBehaviour, ICharacterController
 
 
     public virtual void SpecialAction() {}
-    public void ReleaseSpecialAction(){
-        Debug.Log("character Released");
+    public virtual void ReleaseSpecialAction(){
     }
 
 
