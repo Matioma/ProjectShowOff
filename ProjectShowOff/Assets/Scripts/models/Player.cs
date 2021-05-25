@@ -15,6 +15,9 @@ public class Player : MonoBehaviour
 
     [SerializeField]
     List<CharachterModel> characterControllers;
+    public IList<CharachterModel> ControlledCharacters {
+        get { return characterControllers.AsReadOnly(); }
+    }
     int selectedCharacterId = 0;
 
     [SerializeField]
