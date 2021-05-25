@@ -8,10 +8,10 @@ public class CharachterModel : MonoBehaviour, ICharacterController
     protected CharacterController controller;
 
     [Header("movement")]
-    public float acceletation = 10;
-    public float speed = 6.0f;
+    float acceletation = 10;
+    protected float speed = 6.0f;
 
-    public float gravity = 20.0f;
+    float gravity = 20.0f;
 
     [Range(0,1)]
     public float drag = 0.8f;
