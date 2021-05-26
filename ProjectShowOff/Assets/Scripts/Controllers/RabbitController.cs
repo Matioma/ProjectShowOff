@@ -10,7 +10,7 @@ public class RabbitController : CharachterModel
 
     public override void SpecialAction()
     {
-        base.SpecialAction();
+        onUseSkill?.Invoke();
         if (controller.isGrounded)
         {
             velocity.y = jumpSpeed;

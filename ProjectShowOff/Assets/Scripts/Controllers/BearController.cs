@@ -28,7 +28,6 @@ public class BearController : CharachterModel
 
     public override void SpecialAction()
     {
-        base.SpecialAction();
         bearTriesToPush = true;
     }
 

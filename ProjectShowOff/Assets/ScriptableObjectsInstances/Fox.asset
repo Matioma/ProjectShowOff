@@ -12,4 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a0ac1852dda4ee4aab44e097d478dd7, type: 3}
   m_Name: Fox
   m_EditorClassIdentifier: 
-  animations: []
+  animations:
+  - aniomationType: 0
+    clips:
+    - {fileID: 8300000, guid: 84f9cc4faa314104babe2ca47a65a16e, type: 3}
+  - aniomationType: 0
+    clips:
+    - {fileID: 8300000, guid: 84f9cc4faa314104babe2ca47a65a16e, type: 3}

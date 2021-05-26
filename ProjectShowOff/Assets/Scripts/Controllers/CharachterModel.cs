@@ -53,7 +53,6 @@ public class CharachterModel : MonoBehaviour, ICharacterController
 
 
     public virtual void SpecialAction() {
-        onUseSkill?.Invoke();
     }
     public virtual void ReleaseSpecialAction(){
     }

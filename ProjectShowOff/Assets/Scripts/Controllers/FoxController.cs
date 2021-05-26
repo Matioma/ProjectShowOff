@@ -15,8 +15,9 @@ public class FoxController : CharachterModel
 
     public override void SpecialAction()
     {
-        onUseSkill?.Invoke();
-        if (!isDashing) { 
+       
+        if (!isDashing) {
+            onUseSkill?.Invoke();
             StartCoroutine(Dash());
         }
     }

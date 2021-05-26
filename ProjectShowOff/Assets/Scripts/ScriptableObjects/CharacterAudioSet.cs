@@ -23,6 +23,15 @@ public class CharacterAudioSet : ScriptableObject
         return null;
     }
 
+    public AudioClip GetSpecialSound() {
+        Pair pairSteps = getPairOfType(EAnimation.SpecialAbility);
+        if (pairSteps != null)
+        {
+            return pairSteps.getRandomSound();
+        }
+        return null;
+    }
+
     public Pair getPairOfType(EAnimation animation) {
         foreach (var pair in animations)
         {
