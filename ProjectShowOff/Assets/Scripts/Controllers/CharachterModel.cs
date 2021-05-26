@@ -8,9 +8,12 @@ public class CharachterModel : MonoBehaviour, ICharacterController
     protected CharacterController controller;
 
     [Header("movement")]
+    [SerializeField]
     float acceletation = 10;
+    [SerializeField]
     protected float speed = 6.0f;
 
+    [SerializeField]
     float gravity = 20.0f;
 
     [Range(0,1)]
