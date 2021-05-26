@@ -14,9 +14,12 @@ public class BearController : CharachterModel
     float initialmovementSpeed;
 
     bool bearTriesToPush = false;
-
-
     PushableObject attachedPushable =null;
+
+
+    public bool BearIsDragging() {
+        return attachedPushable != null;
+    }
 
     private void Awake()
     {

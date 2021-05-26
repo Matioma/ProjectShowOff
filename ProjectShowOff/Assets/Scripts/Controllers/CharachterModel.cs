@@ -6,26 +6,21 @@ using UnityEngine.Events;
 [RequireComponent(typeof(SphereCollider))]
 public class CharachterModel : MonoBehaviour, ICharacterController
 {
-
     protected CharacterController controller;
-
     [SerializeField]
     public UnityEvent onUseSkill;
 
 
 
-    [Header("movement")]
+    [Header("Movement")]
     [SerializeField]
     float acceletation = 10;
     [SerializeField]
     protected float speed = 6.0f;
-
     [SerializeField]
     float gravity = 20.0f;
-
     [Range(0,1)]
     public float drag = 0.8f;
-
     float currentSpeed = 0;
 
 
@@ -48,6 +43,11 @@ public class CharachterModel : MonoBehaviour, ICharacterController
     {
         velocity.y -= gravity * Time.deltaTime;
         controller.Move(velocity* Time.deltaTime);
+
+
+        float y = velocity.y;
+        velocity *= drag;
+        velocity.y = y;
     }
 
 
@@ -56,14 +56,6 @@ public class CharachterModel : MonoBehaviour, ICharacterController
     }
     public virtual void ReleaseSpecialAction(){
     }
-
-
-    void Update() {
-        float y = velocity.y;
-        velocity *= drag;
-        velocity.y = y;
-    }
-
     public void Move(Vector3 direction)
     {
         float yVelocity = velocity.y;

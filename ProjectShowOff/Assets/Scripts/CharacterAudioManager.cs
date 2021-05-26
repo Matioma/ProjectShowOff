@@ -22,4 +22,10 @@ public class CharacterAudioManager : MonoBehaviour
         if (audio != null) audioSource.PlayOneShot(audio);
     }
 
+    public void SpecialSkillSound()
+    {
+        AudioClip audio = characterAudioSet.GetSpecialSound();
+        if (audio != null) audioSource.PlayOneShot(audio);
+    }
+
 }

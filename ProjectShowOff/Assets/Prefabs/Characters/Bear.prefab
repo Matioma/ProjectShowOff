@@ -168,7 +168,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2496941519504768812}
         m_TargetAssemblyTypeName: CharacterAudioManager, Assembly-CSharp
-        m_MethodName: PlayStep
+        m_MethodName: SpecialSkillSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
