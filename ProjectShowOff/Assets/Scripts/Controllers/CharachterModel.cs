@@ -5,11 +5,13 @@ using UnityEngine.Events;
 
 public class CharachterModel : MonoBehaviour, ICharacterController
 {
-
     protected CharacterController controller;
 
     [SerializeField]
     public UnityEvent onUseSkill;
+
+    [SerializeField]
+    ChracterStateMachine stateMachine;
 
 
 
