@@ -1,16 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(SphereCollider))]
 public class CharachterModel : MonoBehaviour, ICharacterController
 {
+
     protected CharacterController controller;
 
+    [SerializeField]
+    public UnityEvent onUseSkill;
+
+
+
     [Header("movement")]
+    [SerializeField]
     float acceletation = 10;
+    [SerializeField]
     protected float speed = 6.0f;
 
+    [SerializeField]
     float gravity = 20.0f;
 
     [Range(0,1)]
@@ -20,10 +30,6 @@ public class CharachterModel : MonoBehaviour, ICharacterController
 
 
     protected Vector3 velocity = Vector3.zero;
-
-
-
-   // protected Vector3 velocity =Vector3.zero;
 
     public void AddAceeleration(Vector3 velocity) {
         this.velocity.y = 0;
@@ -46,7 +52,9 @@ public class CharachterModel : MonoBehaviour, ICharacterController
 
 
 
-    public virtual void SpecialAction() {}
+    public virtual void SpecialAction() {
+        onUseSkill?.Invoke();
+    }
     public virtual void ReleaseSpecialAction(){
     }
 
@@ -63,32 +71,12 @@ public class CharachterModel : MonoBehaviour, ICharacterController
 
         velocity.y = 0;
         velocity += direction * acceletation;
-        //if (direction.sqrMagnitude == 0)
-        //{
-        //    velocity *= drag;
-        //}
 
         //Add new Acceleration
         if (velocity.sqrMagnitude > speed * speed) {
             velocity = velocity.normalized * speed;
         }
         velocity.y = yVelocity;
-
-
-        ////IF no input
-        //if (direction.sqrMagnitude == 0)
-        //{
-        //    currentSpeed = 0;
-        //}
-
-        //Set the new Direction
-        //Vector3 xyDirection = direction * currentSpeed;
-        //moveDirection.x = xyDirection.x;
-        //moveDirection.z = xyDirection.z;
-
-        ////Accelerate the player
-        //currentSpeed += acceletation * Time.deltaTime;
-        //if (currentSpeed > speed) currentSpeed = speed;
     } 
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
