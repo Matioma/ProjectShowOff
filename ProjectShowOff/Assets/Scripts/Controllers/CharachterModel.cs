@@ -1,11 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(SphereCollider))]
 public class CharachterModel : MonoBehaviour, ICharacterController
 {
+
     protected CharacterController controller;
+
+    [SerializeField]
+    public UnityEvent onUseSkill;
+
+
 
     [Header("movement")]
     [SerializeField]
@@ -23,10 +30,6 @@ public class CharachterModel : MonoBehaviour, ICharacterController
 
 
     protected Vector3 velocity = Vector3.zero;
-
-
-
-   // protected Vector3 velocity =Vector3.zero;
 
     public void AddAceeleration(Vector3 velocity) {
         this.velocity.y = 0;
@@ -49,7 +52,9 @@ public class CharachterModel : MonoBehaviour, ICharacterController
 
 
 
-    public virtual void SpecialAction() {}
+    public virtual void SpecialAction() {
+        onUseSkill?.Invoke();
+    }
     public virtual void ReleaseSpecialAction(){
     }
 
