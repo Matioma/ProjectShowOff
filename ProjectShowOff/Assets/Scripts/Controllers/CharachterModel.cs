@@ -66,32 +66,12 @@ public class CharachterModel : MonoBehaviour, ICharacterController
 
         velocity.y = 0;
         velocity += direction * acceletation;
-        //if (direction.sqrMagnitude == 0)
-        //{
-        //    velocity *= drag;
-        //}
 
         //Add new Acceleration
         if (velocity.sqrMagnitude > speed * speed) {
             velocity = velocity.normalized * speed;
         }
         velocity.y = yVelocity;
-
-
-        ////IF no input
-        //if (direction.sqrMagnitude == 0)
-        //{
-        //    currentSpeed = 0;
-        //}
-
-        //Set the new Direction
-        //Vector3 xyDirection = direction * currentSpeed;
-        //moveDirection.x = xyDirection.x;
-        //moveDirection.z = xyDirection.z;
-
-        ////Accelerate the player
-        //currentSpeed += acceletation * Time.deltaTime;
-        //if (currentSpeed > speed) currentSpeed = speed;
     } 
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
