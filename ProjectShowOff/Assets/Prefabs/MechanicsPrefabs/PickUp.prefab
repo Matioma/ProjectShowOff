@@ -139,6 +139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2bd5e9ace074ff4e82eda6abe7c700f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scorePerPickUp: 0
   onPickedUp:
     m_PersistentCalls:
       m_Calls: []

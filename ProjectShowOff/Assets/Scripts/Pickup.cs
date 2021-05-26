@@ -29,7 +29,7 @@ public class Pickup : MonoBehaviour
     }
 
     void DestroySelf() {
-        Destroy(this.gameObject);
+        //Destroy(this.gameObject);
     }
 
     void Update() {

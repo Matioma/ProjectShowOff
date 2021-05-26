@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.Events;
 
 [RequireComponent(typeof(BoxCollider))]
-[RequireComponent(typeof(Rigidbody))]
 public class PlatformTrigger : MonoBehaviour
 {
     [SerializeField]

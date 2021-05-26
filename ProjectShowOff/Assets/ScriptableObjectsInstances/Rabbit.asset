@@ -15,7 +15,10 @@ MonoBehaviour:
   animations:
   - aniomationType: 0
     clips:
-    - {fileID: 8300000, guid: 84f9cc4faa314104babe2ca47a65a16e, type: 3}
+    - {fileID: 8300000, guid: 1be24ca8598012b4ea09883e4a68736e, type: 3}
+    - {fileID: 8300000, guid: 126c5c4e4e513344197b0aca38339a97, type: 3}
+    - {fileID: 8300000, guid: 5ffd9fb579cf56c4cb1e4dc09094c264, type: 3}
+    - {fileID: 8300000, guid: 88f1f796eb35f7d4d9d1f1c7eb9b47bd, type: 3}
   - aniomationType: 1
     clips:
-    - {fileID: 8300000, guid: 84f9cc4faa314104babe2ca47a65a16e, type: 3}
+    - {fileID: 8300000, guid: 71a508a03b534234086a2433dcafc59c, type: 3}
