@@ -10,5 +10,13 @@ public class AnimatedTrigger : MonoBehaviour
         animator.SetTrigger(triggerName);
     }
 
+
+    public void ActivateBoolValue(string boolValueName) {
+        animator.SetBool(boolValueName, true);
+    }
+
+    public void DisactivateBoolValue(string boolValueName) {
+        animator.SetBool(boolValueName, false);
+    }
   
 }
