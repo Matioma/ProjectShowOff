@@ -6,25 +6,43 @@ using UnityEngine;
 public class CharacterAudioSet : ScriptableObject
 {
     [SerializeField]
-    List<Pair> animations;
+    List<Pair> AudioClips;
 
 
     public AudioClip GetAudio() {
-        return animations[0].clips[0];
+        return AudioClips[0].clips[0];
     }
-
 
     public AudioClip GetStepSound()
     {
-        Pair pairSteps = getPairOfType(EAnimation.Movement);
+        Pair pairSteps = getPairOfType(EAudioClipType.Movement);
         if (pairSteps != null) { 
             return pairSteps.getRandomSound();
         }
         return null;
     }
 
-    public Pair getPairOfType(EAnimation animation) {
-        foreach (var pair in animations)
+    public AudioClip GetSpecialAbilitySound() {
+        Pair pairSteps = getPairOfType(EAudioClipType.SpecialAbility);
+        if (pairSteps != null)
+        {
+            return pairSteps.getRandomSound();
+        }
+        return null;
+    }
+
+
+    public AudioClip getSoundOfType(EAudioClipType soundType) {
+        Pair pairSteps = getPairOfType(soundType);
+        if (pairSteps != null)
+        {
+            return pairSteps.getRandomSound();
+        }
+        return null;
+    }
+
+    public Pair getPairOfType(EAudioClipType animation) {
+        foreach (var pair in AudioClips)
         {
             if (pair.aniomationType == animation)
             {
@@ -40,16 +58,17 @@ public class CharacterAudioSet : ScriptableObject
 
 
 
-public enum EAnimation{ 
+public enum EAudioClipType{ 
     Movement,
-    SpecialAbility
+    SpecialAbility,
+    Landing
 }
 
 
 [System.Serializable]
 public class Pair{
     [SerializeField]
-    public EAnimation aniomationType;
+    public EAudioClipType aniomationType;
     [SerializeField]
     public List<AudioClip> clips;
 
