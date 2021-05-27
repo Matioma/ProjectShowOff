@@ -17,6 +17,9 @@ public class CameraRestricted : MonoBehaviour
     Vector3 offset;
 
     [SerializeField]
+    bool isRestricted;
+
+    [SerializeField]
     [Range(0, 90)]
     float maxRotationX;
     [SerializeField]
@@ -50,16 +53,28 @@ public class CameraRestricted : MonoBehaviour
 
     private void Update()
     {
+
+        if (!isRestricted) FreeCamera();
+        else RestrictedCamera();
+    }
+
+
+    void RestrictedCamera()
+    {
         float deltaX = Input.GetAxis("Mouse X") * rotationSensitivity * Time.deltaTime;
         yRotation += deltaX;
+
         yRotation = Mathf.Clamp(yRotation, -maxRotationY, maxRotationY);
+        yRotation = Mathf.Clamp(yRotation, -90.0f, 90.0f);
+
 
         float deltaY = Input.GetAxis("Mouse Y") * rotationSensitivity * Time.deltaTime;
         xRotation -= deltaY;
         xRotation = Mathf.Clamp(xRotation, -maxRotationX, maxRotationX);
 
 
-        if (deltaX !=0 || deltaY != 0) {
+        if (deltaX != 0 || deltaY != 0)
+        {
             transform.SetPositionAndRotation(initialPosition, initialRotation);
             transform.RotateAround(targetBody.position, Vector3.right, xRotation);
             transform.RotateAround(targetBody.position, Vector3.up, yRotation);
@@ -68,8 +83,38 @@ public class CameraRestricted : MonoBehaviour
 
 
         Quaternion offsetQuaternion = Quaternion.Euler(xRotation, yRotation, 0);
-        transform.position = targetBody.position + offsetQuaternion*offset;
+        transform.position = targetBody.position + offsetQuaternion * offset;
+
     }
+
+    void FreeCamera() {
+        xRotation = 0;
+        yRotation = 0;
+        float mouseX = Input.GetAxis("Mouse X") * rotationSensitivity * Time.deltaTime;
+
+
+        float mouseY = Input.GetAxis("Mouse Y") * rotationSensitivity * Time.deltaTime;
+        xRotation -= mouseY;
+        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+
+        yRotation += mouseX;
+        yRotation = Mathf.Clamp(yRotation, -90f, 90f);
+
+
+        //Rotate the camera around the target
+        transform.RotateAround(targetBody.position, Vector3.up, yRotation);
+
+
+        //Compute the new rotated offset from the target
+        Quaternion offsetRotationQuaternion = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
+        transform.position = Vector3.Lerp(transform.position, targetBody.position + offsetRotationQuaternion * offset, 1);
+
+        //Make the target rotate in camera Direction
+        Vector3 lookDirectionTarget = targetBody.position + transform.forward;
+        lookDirectionTarget.y = targetBody.position.y;
+        targetBody.LookAt(lookDirectionTarget);
+    }
+
 
     public void UpdateFollowedCharacter() {
         targetBody = playerModel.ControlledCharacter.transform;
