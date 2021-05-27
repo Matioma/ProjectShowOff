@@ -12,4 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a0ac1852dda4ee4aab44e097d478dd7, type: 3}
   m_Name: Bear
   m_EditorClassIdentifier: 
-  AudioClips: []
+  AudioClips:
+  - aniomationType: 0
+    clips:
+    - {fileID: 8300000, guid: 46795453d9e824441a8ff44679ed98f7, type: 3}
+    - {fileID: 8300000, guid: cd19d886d3b32a64f899758949e4a72f, type: 3}
+    - {fileID: 8300000, guid: 15cd1451d07de124cac51542c524017a, type: 3}
+  - aniomationType: 1
+    clips:
+    - {fileID: 8300000, guid: 63a4d79672373ac4db7c8bc312005cfa, type: 3}
+    - {fileID: 8300000, guid: 8ff76ea688f2ec6438818f3df04dae64, type: 3}

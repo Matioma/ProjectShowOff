@@ -6408,6 +6408,10 @@ PrefabInstance:
       propertyPath: followSensitivity
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3139855854294302306, guid: 4e7441b6e32f5854cbaa2bb005037280, type: 3}
+      propertyPath: rotationSensitivity
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 3139855854294302307, guid: 4e7441b6e32f5854cbaa2bb005037280, type: 3}
       propertyPath: m_Name
       value: RestrcitedFollowingCamera (1)
