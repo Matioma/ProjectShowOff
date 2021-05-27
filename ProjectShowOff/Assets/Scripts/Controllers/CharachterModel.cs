@@ -110,11 +110,18 @@ public class CharachterModel : MonoBehaviour, ICharacterController
         
     }
 
-    public void Move(Vector3 direction)
+    public void Move(Vector3 pDirection)
     {
+        Debug.Log(pDirection);
+
+        Vector3 localDirection = transform.forward * pDirection.z + transform.right * pDirection.x;
+
+        //transform.forward + direction.x
+
+
         float yVelocity = velocity.y;
         velocity.y = 0;
-        velocity += direction * acceletation;
+        velocity += localDirection * acceletation;
 
         //Add new Acceleration
         if (velocity.sqrMagnitude > speed * speed) {
