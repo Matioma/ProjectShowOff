@@ -12,4 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a0ac1852dda4ee4aab44e097d478dd7, type: 3}
   m_Name: Fox
   m_EditorClassIdentifier: 
-  animations: []
+  AudioClips:
+  - aniomationType: 0
+    clips:
+    - {fileID: 8300000, guid: 971b39807b6f30b4ba6bff3db3998e86, type: 3}
+    - {fileID: 8300000, guid: e1f401a1a75758448af4ba93c3425acd, type: 3}
+    - {fileID: 8300000, guid: 48c648200a4a5bd4f930fa70c1df7195, type: 3}
+    - {fileID: 8300000, guid: 1f12032bf3d32374d938bb69cfe8d00b, type: 3}
+    - {fileID: 8300000, guid: a16e1f3372ca00849a1d81a40241621b, type: 3}
+    - {fileID: 8300000, guid: d7006a5137d56d8449c959e1d39b3e49, type: 3}
+  - aniomationType: 1
+    clips:
+    - {fileID: 8300000, guid: 193546a7d94da4b49aaf6b91ec047e62, type: 3}
+    - {fileID: 8300000, guid: 6f05f37b80be810459e28e0bf5bb1019, type: 3}
+  - aniomationType: 2
+    clips:
+    - {fileID: 8300000, guid: 33e461fb707924c4297815ceb46620be, type: 3}
