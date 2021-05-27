@@ -7,12 +7,12 @@ public class CharachterModel : MonoBehaviour, ICharacterController
 {
     protected CharacterController controller;
 
-    [SerializeField]
-    public UnityEvent onUseSkill;
+    //[SerializeField]
+    //public UnityEvent onUseSkill;
 
     
-    public UnityEvent OnLand;
-    public UnityEvent OnUseSpell;
+    public UnityEvent OnLanding;
+    public UnityEvent onUseSkill;
     public UnityEvent OnWalking;
 
 
@@ -39,6 +39,8 @@ public class CharachterModel : MonoBehaviour, ICharacterController
 
     protected Vector3 velocity = Vector3.zero;
 
+    bool wasInAir = false;
+
     public void AddAceeleration(Vector3 velocity) {
         this.velocity.y = 0;
         this.velocity += velocity;
@@ -54,6 +56,21 @@ public class CharachterModel : MonoBehaviour, ICharacterController
 
     private void FixedUpdate()
     {
+        if (wasInAir && controller.isGrounded)
+        {
+            wasInAir = false;
+            OnLanding?.Invoke();
+        }
+        else if (!controller.isGrounded) {
+            wasInAir = true;
+        }
+
+        //wasInAir = !controller.isGrounded;
+        
+        //wasInAir = controller.isGrounded;
+       
+
+
         Vector3 XYVelocity = new Vector3(velocity.x, 0, velocity.y);
         if (XYVelocity.sqrMagnitude > 0) {
             OnWalking?.Invoke();//If Walking
@@ -101,14 +118,16 @@ public class CharachterModel : MonoBehaviour, ICharacterController
         if (hit.normal == Vector3.down) {
             velocity.y = 0;
         }
-        if (canStand(hit.normal, surfaceTolerance)){
-            OnLand?.Invoke();
-            velocity.y = 0;
-        }
-        else {
-            velocity += hit.normal;
-        }
-        
+        //if (canStand(hit.normal, surfaceTolerance) && wasInAir){
+        //    OnLanding?.Invoke();
+        //    velocity.y = 0;
+        //    wasInAir = false;
+        //    //Debug.Log("grounded");
+        //}else {
+        //    velocity += hit.normal;
+        //    wasInAir = true;
+        //    //Debug.Log("not grounded");
+        //}
     }
 
 

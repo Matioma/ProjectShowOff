@@ -34,7 +34,6 @@ public class Player : MonoBehaviour
     }
 
     public void Die() {
-        Debug.Log("Die");
         onDeath?.Invoke();
     }
 
