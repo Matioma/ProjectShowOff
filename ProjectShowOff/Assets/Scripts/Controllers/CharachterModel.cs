@@ -7,6 +7,9 @@ public class CharachterModel : MonoBehaviour, ICharacterController
 {
     protected CharacterController controller;
 
+    [SerializeField]
+    protected Animator animator;
+
     //[SerializeField]
     //public UnityEvent onUseSkill;
 
@@ -14,6 +17,7 @@ public class CharachterModel : MonoBehaviour, ICharacterController
     public UnityEvent OnLanding;
     public UnityEvent onUseSkill;
     public UnityEvent OnWalking;
+    public UnityEvent OnStanding;
 
 
 
@@ -54,6 +58,8 @@ public class CharachterModel : MonoBehaviour, ICharacterController
     }
 
 
+
+
     private void FixedUpdate()
     {
         if (wasInAir && controller.isGrounded)
@@ -64,16 +70,21 @@ public class CharachterModel : MonoBehaviour, ICharacterController
         else if (!controller.isGrounded) {
             wasInAir = true;
         }
-
-        //wasInAir = !controller.isGrounded;
-        
-        //wasInAir = controller.isGrounded;
        
 
 
-        Vector3 XYVelocity = new Vector3(velocity.x, 0, velocity.y);
-        if (XYVelocity.sqrMagnitude > 0) {
+        Vector3 XZVelocity = new Vector3(velocity.x, 0, velocity.z);
+
+        Debug.Log(XZVelocity);
+        //if (animator != null) animator.SetBool("IsMoving", XZVelocity.sqrMagnitude > 0);
+        if (animator != null) animator.SetFloat("Velocity", XZVelocity.sqrMagnitude);
+
+        if (XZVelocity.sqrMagnitude > 0)
+        {
             OnWalking?.Invoke();//If Walking
+        }
+        else {
+            OnStanding?.Invoke();
         }
 
         velocity.y -= gravity * Time.deltaTime; // gravity Acceleration
