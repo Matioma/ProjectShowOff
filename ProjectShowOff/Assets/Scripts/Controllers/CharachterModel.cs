@@ -10,8 +10,12 @@ public class CharachterModel : MonoBehaviour, ICharacterController
     [SerializeField]
     public UnityEvent onUseSkill;
 
-    [SerializeField]
-    ChracterStateMachine stateMachine;
+    
+    public UnityEvent OnLand;
+    public UnityEvent OnUseSpell;
+    public UnityEvent OnWalking;
+
+
 
 
 
@@ -24,10 +28,13 @@ public class CharachterModel : MonoBehaviour, ICharacterController
     [SerializeField]
     float gravity = 20.0f;
 
+    [SerializeField]
+    [Range(0, 1)]
+    [Tooltip("the higher the value the more flat should be the surface for landing")]
+    float surfaceTolerance; 
+
     [Range(0,1)]
     public float drag = 0.8f;
-
-    float currentSpeed = 0;
 
 
     protected Vector3 velocity = Vector3.zero;
@@ -47,8 +54,19 @@ public class CharachterModel : MonoBehaviour, ICharacterController
 
     private void FixedUpdate()
     {
-        velocity.y -= gravity * Time.deltaTime;
-        controller.Move(velocity* Time.deltaTime);
+        Vector3 XYVelocity = new Vector3(velocity.x, 0, velocity.y);
+        if (XYVelocity.sqrMagnitude > 0) {
+            OnWalking?.Invoke();//If Walking
+        }
+
+        velocity.y -= gravity * Time.deltaTime; // gravity Acceleration
+        controller.Move(velocity* Time.deltaTime); 
+
+
+        //Add XY drag
+        float y = velocity.y;
+        velocity *= drag;
+        velocity.y = y;
     }
 
 
@@ -61,21 +79,19 @@ public class CharachterModel : MonoBehaviour, ICharacterController
 
 
     void Update() {
-        float y = velocity.y;
-        velocity *= drag;
-        velocity.y = y;
+        
     }
 
     public void Move(Vector3 direction)
     {
         float yVelocity = velocity.y;
-
         velocity.y = 0;
         velocity += direction * acceletation;
 
         //Add new Acceleration
         if (velocity.sqrMagnitude > speed * speed) {
             velocity = velocity.normalized * speed;
+          
         }
         velocity.y = yVelocity;
     } 
@@ -85,7 +101,18 @@ public class CharachterModel : MonoBehaviour, ICharacterController
         if (hit.normal == Vector3.down) {
             velocity.y = 0;
         }
+        if (canStand(hit.normal, surfaceTolerance)){
+            OnLand?.Invoke();
+            velocity.y = 0;
+        }
+        else {
+            velocity += hit.normal;
+        }
+        
     }
 
- 
+
+    bool canStand(Vector3 normal, float tolerance) {
+        return (Vector3.Dot(normal, Vector3.up) > tolerance) ;
+    }
 }

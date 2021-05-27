@@ -7,18 +7,30 @@ using UnityEngine;
 public class ChracterStateMachine
 {
     [SerializeField]
-    string intialStateIdentifier;
+    State intialState;
 
-    [SerializeField]
+   
     State activState;
 
     [SerializeField]
     List<NameStatePair> ObjectStates;
 
 
+    public void Init()
+    {
+        SetState(intialState);
+    }
+
+
     public void SetState(string identifier) {
         activState?.Exit();
         activState = findState(identifier);
+        activState?.Enter();
+    }
+
+    public void SetState(State state) {
+        activState?.Exit();
+        activState = state;
         activState?.Enter();
     }
 

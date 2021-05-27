@@ -13,11 +13,19 @@ public class CharacterAudioSet : ScriptableObject
         return animations[0].clips[0];
     }
 
-
     public AudioClip GetStepSound()
     {
         Pair pairSteps = getPairOfType(EAnimation.Movement);
         if (pairSteps != null) { 
+            return pairSteps.getRandomSound();
+        }
+        return null;
+    }
+
+    public AudioClip GetSpecialAbilitySound() {
+        Pair pairSteps = getPairOfType(EAnimation.SpecialAbility);
+        if (pairSteps != null)
+        {
             return pairSteps.getRandomSound();
         }
         return null;

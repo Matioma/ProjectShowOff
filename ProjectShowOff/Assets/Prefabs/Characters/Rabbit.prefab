@@ -337,6 +337,16 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  stateMachine:
+    intialStateIdentifier: Idle
+    activState: {fileID: 0}
+    ObjectStates:
+    - name: Idle
+      state: {fileID: 11400000, guid: 6f2c943ce069b1e4c8dd4e2ef405ec65, type: 2}
+    - name: Running
+      state: {fileID: 11400000, guid: 22631395eee5cac4bb3c1e890360a5c3, type: 2}
+    - name: Air
+      state: {fileID: 11400000, guid: 6f7ae18413fb9764185b132e604605f7, type: 2}
   acceletation: 10
   speed: 8
   gravity: 20

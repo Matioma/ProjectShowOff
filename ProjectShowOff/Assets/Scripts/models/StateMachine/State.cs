@@ -4,9 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 
-
-[CreateAssetMenu(fileName = "State", menuName = "StateMachine/State", order = 1)]
-public class State : ScriptableObject
+public class State
 {
     [SerializeField]
     UnityEvent onStateEnter;
@@ -17,13 +15,14 @@ public class State : ScriptableObject
 
     [SerializeField]
     State targetState;
-    public void Enter() { 
-
+    public void Enter() {
+        onStateEnter?.Invoke();
     }
 
-    public void UpdateState() { 
-        
+    public void UpdateState() {
+        onStateUpdate?.Invoke();
     }
-    public void Exit() { 
+    public void Exit() {
+        onStateExit?.Invoke();
     }
 }
