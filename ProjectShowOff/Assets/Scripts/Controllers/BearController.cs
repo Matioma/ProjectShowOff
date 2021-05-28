@@ -28,7 +28,7 @@ public class BearController : CharachterModel
 
     public override void SpecialAction()
     {
-        base.SpecialAction();
+        
         bearTriesToPush = true;
     }
 
@@ -41,7 +41,8 @@ public class BearController : CharachterModel
         pushable.transform.parent = transform;
         attachedPushable = pushable;
         speed = moveSpeedWhenPushing;
-        onUseSkill?.Invoke();
+        //onUseSkill?.Invoke();
+        base.SpecialAction();
     }
 
     void DetachPushable()
