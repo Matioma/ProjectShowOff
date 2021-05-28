@@ -5260,7 +5260,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6243128901803473554, guid: b7e7326288e687841ab67ad7bbba2c34, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -18.69992
+      value: -17.6
       objectReference: {fileID: 0}
     - target: {fileID: 6243128901803473554, guid: b7e7326288e687841ab67ad7bbba2c34, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5268,7 +5268,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6243128901803473554, guid: b7e7326288e687841ab67ad7bbba2c34, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -147.61728
+      value: -151.02
       objectReference: {fileID: 0}
     - target: {fileID: 6243128901803473554, guid: b7e7326288e687841ab67ad7bbba2c34, type: 3}
       propertyPath: m_LocalRotation.w
@@ -41361,7 +41361,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8102638679887913729, guid: f4de830e9efbaa6409b3c3e8633c10d1, type: 3}
       propertyPath: characterControllers.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8102638679887913729, guid: f4de830e9efbaa6409b3c3e8633c10d1, type: 3}
       propertyPath: characterControllers.Array.data[0]
@@ -50216,6 +50216,10 @@ PrefabInstance:
     - target: {fileID: 2723778934439330149, guid: a2795fff94e5b8848972f763850f332e, type: 3}
       propertyPath: m_Name
       value: Bear
+      objectReference: {fileID: 0}
+    - target: {fileID: 2723778934439330149, guid: a2795fff94e5b8848972f763850f332e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7725581517119564611, guid: a2795fff94e5b8848972f763850f332e, type: 3}
       propertyPath: speed
