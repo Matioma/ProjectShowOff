@@ -41,6 +41,9 @@ public class CameraRestricted : MonoBehaviour
 
     private void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+
         offset = transform.position - targetBody.position;
 
         initialPosition = transform.position;

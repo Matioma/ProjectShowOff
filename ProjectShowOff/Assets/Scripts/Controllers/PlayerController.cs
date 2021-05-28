@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour, ICharacterController
     Player playerModel;
 
     void Start() {
-        playerModel = GetComponent<Player>();
+       playerModel = GetComponent<Player>();
     }
 
     void Update()

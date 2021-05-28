@@ -24,7 +24,6 @@ public class Camera3rdPerson : MonoBehaviour
     private void Start()
     {
         offset = transform.position - targetBody.position;
-        Cursor.lockState = CursorLockMode.Locked;
     }
 
     private void Update()
