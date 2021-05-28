@@ -28,7 +28,6 @@ public class DangerousObstacle : MonoBehaviour
         CharachterModel charachterModel = collision.gameObject.GetComponent<CharachterModel>();
         if (charachterModel != null) {
             onCollisionWithCharacter?.Invoke();
-            Debug.Log(playerModel.gameObject.name);
             playerModel?.Die();
         }
     }

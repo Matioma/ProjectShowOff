@@ -112,7 +112,7 @@ public class CharachterModel : MonoBehaviour, ICharacterController
 
     public void Move(Vector3 pDirection)
     {
-        Debug.Log(pDirection);
+
 
         Vector3 localDirection = transform.forward * pDirection.z + transform.right * pDirection.x;
 

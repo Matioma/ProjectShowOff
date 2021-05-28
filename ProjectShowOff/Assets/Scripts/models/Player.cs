@@ -33,13 +33,18 @@ public class Player : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
+    public void LoadProgress() {
+        CheckPoint.LoadProgress();
+    }
+
+
     public void Die() {
         onDeath?.Invoke();
     }
 
     private void Start()
     {
-        onDeath.AddListener(RestartLevel);
+        onDeath.AddListener(LoadProgress);
     }
 
     public void SwitchCharacter() {
@@ -51,6 +56,6 @@ public class Player : MonoBehaviour
 
     private void OnDestroy()
     {
-        onDeath.RemoveListener(RestartLevel);
+        onDeath.RemoveListener(LoadProgress);
     }
 }
