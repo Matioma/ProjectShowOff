@@ -38,11 +38,15 @@ public class Pickup : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        foreach (var character in characters) {
-            if (other.gameObject == character.gameObject) {
-                onPickedUp?.Invoke();
-            }
+        if (other.GetComponent<CharachterModel>() != null) {
+            onPickedUp?.Invoke();
         }
+        //Debug.Log(other.gameObject.name);
+        //foreach (var character in characters) {
+        //    if (other.gameObject == character.gameObject) {
+        //        onPickedUp?.Invoke();
+        //    }
+        //}
     }
 
     private void OnDestroy()
