@@ -75,7 +75,7 @@ public class CharachterModel : MonoBehaviour, ICharacterController
 
         Vector3 XZVelocity = new Vector3(velocity.x, 0, velocity.z);
 
-        Debug.Log(XZVelocity);
+
         //if (animator != null) animator.SetBool("IsMoving", XZVelocity.sqrMagnitude > 0);
         if (animator != null) animator.SetFloat("Velocity", XZVelocity.sqrMagnitude);
 
