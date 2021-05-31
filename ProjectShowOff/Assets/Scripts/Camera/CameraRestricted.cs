@@ -16,6 +16,8 @@ public class CameraRestricted : MonoBehaviour
 
     Vector3 offset;
 
+    Vector3 cameraDirection;
+
     [SerializeField]
     bool isRestricted;
 
@@ -45,6 +47,7 @@ public class CameraRestricted : MonoBehaviour
         Cursor.visible = false;
 
         offset = transform.position - targetBody.position;
+        cameraDirection = offset.normalized;
 
         initialPosition = transform.position;
         initialRotation = transform.rotation;
@@ -83,6 +86,8 @@ public class CameraRestricted : MonoBehaviour
             transform.RotateAround(targetBody.position, Vector3.up, yRotation);
         }
         Quaternion offsetQuaternion = Quaternion.Euler(xRotation, yRotation, 0);
+     
+
         transform.position = targetBody.position + offsetQuaternion * offset;
     }
 
@@ -90,8 +95,7 @@ public class CameraRestricted : MonoBehaviour
         float deltaX = Input.GetAxis("Mouse X") * rotationSensitivity * Time.deltaTime;
         yRotation += deltaX;
 
-        //yRotation = Mathf.Clamp(yRotation, -maxRotationY, maxRotationY);
-
+        
 
         float deltaY = Input.GetAxis("Mouse Y") * rotationSensitivity * Time.deltaTime;
         xRotation -= deltaY;
@@ -105,12 +109,39 @@ public class CameraRestricted : MonoBehaviour
             transform.RotateAround(targetBody.position, Vector3.up, yRotation);
         }
         Quaternion offsetQuaternion = Quaternion.Euler(xRotation, yRotation, 0);
-        transform.position = targetBody.position + offsetQuaternion * offset;
+
+
+        //transform.position = targetBody.position + offsetQuaternion * offset;
+        transform.position = targetBody.position + getNewCameraOffset(offsetQuaternion);
 
 
         Vector3 lookDirectionTarget = targetBody.position + transform.forward;
         lookDirectionTarget.y = targetBody.position.y;
         targetBody.LookAt(lookDirectionTarget);
+    }
+
+
+
+    Vector3 getNewCameraOffset(Quaternion rotation) {
+        Vector3 offsetDirection  = (rotation * offset).normalized;
+
+
+        RaycastHit hit;
+        if (Physics.Raycast(targetBody.position, offsetDirection, out hit, Mathf.Infinity)) {
+            Debug.DrawRay(targetBody.position, offsetDirection * hit.distance, Color.yellow,0.1f);
+
+            Vector3 hitDirection = hit.point - targetBody.position;
+
+            if (hitDirection.magnitude < offset.magnitude && hitDirection.magnitude > 1) {
+                return hitDirection;
+            }
+
+            //return hit.point-targetBody.position;
+            //Debug.Log("Did Hit");
+            Debug.Log(hit.transform.name);
+        }
+
+        return rotation * offset;
     }
 
 

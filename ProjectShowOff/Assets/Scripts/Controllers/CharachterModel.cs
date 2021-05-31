@@ -80,17 +80,10 @@ public class CharachterModel : MonoBehaviour, ICharacterController
         this.velocity.y = 0;
         this.velocity += velocity;
     }
-
-
-
     protected void Awake()
     {
         controller = GetComponent<CharacterController>();
     }
-
-
-
-
     private void FixedUpdate()
     {
         if (wasInAir && controller.isGrounded)
@@ -162,16 +155,7 @@ public class CharachterModel : MonoBehaviour, ICharacterController
         if (hit.normal == Vector3.down) {
             velocity.y = 0;
         }
-        //if (canStand(hit.normal, surfaceTolerance) && wasInAir){
-        //    OnLanding?.Invoke();
-        //    velocity.y = 0;
-        //    wasInAir = false;
-        //    //Debug.Log("grounded");
-        //}else {
-        //    velocity += hit.normal;
-        //    wasInAir = true;
-        //    //Debug.Log("not grounded");
-        //}
+      
     }
 
 
