@@ -27,6 +27,16 @@ public class CheckPoint : MonoBehaviour
         playerModel = FindObjectOfType<Player>();
 
         onCheckPointReached.AddListener(SaveProgress);
+
+
+
+    }
+
+
+
+    private void Start()
+    {
+        SaveProgress();
     }
     void CharacterEnterZone() {
         charactersInZone++;
