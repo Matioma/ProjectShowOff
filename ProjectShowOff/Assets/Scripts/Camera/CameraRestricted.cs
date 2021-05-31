@@ -125,6 +125,7 @@ public class CameraRestricted : MonoBehaviour
     Vector3 getNewCameraOffset(Quaternion rotation) {
         Vector3 offsetDirection  = (rotation * offset).normalized;
 
+
         RaycastHit hit;
         if (Physics.Raycast(targetBody.position, offsetDirection, out hit, Mathf.Infinity)) {
             Debug.DrawRay(targetBody.position, offsetDirection * hit.distance, Color.yellow,0.1f);
@@ -137,7 +138,7 @@ public class CameraRestricted : MonoBehaviour
 
             //return hit.point-targetBody.position;
             //Debug.Log("Did Hit");
-            //Debug.Log(hit.transform.name);
+            Debug.Log(hit.transform.name);
         }
 
         return rotation * offset;
