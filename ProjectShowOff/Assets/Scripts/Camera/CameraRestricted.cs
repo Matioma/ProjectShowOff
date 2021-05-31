@@ -7,16 +7,23 @@ public class CameraRestricted : MonoBehaviour
     [SerializeField]
     Transform targetBody;
 
+    Vector3 targetPosition;
+
+
     [SerializeField]
     float rotationSensitivity;
 
-    [Range(0, 1)]
-    [SerializeField]
-    float followSensitivity;
+    //[Range(0, 1)]
+    //[SerializeField]
+    //float followSensitivity;
 
-    Vector3 offset;
+    Vector3 initialOffset;
 
-    Vector3 cameraDirection;
+    Vector3 rotatedOffsetVector;
+
+
+
+
 
     [SerializeField]
     bool isRestricted;
@@ -28,15 +35,20 @@ public class CameraRestricted : MonoBehaviour
     [Range(0, 90)]
     float maxRotationY;
 
-
-
-
     float xRotation = 0f;
     float yRotation = 0f;
 
-
     Vector3 initialPosition;
     Quaternion initialRotation;
+
+
+    [SerializeField]
+    [Range(0,1)]
+    float transitionTime = 0.5f;
+    float timer=0;
+
+    [SerializeField]
+    bool isTransitioning;
 
 
     Player playerModel;
@@ -46,8 +58,7 @@ public class CameraRestricted : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
-        offset = transform.position - targetBody.position;
-        cameraDirection = offset.normalized;
+        initialOffset = transform.position - targetBody.position;
 
         initialPosition = transform.position;
         initialRotation = transform.rotation;
@@ -59,48 +70,56 @@ public class CameraRestricted : MonoBehaviour
 
     private void Update()
     {
+        //if (!isRestricted) 
+        //FreeCamera();
+        //else 
+        //RestrictedCamera();
 
-        if (!isRestricted) FreeCamera();
-        else RestrictedCamera();
+
+        if (!isTransitioning)
+        {
+            FreeCamera();
+            transform.position = Vector3.Lerp(transform.position, targetBody.position + rotatedOffsetVector, 1);
+        }
+        
+        //transform.position = targetBody.position + rotatedOffsetVector;
+        //transform.position = Vector3.Lerp(transform.position, targetPosition, 0.9f);
     }
 
 
-    void RestrictedCamera()
-    {
-        float deltaX = Input.GetAxis("Mouse X") * rotationSensitivity * Time.deltaTime;
-        yRotation += deltaX;
+    //void RestrictedCamera()
+    //{
+    //    float deltaX = Input.GetAxis("Mouse X") * rotationSensitivity * Time.deltaTime;
+    //    yRotation += deltaX;
 
-        yRotation = Mathf.Clamp(yRotation, -maxRotationY, maxRotationY);
-        yRotation = Mathf.Clamp(yRotation, -maxRotationX, maxRotationX);
-
-
-        float deltaY = Input.GetAxis("Mouse Y") * rotationSensitivity * Time.deltaTime;
-        xRotation -= deltaY;
-        xRotation = Mathf.Clamp(xRotation, -maxRotationX, maxRotationX);
+    //    yRotation = Mathf.Clamp(yRotation, -maxRotationY, maxRotationY);
+    //    yRotation = Mathf.Clamp(yRotation, -maxRotationX, maxRotationX);
 
 
-        if (deltaX != 0 || deltaY != 0)
-        {
-            transform.SetPositionAndRotation(initialPosition, initialRotation);
-            transform.RotateAround(targetBody.position, Vector3.right, xRotation);
-            transform.RotateAround(targetBody.position, Vector3.up, yRotation);
-        }
-        Quaternion offsetQuaternion = Quaternion.Euler(xRotation, yRotation, 0);
+    //    float deltaY = Input.GetAxis("Mouse Y") * rotationSensitivity * Time.deltaTime;
+    //    xRotation -= deltaY;
+    //    xRotation = Mathf.Clamp(xRotation, -maxRotationX, maxRotationX);
+
+
+    //    if (deltaX != 0 || deltaY != 0)
+    //    {
+    //        transform.SetPositionAndRotation(initialPosition, initialRotation);
+    //        transform.RotateAround(targetBody.position, Vector3.right, xRotation);
+    //        transform.RotateAround(targetBody.position, Vector3.up, yRotation);
+    //    }
+    //    Quaternion offsetQuaternion = Quaternion.Euler(xRotation, yRotation, 0);
      
 
-        transform.position = targetBody.position + offsetQuaternion * offset;
-    }
+    //    transform.position = targetBody.position + offsetQuaternion * offset;
+    //}
 
     void FreeCamera() {
         float deltaX = Input.GetAxis("Mouse X") * rotationSensitivity * Time.deltaTime;
         yRotation += deltaX;
 
-        
-
         float deltaY = Input.GetAxis("Mouse Y") * rotationSensitivity * Time.deltaTime;
         xRotation -= deltaY;
         xRotation = Mathf.Clamp(xRotation, -maxRotationX, maxRotationX);
-
 
         if (deltaX != 0 || deltaY != 0)
         {
@@ -111,19 +130,34 @@ public class CameraRestricted : MonoBehaviour
         Quaternion offsetQuaternion = Quaternion.Euler(xRotation, yRotation, 0);
 
 
-        //transform.position = targetBody.position + offsetQuaternion * offset;
-        transform.position = targetBody.position + getNewCameraOffset(offsetQuaternion);
-
+        rotatedOffsetVector = getNewCameraOffset(offsetQuaternion);
 
         Vector3 lookDirectionTarget = targetBody.position + transform.forward;
         lookDirectionTarget.y = targetBody.position.y;
         targetBody.LookAt(lookDirectionTarget);
     }
 
+    void startTransition(Vector3 position) {
+        timer = 0;
+        StartCoroutine(transition(position));
+    }
+
+    IEnumerator transition(Vector3 position) {
+        isTransitioning = true;
+     
+        while (timer < transitionTime) {
+            timer += Time.deltaTime;
+            transform.position = Vector3.Lerp(transform.position, position, timer / transitionTime);
+            Debug.Log(timer / transitionTime);
+            yield return null;
+        }
+        isTransitioning = false;
+    }
+
 
 
     Vector3 getNewCameraOffset(Quaternion rotation) {
-        Vector3 offsetDirection  = (rotation * offset).normalized;
+        Vector3 offsetDirection  = (rotation * initialOffset).normalized;
 
 
         RaycastHit hit;
@@ -132,21 +166,17 @@ public class CameraRestricted : MonoBehaviour
 
             Vector3 hitDirection = hit.point - targetBody.position;
 
-            if (hitDirection.magnitude < offset.magnitude && hitDirection.magnitude > 1) {
+            if (hitDirection.magnitude < initialOffset.magnitude && hitDirection.magnitude > 1) {
                 return hitDirection;
             }
-
-            //return hit.point-targetBody.position;
-            //Debug.Log("Did Hit");
-            Debug.Log(hit.transform.name);
         }
-
-        return rotation * offset;
+        return rotation * initialOffset;
     }
 
 
     public void UpdateFollowedCharacter() {
         targetBody = playerModel.ControlledCharacter.transform;
+        startTransition(targetBody.position + rotatedOffsetVector);
     }
 
     private void OnDestroy()
