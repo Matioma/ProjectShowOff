@@ -17,7 +17,7 @@ public class CharachterModel : MonoBehaviour, ICharacterController
     public UnityEvent OnStanding;
 
 
-    bool skillsIsEnabled;
+    bool skillsIsEnabled =true;
     public bool SkillIsEnabled
     {
         get
