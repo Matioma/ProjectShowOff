@@ -15,11 +15,9 @@ MonoBehaviour:
   AudioClips:
   - aniomationType: 0
     clips:
-    - {fileID: 8300000, guid: 99f9de25454f70442a47c78558d70f51, type: 3}
-    - {fileID: 8300000, guid: 3faf4261fe266474dbfe7d7aad40b8e6, type: 3}
-    - {fileID: 8300000, guid: 1e18067be321d1e4bb51eb4f5b971b93, type: 3}
-    - {fileID: 8300000, guid: e5af25e38975cdf4abe14df5980b8fbd, type: 3}
-    - {fileID: 8300000, guid: 8d688a0fc7f7f354aab5574b86405db9, type: 3}
+    - {fileID: 8300000, guid: 812bab4af481e3c4cb1b9c139d92673c, type: 3}
+    - {fileID: 8300000, guid: 08561a5cc2c2c0a47b39933758727787, type: 3}
+    - {fileID: 8300000, guid: f3e12e6b4c1acd647af67990eb424802, type: 3}
   - aniomationType: 1
     clips:
     - {fileID: 8300000, guid: c8cbfa16253a0d042b8894983831dc79, type: 3}
