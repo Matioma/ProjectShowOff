@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour, ICharacterController
             ReleaseSpecialAction();
         }
 
-        if (Input.GetMouseButtonDown(0)) {
+        if (Input.GetMouseButtonDown(1)) {
             playerModel.SwitchCharacter();
         }
     }
