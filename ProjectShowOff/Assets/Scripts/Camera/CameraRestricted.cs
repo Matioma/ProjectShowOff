@@ -44,7 +44,7 @@ public class CameraRestricted : MonoBehaviour
 
     [SerializeField]
     [Range(0,1)]
-    float transitionTime = 1;
+    float transitionTime = 0.5f;
     float timer=0;
 
     [SerializeField]
