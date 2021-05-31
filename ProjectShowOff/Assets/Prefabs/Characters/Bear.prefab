@@ -162,13 +162,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fb827a0582d89c47b2ad51ab27d4da4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnLand:
+  animator: {fileID: 0}
+  OnLanding:
     m_PersistentCalls:
       m_Calls: []
   onUseSkill:
     m_PersistentCalls:
       m_Calls: []
   OnWalking:
+    m_PersistentCalls:
+      m_Calls: []
+  OnStanding:
     m_PersistentCalls:
       m_Calls: []
   acceletation: 10
@@ -289,7 +293,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 32.035152
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
