@@ -10,8 +10,13 @@ public class TarTrap : MonoBehaviour
     float slowPercent;
 
 
+    [Header("Character skill disable options")]
     [SerializeField]
-    bool disablesSkills;
+    bool disableRabbit;
+    [SerializeField]
+    bool disableFox;
+    [SerializeField]
+    bool disableBear;
 
     private void Start()
     {
@@ -23,7 +28,9 @@ public class TarTrap : MonoBehaviour
         CharachterModel charachter = other.GetComponent<CharachterModel>();
         if (charachter !=null) {
             charachter.Slow(slowPercent);
-            if (disablesSkills) { charachter.DisableSkills(); }
+            if (charachter is BearController && disableBear) { charachter.DisableSkills(); }
+            if (charachter is FoxController && disableFox) { charachter.DisableSkills(); }
+            if (charachter is RabbitController && disableRabbit) { charachter.DisableSkills(); }
         }
     }
 
@@ -33,7 +40,9 @@ public class TarTrap : MonoBehaviour
         if (charachter != null)
         {
             charachter.ReverseSlow(slowPercent);
-            if (disablesSkills) { charachter.EnableSkills(); }
+            if (charachter is BearController && disableBear) { charachter.EnableSkills(); }
+            if (charachter is FoxController && disableFox) { charachter.EnableSkills(); }
+            if (charachter is RabbitController && disableRabbit) { charachter.EnableSkills(); }
         }
     }
 }
