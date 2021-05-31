@@ -36,8 +36,8 @@ public class CharacterAudioManager : MonoBehaviour
     }
 
 
-    public void PlayStep() {
-        AudioClip audio = characterAudioSet.GetStepSound();
+    public void PlayRandomStep() {
+        AudioClip audio = characterAudioSet.GetRandomStepSound();
         if (audio != null) audioSource.PlayOneShot(audio);
     }
 
@@ -48,5 +48,9 @@ public class CharacterAudioManager : MonoBehaviour
     }
 
 
+    public void PlayNextOrderedStep() {
+        AudioClip audio = characterAudioSet.GetStepSound();
+        if (audio != null) audioSource.PlayOneShot(audio);
+    }
 
 }
