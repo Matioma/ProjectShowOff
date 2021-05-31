@@ -15,6 +15,7 @@ public class FoxController : CharachterModel
 
     public override void SpecialAction()
     {
+        if (!SkillIsEnabled) return;
         if (!controller.isGrounded) return;
         onUseSkill?.Invoke();
         if (!isDashing) { 

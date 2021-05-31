@@ -10,9 +10,6 @@ public class CharachterModel : MonoBehaviour, ICharacterController
     [SerializeField]
     protected Animator animator;
 
-    //[SerializeField]
-    //public UnityEvent onUseSkill;
-
     
     public UnityEvent OnLanding;
     public UnityEvent onUseSkill;
@@ -20,14 +17,48 @@ public class CharachterModel : MonoBehaviour, ICharacterController
     public UnityEvent OnStanding;
 
 
+    bool skillsIsEnabled;
+    public bool SkillIsEnabled
+    {
+        get
+        {
+            return skillsIsEnabled;
+        }
+        private set {
+            skillsIsEnabled = value;
+        }
+    }
 
-
+    public void DisableSkills() {
+        SkillIsEnabled = false;
+    }
+    public void EnableSkills() {
+        SkillIsEnabled = true;
+    }
 
     [Header("movement")]
     [SerializeField]
     float acceletation = 10;
     [SerializeField]
     protected float speed = 6.0f;
+
+    public void SetSpeed(float speed) {
+        if (speed > 0){
+            this.speed = speed;
+        } else {
+            this.speed = 0;
+        }
+    }
+
+    public void Slow(float percentage)
+    {
+        float percentSlow = percentage / 100.0f;
+        speed = speed *(1- percentSlow);
+    }
+    public void ReverseSlow(float percentage) {
+        float percentSlow = percentage / 100.0f;
+        speed = speed / (1 - percentSlow);
+    }
 
     [SerializeField]
     float gravity = 20.0f;
@@ -112,12 +143,7 @@ public class CharachterModel : MonoBehaviour, ICharacterController
 
     public void Move(Vector3 pDirection)
     {
-
-
         Vector3 localDirection = transform.forward * pDirection.z + transform.right * pDirection.x;
-
-        //transform.forward + direction.x
-
 
         float yVelocity = velocity.y;
         velocity.y = 0;

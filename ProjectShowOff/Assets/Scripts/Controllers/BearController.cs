@@ -28,7 +28,7 @@ public class BearController : CharachterModel
 
     public override void SpecialAction()
     {
-        
+        if (!SkillIsEnabled) return;
         bearTriesToPush = true;
     }
 
@@ -40,7 +40,8 @@ public class BearController : CharachterModel
     void AttachPushable(PushableObject pushable) {
         pushable.transform.parent = transform;
         attachedPushable = pushable;
-        speed = moveSpeedWhenPushing;
+        SetSpeed(moveSpeedWhenPushing);
+        //speed = moveSpeedWhenPushing;
         //onUseSkill?.Invoke();
         base.SpecialAction();
     }
@@ -50,7 +51,8 @@ public class BearController : CharachterModel
         if (attachedPushable == null) return;
         attachedPushable.transform.parent = attachedPushable.GetInitialParent;
         attachedPushable = null;
-        speed = initialmovementSpeed;
+
+        SetSpeed(initialmovementSpeed);
     }
 
 
