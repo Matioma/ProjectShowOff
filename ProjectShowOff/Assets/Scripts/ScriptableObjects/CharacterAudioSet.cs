@@ -13,11 +13,20 @@ public class CharacterAudioSet : ScriptableObject
         return AudioClips[0].clips[0];
     }
 
-    public AudioClip GetStepSound()
+    public AudioClip GetRandomStepSound()
     {
         Pair pairSteps = getPairOfType(EAudioClipType.Movement);
         if (pairSteps != null) { 
             return pairSteps.getRandomSound();
+        }
+        return null;
+    }
+
+
+    public AudioClip GetStepSound() {
+        Pair pairSteps = getPairOfType(EAudioClipType.Movement);
+        if (pairSteps != null) {
+            return pairSteps.getNextClip();
         }
         return null;
     }
@@ -72,6 +81,7 @@ public class Pair{
     [SerializeField]
     public List<AudioClip> clips;
 
+    int clipId = 0;
 
     public AudioClip getRandomSound() {
         if (clips.Count <= 0) {
@@ -79,5 +89,16 @@ public class Pair{
             return null;
         }
         return clips[Random.Range(0, clips.Count)];
+    }
+
+
+    public AudioClip getNextClip() {
+        if (clips.Count <= 0)
+        {
+            Debug.LogWarning($"the list of clips in CharacterAudio  of {aniomationType} set is empty");
+            return null;
+        }
+        clipId = (clipId + 1) % clips.Count;
+        return clips[clipId];
     }
 }

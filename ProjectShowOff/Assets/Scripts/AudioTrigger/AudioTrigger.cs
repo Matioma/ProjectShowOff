@@ -7,7 +7,7 @@ public class AudioTrigger : MonoBehaviour
     [SerializeField]
     CharacterAudioManager characterAudioManager;
     public void TriggerStep() {
-        characterAudioManager.PlayStep();
+        characterAudioManager.PlayNextOrderedStep();
     }
     public void PlaySound(AudioClip clip) {
         characterAudioManager.PlayAudio(clip);
