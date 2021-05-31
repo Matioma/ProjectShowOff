@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &181600813940449250
+--- !u!1 &3605695576016445340
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,7 +8,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4105852149325875648}
+  - component: {fileID: 609612372233423294}
   m_Layer: 0
   m_Name: Mush_01_LP_button
   m_TagString: Untagged
@@ -16,41 +16,41 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4105852149325875648
+--- !u!4 &609612372233423294
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 181600813940449250}
+  m_GameObject: {fileID: 3605695576016445340}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 211.58, y: 7.84, z: 230.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 74654238607597835}
+  - {fileID: 3568562147628753269}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1995346844233931843
+--- !u!65 &3116430046537800765
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 739409539335371697}
+  m_GameObject: {fileID: 4237259365316393935}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1.2203724, y: 1.2718487, z: 1.2400823}
   m_Center: {x: 0.000000029802322, y: -0.000000029802322, z: -0.000000029802322}
---- !u!114 &4206903485058465814
+--- !u!114 &787779815938490472
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 739409539335371697}
+  m_GameObject: {fileID: 4237259365316393935}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 97dedb9eb06c47a4ca797a02964e694d, type: 3}
@@ -86,12 +86,12 @@ MonoBehaviour:
           m_StringArgument: RightMush
           m_BoolArgument: 0
         m_CallState: 2
---- !u!1001 &469360481771161312
+--- !u!1001 &3894678133922350750
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 4105852149325875648}
+    m_TransformParent: {fileID: 609612372233423294}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 86cc93c50ed65904eb48cc1d6c0e9b80, type: 3}
       propertyPath: m_RootOrder
@@ -143,13 +143,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86cc93c50ed65904eb48cc1d6c0e9b80, type: 3}
---- !u!1 &739409539335371697 stripped
+--- !u!1 &4237259365316393935 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 86cc93c50ed65904eb48cc1d6c0e9b80, type: 3}
-  m_PrefabInstance: {fileID: 469360481771161312}
+  m_PrefabInstance: {fileID: 3894678133922350750}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &74654238607597835 stripped
+--- !u!4 &3568562147628753269 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 86cc93c50ed65904eb48cc1d6c0e9b80, type: 3}
-  m_PrefabInstance: {fileID: 469360481771161312}
+  m_PrefabInstance: {fileID: 3894678133922350750}
   m_PrefabAsset: {fileID: 0}
