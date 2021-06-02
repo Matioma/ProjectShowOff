@@ -36,9 +36,6 @@ public class Geyzer : MonoBehaviour
             }
         }
     }
-
-
-
  
     private void OnTriggerEnter(Collider other)
     {

@@ -26,8 +26,10 @@ public class PlatformTrigger : MonoBehaviour
     private void Awake()
     {
         Rigidbody rigidbody = GetComponent<Rigidbody>();
-        rigidbody.useGravity = false;
-        rigidbody.constraints = RigidbodyConstraints.FreezeAll;
+        if (rigidbody != null) {
+            rigidbody.useGravity = false;
+            rigidbody.constraints = RigidbodyConstraints.FreezeAll;
+        }
     }
 
 
@@ -50,23 +52,4 @@ public class PlatformTrigger : MonoBehaviour
         }
     }
 
-    //private void o(Collision collision)
-    //{
-
-    //    if (collision.gameObject.GetComponent<PushableObject>() || 
-    //        collision.gameObject.GetComponent<CharachterModel>()) {
-    //        NumPushingObjects++;
-    //    }
-    //    Debug.Log(NumPushingObjects);
-    //}
-
-    private void OnCollisionExit(Collision collision)
-    {
-        //if (collision.gameObject.GetComponent<PushableObject>() ||
-        //   collision.gameObject.GetComponent<CharachterModel>())
-        //{
-        //    NumPushingObjects--;
-        //}
-        //Debug.Log(NumPushingObjects);
-    }
 }
