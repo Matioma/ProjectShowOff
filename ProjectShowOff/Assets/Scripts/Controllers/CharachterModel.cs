@@ -10,14 +10,14 @@ public class CharachterModel : MonoBehaviour, ICharacterController
     [SerializeField]
     protected Animator animator;
 
-    
+
     public UnityEvent OnLanding;
     public UnityEvent onUseSkill;
     public UnityEvent OnWalking;
     public UnityEvent OnStanding;
 
 
-    bool skillsIsEnabled =true;
+    bool skillsIsEnabled = true;
     public bool SkillIsEnabled
     {
         get
@@ -43,7 +43,7 @@ public class CharachterModel : MonoBehaviour, ICharacterController
     protected float speed = 6.0f;
 
     public void SetSpeed(float speed) {
-        if (speed > 0){
+        if (speed > 0) {
             this.speed = speed;
         } else {
             this.speed = 0;
@@ -53,7 +53,7 @@ public class CharachterModel : MonoBehaviour, ICharacterController
     public void Slow(float percentage)
     {
         float percentSlow = percentage / 100.0f;
-        speed = speed *(1- percentSlow);
+        speed = speed * (1 - percentSlow);
     }
     public void ReverseSlow(float percentage) {
         float percentSlow = percentage / 100.0f;
@@ -66,10 +66,15 @@ public class CharachterModel : MonoBehaviour, ICharacterController
     [SerializeField]
     [Range(0, 1)]
     [Tooltip("the higher the value the more flat should be the surface for landing")]
-    float surfaceTolerance; 
+    float surfaceTolerance;
 
-    [Range(0,1)]
+    [Range(0, 1)]
     public float drag = 0.8f;
+
+
+    [SerializeField]
+    [Range(0, 90)]
+    float maxAngleFromUp = 50;
 
 
     protected Vector3 velocity = Vector3.zero;
@@ -94,8 +99,6 @@ public class CharachterModel : MonoBehaviour, ICharacterController
         else if (!controller.isGrounded) {
             wasInAir = true;
         }
-       
-
 
         Vector3 XZVelocity = new Vector3(velocity.x, 0, velocity.z);
 
@@ -112,8 +115,9 @@ public class CharachterModel : MonoBehaviour, ICharacterController
         }
 
         velocity.y -= gravity * Time.deltaTime; // gravity Acceleration
-        controller.Move(velocity* Time.deltaTime); 
+        controller.Move(velocity * Time.deltaTime);
 
+        checkSlope();
 
         //Add XY drag
         float y = velocity.y;
@@ -126,12 +130,12 @@ public class CharachterModel : MonoBehaviour, ICharacterController
     public virtual void SpecialAction() {
         onUseSkill?.Invoke();
     }
-    public virtual void ReleaseSpecialAction(){
+    public virtual void ReleaseSpecialAction() {
     }
 
 
     void Update() {
-        
+
     }
 
     public void Move(Vector3 pDirection)
@@ -145,21 +149,63 @@ public class CharachterModel : MonoBehaviour, ICharacterController
         //Add new Acceleration
         if (velocity.sqrMagnitude > speed * speed) {
             velocity = velocity.normalized * speed;
-          
+
         }
         velocity.y = yVelocity;
-    } 
+    }
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
         if (hit.normal == Vector3.down) {
             velocity.y = 0;
         }
-      
     }
 
 
-    bool canStand(Vector3 normal, float tolerance) {
-        return (Vector3.Dot(normal, Vector3.up) > tolerance) ;
+
+    void checkSlope (){
+        RaycastHit ray;
+
+        if (Physics.Raycast(transform.position, Vector3.down, out ray, 10)) {
+
+            Debug.DrawRay(transform.position, ray.normal, Color.green);
+            Vector3 right = Vector3.Cross(ray.normal, Vector3.up);
+            Vector3 slideDirection = Vector3.Cross(ray.normal, right);
+            Debug.DrawRay(transform.position, slideDirection, Color.green);
+            //Debug.Log(maxAngleFromUp);
+            //Debug.Log(canStand(ray.normal, maxAngle));
+            if (canStand(ray.normal, maxAngleFromUp))
+            {
+            }
+            else {
+              
+
+                Vector3 newVelocity = new Vector3(velocity.x, velocity.y, velocity.z);
+                float newSlidingVelocity = Vector3.Dot(newVelocity, slideDirection);
+                Debug.Log(velocity);
+
+                if (controller.isGrounded) {
+                    Debug.Log(slideDirection * newSlidingVelocity);
+
+                    velocity = slideDirection * newSlidingVelocity;
+                }
+            }
+        }
+    }
+
+
+    bool canStand(Vector3 normal, float angleLimit) {
+
+        //Debug.Log(Vector3.Dot(normal, Vector3.up));
+        //Debug.Log(Vector3.Dot(normal, Vector3.up) > Mathf.Cos(angleLimit));
+
+
+        //(Vector3.Dot(normal, Vector3.up) > tolerance)
+        //Debug.Log();
+
+        //Debug.Log(Mathf.Cos(maxAngleFromUp));
+
+
+        return Vector3.Dot(normal, Vector3.up) > Mathf.Cos(angleLimit);
     }
 }
