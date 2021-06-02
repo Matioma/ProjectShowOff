@@ -26,8 +26,10 @@ public class PlatformTrigger : MonoBehaviour
     private void Awake()
     {
         Rigidbody rigidbody = GetComponent<Rigidbody>();
-        rigidbody.useGravity = false;
-        rigidbody.constraints = RigidbodyConstraints.FreezeAll;
+        if (rigidbody != null) {
+            rigidbody.useGravity = false;
+            rigidbody.constraints = RigidbodyConstraints.FreezeAll;
+        }
     }
 
 
