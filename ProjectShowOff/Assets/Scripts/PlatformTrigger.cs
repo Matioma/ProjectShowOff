@@ -50,23 +50,4 @@ public class PlatformTrigger : MonoBehaviour
         }
     }
 
-    //private void o(Collision collision)
-    //{
-
-    //    if (collision.gameObject.GetComponent<PushableObject>() || 
-    //        collision.gameObject.GetComponent<CharachterModel>()) {
-    //        NumPushingObjects++;
-    //    }
-    //    Debug.Log(NumPushingObjects);
-    //}
-
-    private void OnCollisionExit(Collision collision)
-    {
-        //if (collision.gameObject.GetComponent<PushableObject>() ||
-        //   collision.gameObject.GetComponent<CharachterModel>())
-        //{
-        //    NumPushingObjects--;
-        //}
-        //Debug.Log(NumPushingObjects);
-    }
 }
