@@ -44,4 +44,15 @@ public class FoxController : CharachterModel
         isDashing = false;
         yield return null;
     }
+
+    public void OnControllerColliderHit(ControllerColliderHit collision)
+    {
+        if (!isDashing) return;
+
+        Destroyable destroyable = collision.gameObject.GetComponent<Destroyable>();
+        if (collision.gameObject.GetComponent<Destroyable>())
+        {
+            destroyable.onCollisionEvent();
+        }
+    }
 }
