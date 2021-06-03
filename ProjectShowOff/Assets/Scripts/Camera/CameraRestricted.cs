@@ -62,6 +62,10 @@ public class CameraRestricted : MonoBehaviour
 
     Player playerModel;
 
+
+    List<MakeTransparent> occludingObjects = new List<MakeTransparent>();
+
+
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -92,11 +96,41 @@ public class CameraRestricted : MonoBehaviour
         {
             FreeCamera();
             transform.position = Vector3.Lerp(transform.position, targetBody.position + rotatedOffsetVector, 1);
+            HideObjectsInFront();
+
+
         }
         
         //transform.position = targetBody.position + rotatedOffsetVector;
         //transform.position = Vector3.Lerp(transform.position, targetPosition, 0.9f);
     }
+
+
+    void HideObjectsInFront() {
+        foreach (var occuldingObject in occludingObjects) {
+            occuldingObject.MakeObjectNormal();
+        }
+        occludingObjects.Clear();
+
+        RaycastHit[] hits;
+        hits = Physics.RaycastAll(transform.position, transform.forward, Mathf.Infinity);
+
+
+        foreach (RaycastHit hit in hits) {
+            if (hit.transform == targetBody){
+                continue;
+            }
+
+            if ((hit.point - transform.position).sqrMagnitude < (targetBody.position - transform.position).sqrMagnitude) {
+                MakeTransparent makeTransparent = hit.transform.gameObject.AddComponent<MakeTransparent>();
+                occludingObjects.Add(makeTransparent);
+            }
+        } 
+    }
+
+
+    
+
 
 
     //void RestrictedCamera()
