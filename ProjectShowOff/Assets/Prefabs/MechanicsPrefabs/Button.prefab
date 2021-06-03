@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 609612372233423294}
   m_Layer: 0
-  m_Name: Mush_01_LP_button
+  m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42,8 +42,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.2203724, y: 1.2718487, z: 1.2400823}
-  m_Center: {x: 0.000000029802322, y: -0.000000029802322, z: -0.000000029802322}
+  m_Size: {x: 2.59, y: 2.3, z: 2.1}
+  m_Center: {x: 0.000000029802322, y: 0.68, z: -0.000000029802322}
 --- !u!114 &787779815938490472
 MonoBehaviour:
   m_ObjectHideFlags: 0
