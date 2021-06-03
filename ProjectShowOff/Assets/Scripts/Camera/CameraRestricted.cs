@@ -40,6 +40,7 @@ public class CameraRestricted : MonoBehaviour
 
     Vector3 initialPosition;
     Quaternion initialRotation;
+    float floatCameraDistance;
 
 
     [SerializeField]
@@ -47,8 +48,16 @@ public class CameraRestricted : MonoBehaviour
     float transitionTime = 0.5f;
     float timer=0;
 
-    [SerializeField]
     bool isTransitioning;
+
+
+    [Header("Learping Properties")]
+    [SerializeField]
+    [Range(0,1)]
+    float learpingRotation = 1;
+    [SerializeField]
+    [Range(0, 100)]
+    float learpingPosition = 1;
 
 
     Player playerModel;
@@ -59,9 +68,12 @@ public class CameraRestricted : MonoBehaviour
         Cursor.visible = false;
 
         initialOffset = transform.position - targetBody.position;
+        floatCameraDistance = initialOffset.magnitude;
 
         initialPosition = transform.position;
         initialRotation = transform.rotation;
+
+
 
         playerModel = FindObjectOfType<Player>();
         targetBody = playerModel.ControlledCharacter.transform;
@@ -113,6 +125,8 @@ public class CameraRestricted : MonoBehaviour
     //    transform.position = targetBody.position + offsetQuaternion * offset;
     //}
 
+
+
     void FreeCamera() {
         float deltaX = Input.GetAxis("Mouse X") * rotationSensitivity * Time.deltaTime;
         yRotation += deltaX;
@@ -127,10 +141,14 @@ public class CameraRestricted : MonoBehaviour
             transform.RotateAround(targetBody.position, Vector3.right, xRotation);
             transform.RotateAround(targetBody.position, Vector3.up, yRotation);
         }
+
         Quaternion offsetQuaternion = Quaternion.Euler(xRotation, yRotation, 0);
+        //Vector3 offsetDirection = getNewCameraOffset(offsetQuaternion);
+        rotatedOffsetVector = getNewCameraOffsetDirection(offsetQuaternion)* floatCameraDistance;
 
 
-        rotatedOffsetVector = getNewCameraOffset(offsetQuaternion);
+        //offsetQuaternion = Quaternion.Slerp(offsetQuaternion, Quaternion.Euler(xRotation, yRotation, 0), learpingRotation);
+        //rotatedOffsetVector = Vector3.Lerp(rotatedOffsetVector, getNewCameraOffset(offsetQuaternion), learpingPosition);
 
         Vector3 lookDirectionTarget = targetBody.position + transform.forward;
         lookDirectionTarget.y = targetBody.position.y;
@@ -156,21 +174,26 @@ public class CameraRestricted : MonoBehaviour
 
 
 
-    Vector3 getNewCameraOffset(Quaternion rotation) {
+    Vector3 getNewCameraOffsetDirection(Quaternion rotation) {
         Vector3 offsetDirection  = (rotation * initialOffset).normalized;
 
-
+        int layer_mask = LayerMask.GetMask("Default");
         RaycastHit hit;
-        if (Physics.Raycast(targetBody.position, offsetDirection, out hit, Mathf.Infinity)) {
+        if (Physics.Raycast(targetBody.position, offsetDirection, out hit, Mathf.Infinity, layer_mask)) {
             Debug.DrawRay(targetBody.position, offsetDirection * hit.distance, Color.yellow,0.1f);
 
             Vector3 hitDirection = hit.point - targetBody.position;
 
+
             if (hitDirection.magnitude < initialOffset.magnitude && hitDirection.magnitude > 1) {
-                return hitDirection;
+
+                floatCameraDistance = Mathf.Lerp(floatCameraDistance, hitDirection.magnitude, learpingPosition*Time.deltaTime);
+                return hitDirection.normalized;
             }
         }
-        return rotation * initialOffset;
+
+        floatCameraDistance = Mathf.Lerp(floatCameraDistance, initialOffset.magnitude, learpingPosition * Time.deltaTime);
+        return (rotation * initialOffset).normalized;
     }
 
 
