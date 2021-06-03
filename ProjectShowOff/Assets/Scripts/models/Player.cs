@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
         score += amount;
     }
 
+    public bool AudioEnabled { get; set; } = false;
 
 
     [SerializeField]
