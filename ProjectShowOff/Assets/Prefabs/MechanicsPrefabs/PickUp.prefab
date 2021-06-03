@@ -108,7 +108,7 @@ Transform:
   m_GameObject: {fileID: 3061568460142740278}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.90250593, y: 2.7615616, z: 2.7615616}
   m_Children:
   - {fileID: 6350382555692545825}
   - {fileID: 6625583813826107312}
@@ -155,6 +155,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 0
+      - m_Target: {fileID: 6893084355439057487}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 3469f71e5d5935946966a6618c11e230, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &4405766119688104255
 GameObject:
@@ -181,7 +193,7 @@ Transform:
   m_GameObject: {fileID: 4405766119688104255}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.64723, y: 0.90256, z: 0.90072}
   m_Children:
   - {fileID: 236171570844044021}
   m_Father: {fileID: 4733383490775605964}
