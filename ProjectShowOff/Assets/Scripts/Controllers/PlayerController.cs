@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour, ICharacterController
 {
     Player playerModel;
 
+   
+
     void Start() {
        playerModel = GetComponent<Player>();
     }
@@ -28,6 +30,19 @@ public class PlayerController : MonoBehaviour, ICharacterController
 
         if (Input.GetMouseButtonDown(1)) {
             playerModel.SwitchCharacter();
+        }
+
+
+        if (Input.GetKeyDown(KeyCode.X)) {
+            playerModel.AudioEnabled = !playerModel.AudioEnabled;
+            if (playerModel.AudioEnabled)
+            {
+                AudioListener.volume = 1;
+            }
+            else {
+                AudioListener.volume = 0;
+            }
+            
         }
     }
     public void Move(Vector3 direction)
