@@ -123,5 +123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6cc5220db20e9d44954014989f956e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slowPercent: 15
-  disablesSkills: 0
+  slowPercent: 65
+  disableFoxSkill: 0
+  disableRabbitSkill: 1
+  disableBearSkill: 1
