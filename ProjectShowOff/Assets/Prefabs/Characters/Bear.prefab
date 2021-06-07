@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2723778934076953392
 Transform:
   m_ObjectHideFlags: 0
@@ -175,11 +175,11 @@ MonoBehaviour:
   OnStanding:
     m_PersistentCalls:
       m_Calls: []
-  acceletation: 10
-  speed: 10
+  acceletation: 7
+  speed: 8
   gravity: 20
   surfaceTolerance: 0
-  drag: 0.8
+  drag: 0.5
   maxAngleFromUp: 50
   pushPower: 0
   moveSpeedWhenPushing: 4
