@@ -50,6 +50,12 @@ public class CharachterModel : MonoBehaviour, ICharacterController
         }
     }
 
+    public void PushBack( Vector3 velocity) {
+        this.velocity = velocity;
+        //controller.Move(velocity);
+
+    }
+
     public void Slow(float percentage)
     {
         float percentSlow = percentage / 100.0f;
