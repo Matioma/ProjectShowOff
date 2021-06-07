@@ -36,8 +36,16 @@ public class PlatformTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.GetComponent<PushableObject>() ||
-           other.gameObject.GetComponent<CharachterModel>())
+        PushableObject pushableObject = other.gameObject.GetComponent<PushableObject>();
+
+
+        if (pushableObject != null) {
+            if (!pushableObject.IsBeingGrabbed()) {
+                NumPushingObjects++;
+            }
+        }
+
+        if ( other.gameObject.GetComponent<CharachterModel>())
         {
             NumPushingObjects++;
         }
@@ -46,11 +54,17 @@ public class PlatformTrigger : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.GetComponent<PushableObject>() ||
+        PushableObject pushableObject = other.gameObject.GetComponent<PushableObject>();
+        if (pushableObject != null) {
+            if (!pushableObject.IsBeingGrabbed())
+            {
+                NumPushingObjects--;
+            }
+        }
+        if (
          other.gameObject.GetComponent<CharachterModel>())
         {
             NumPushingObjects--;
         }
     }
-
 }
