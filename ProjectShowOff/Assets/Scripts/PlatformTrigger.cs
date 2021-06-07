@@ -19,7 +19,8 @@ public class PlatformTrigger : MonoBehaviour
             
             if (numPushingObjects == 0 && value > 0) onPressTrigger?.Invoke();
             if (value == 0) onReleaseTrigger?.Invoke();
-            numPushingObjects = value; 
+            numPushingObjects = value;
+            Debug.Log(numPushingObjects);
         }
     }
 
