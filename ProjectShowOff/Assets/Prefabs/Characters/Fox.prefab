@@ -175,13 +175,14 @@ MonoBehaviour:
   OnStanding:
     m_PersistentCalls:
       m_Calls: []
-  acceletation: 10
-  speed: 9
+  acceletation: 9
+  speed: 10
   gravity: 20
   surfaceTolerance: 0
-  drag: 0.8
-  dashTime: 1
-  dashSpeed: 10
+  drag: 0.5
+  maxAngleFromUp: 50
+  dashTime: 0.4
+  dashSpeed: 18
 --- !u!136 &2639395515962379635
 CapsuleCollider:
   m_ObjectHideFlags: 0
