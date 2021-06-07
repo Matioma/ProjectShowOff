@@ -40,10 +40,20 @@ public class PushableObject : MonoBehaviour
                 }
                 else {
                     OnStopDragging?.Invoke();
-                }            
+                }
             }
             isDragged = value;
         }
+    }
+
+
+    public void FreezePosition(){
+        rigidbody.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotation;
+    }
+
+    public void UnFreezePosition()
+    {
+        rigidbody.constraints = RigidbodyConstraints.None;
     }
 
 
@@ -55,20 +65,20 @@ public class PushableObject : MonoBehaviour
     {
         initialParent = transform.parent;
         rigidbody = GetComponent<Rigidbody>();
+        FreezePosition();
     }
 
 
     private void Update()
     {
         if (isBeingGrabbed()) {
-            IsDragged = transform.parent.GetComponent<CharacterController>().velocity.sqrMagnitude > 0;
+            IsDragged = transform.parent.GetComponent<CharacterController>().velocity.sqrMagnitude > 0.1f;
         }
         else {
-
-            if (rigidbody != null) { 
-                IsDragged = rigidbody.velocity.sqrMagnitude > 0;
-            }
-
+            IsDragged = false;
+            //if (rigidbody != null) { 
+            //    IsDragged = rigidbody.velocity.sqrMagnitude > 0;
+            //}
         }
 
 
