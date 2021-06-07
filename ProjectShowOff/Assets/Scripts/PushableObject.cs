@@ -22,7 +22,7 @@ public class PushableObject : MonoBehaviour
     [SerializeField]
     UnityEvent OnStopDragging;
 
-    bool isBeingGrabbed() {
+    public bool IsBeingGrabbed() {
         return transform.parent != initialParent;
     }
 
@@ -71,7 +71,7 @@ public class PushableObject : MonoBehaviour
 
     private void Update()
     {
-        if (isBeingGrabbed()) {
+        if (IsBeingGrabbed()) {
             IsDragged = transform.parent.GetComponent<CharacterController>().velocity.sqrMagnitude > 0.1f;
         }
         else {

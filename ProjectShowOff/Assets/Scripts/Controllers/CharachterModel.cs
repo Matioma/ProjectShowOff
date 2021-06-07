@@ -69,10 +69,6 @@ public class CharachterModel : MonoBehaviour, ICharacterController
     [SerializeField]
     float gravity = 20.0f;
 
-    [SerializeField]
-    [Range(0, 1)]
-    [Tooltip("the higher the value the more flat should be the surface for landing")]
-    float surfaceTolerance;
 
     [Range(0, 1)]
     public float drag = 0.8f;
@@ -80,7 +76,9 @@ public class CharachterModel : MonoBehaviour, ICharacterController
 
     [SerializeField]
     [Range(0, 90)]
-    float maxAngleFromUp = 50;
+    float maxAngleFromUp = 20;
+    [SerializeField]
+    float slidingAccelerator = 2;
 
 
     protected Vector3 velocity = Vector3.zero;
@@ -184,32 +182,40 @@ public class CharachterModel : MonoBehaviour, ICharacterController
             {
             }
             else {
-              
-
                 Vector3 newVelocity = new Vector3(velocity.x, velocity.y, velocity.z);
                 float newSlidingVelocity = Vector3.Dot(newVelocity, slideDirection);
                 Debug.Log(velocity);
 
                 if (controller.isGrounded) {
-                    Debug.Log(slideDirection * newSlidingVelocity);
+                    //Debug.Log(slideDirection * newSlidingVelocity);
 
-                    velocity = slideDirection * newSlidingVelocity;
+                    velocity = slideDirection * slidingAccelerator;
                 }
             }
         }
     }
 
+    protected bool canStand()
+    {
+        RaycastHit ray;
 
-    bool canStand(Vector3 normal, float angleLimit) {
+        if (Physics.Raycast(transform.position, Vector3.down, out ray, 10))
+        {
+            Debug.DrawRay(transform.position, ray.normal*10, Color.red);
+            return canStand(ray.normal, maxAngleFromUp);
+            
+            //Debug.DrawRay(transform.position, ray.normal, Color.green);
+            //Vector3 right = Vector3.Cross(ray.normal, Vector3.up);
+            //Vector3 slideDirection = Vector3.Cross(ray.normal, right);
+            //Debug.DrawRay(transform.position, slideDirection, Color.green);
+            //Debug.Log(maxAngleFromUp);
+            //Debug.Log(canStand(ray.normal, maxAngle));
 
-        //Debug.Log(Vector3.Dot(normal, Vector3.up));
-        //Debug.Log(Vector3.Dot(normal, Vector3.up) > Mathf.Cos(angleLimit));
+        }
+        return false;
+    }
 
-
-        //(Vector3.Dot(normal, Vector3.up) > tolerance)
-        //Debug.Log();
-
-        //Debug.Log(Mathf.Cos(maxAngleFromUp));
+    protected bool canStand(Vector3 normal, float angleLimit) {
 
 
         return Vector3.Dot(normal, Vector3.up) > Mathf.Cos(angleLimit);
