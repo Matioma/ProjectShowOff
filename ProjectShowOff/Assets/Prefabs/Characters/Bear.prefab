@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2723778934076953397}
   - component: {fileID: 2723778934076953398}
   - component: {fileID: 2723778934076953399}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 7725581517119564611}
   - component: {fileID: 1228291624806410752}
   - component: {fileID: 4098828172811334020}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Bear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -220,7 +220,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6347918667353014817}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MeshParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -253,7 +253,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9113240429864464889}
   - component: {fileID: 8983312894609656352}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Audio Source
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -424,6 +424,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 9d26a866099807c449ebc75c4b9d01d3, type: 3}
       propertyPath: m_Name
       value: Bear_zremesher
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9d26a866099807c449ebc75c4b9d01d3, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d26a866099807c449ebc75c4b9d01d3, type: 3}
