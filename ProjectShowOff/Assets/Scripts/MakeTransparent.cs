@@ -35,6 +35,6 @@ public class MakeTransparent : MonoBehaviour
         {
             keyValueMaterial.Key.material = keyValueMaterial.Value;
         }
-        //Destroy(this);
+        Destroy(this);
     }
 }

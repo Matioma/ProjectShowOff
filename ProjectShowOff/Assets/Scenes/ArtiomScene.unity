@@ -13518,10 +13518,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PushbackObject
       objectReference: {fileID: 0}
-    - target: {fileID: 7045270378234515939, guid: 6802eb34011ad9e49a957a84ff98d92e, type: 3}
-      propertyPath: pushBackVelocity
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 7045270378234515941, guid: 6802eb34011ad9e49a957a84ff98d92e, type: 3}
       propertyPath: m_RootOrder
       value: 51
