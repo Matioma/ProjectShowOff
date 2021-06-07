@@ -97,8 +97,6 @@ public class CameraRestricted : MonoBehaviour
             FreeCamera();
             transform.position = Vector3.Lerp(transform.position, targetBody.position + rotatedOffsetVector, 1);
             HideObjectsInFront();
-
-
         }
         
         //transform.position = targetBody.position + rotatedOffsetVector;
@@ -113,7 +111,8 @@ public class CameraRestricted : MonoBehaviour
         occludingObjects.Clear();
 
         RaycastHit[] hits;
-        hits = Physics.RaycastAll(transform.position, transform.forward, Mathf.Infinity);
+        hits = Physics.RaycastAll(transform.position,targetBody.position- transform.position, Mathf.Infinity);
+        Debug.DrawRay(transform.position, (targetBody.position - transform.position )* 1000f,Color.green );
 
 
         foreach (RaycastHit hit in hits) {
@@ -121,7 +120,7 @@ public class CameraRestricted : MonoBehaviour
                 continue;
             }
 
-            if ((hit.point - transform.position).sqrMagnitude < (targetBody.position - transform.position).sqrMagnitude) {
+            if ((hit.point - transform.position).sqrMagnitude < (targetBody.position - transform.position).sqrMagnitude -1) {
                 MakeTransparent makeTransparent = hit.transform.gameObject.AddComponent<MakeTransparent>();
                 occludingObjects.Add(makeTransparent);
             }
