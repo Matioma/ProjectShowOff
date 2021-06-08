@@ -26,6 +26,16 @@ public class PushableObject : MonoBehaviour
         return transform.parent != initialParent;
     }
 
+
+    PlatformTrigger platformTrigger;
+    public void SetPlatformTrigger(PlatformTrigger platform) {
+        this.platformTrigger = platform;
+    }
+    public PlatformTrigger GetPlatformTrigger() {
+        return platformTrigger;
+    }
+
+
     [SerializeField]
     bool isDragged = false;
     bool IsDragged {
