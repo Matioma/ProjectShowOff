@@ -11,7 +11,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: -1471469002944660891}
-    m_Position: {x: 350, y: -20, z: 0}
+    m_Position: {x: 390, y: -40, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 3444910676804250209}
     m_Position: {x: 235, y: 65, z: 0}
@@ -60,7 +60,7 @@ AnimatorController:
   m_Name: Rock4
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: IsPressed
+  - m_Name: Pressing
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -115,7 +115,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: IsPressed
+    m_ConditionEvent: Pressing
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -1471469002944660891}
