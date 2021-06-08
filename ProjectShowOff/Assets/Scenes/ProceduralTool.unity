@@ -626,12 +626,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20cbe41bda51e5c46a1c18c3ab398004, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  width: 256
-  depth: 256
-  height: 30
-  scale: 7.27
-  offsetX: 6589.313
-  offsetZ: 8969.815
+  width: 512
+  depth: 512
+  height: 65
+  offsetX: 6446.4404
+  offsetZ: 6944.056
+  scale: 2
+  scale2: 12
 --- !u!1 &1990431993
 GameObject:
   m_ObjectHideFlags: 0
