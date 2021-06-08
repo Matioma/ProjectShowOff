@@ -70,7 +70,8 @@ public class CharacterAudioSet : ScriptableObject
 public enum EAudioClipType{ 
     Movement,
     SpecialAbility,
-    Landing
+    Landing,
+    BackgroundMusic
 }
 
 

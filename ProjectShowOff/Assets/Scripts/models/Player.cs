@@ -50,8 +50,11 @@ public class Player : MonoBehaviour
 
     public void SwitchCharacter() {
         ControlledCharacter.Move(Vector3.zero);
+
+        ControlledCharacter?.CharacterDeselected();
         selectedCharacterId = (selectedCharacterId + 1) % characterControllers.Count;
-        
+        ControlledCharacter?.CharacterSeleted();
+
         onSwitchCharacter?.Invoke();
     }
 

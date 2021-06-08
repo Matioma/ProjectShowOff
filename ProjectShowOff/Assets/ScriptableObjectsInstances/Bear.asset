@@ -25,3 +25,6 @@ MonoBehaviour:
   - aniomationType: 1
     clips:
     - {fileID: 8300000, guid: 33e461fb707924c4297815ceb46620be, type: 3}
+  - aniomationType: 3
+    clips:
+    - {fileID: 8300000, guid: ae011979adedd234b909ef1f3bfb8da3, type: 3}

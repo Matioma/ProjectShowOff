@@ -199,7 +199,7 @@ public class CameraRestricted : MonoBehaviour
         while (timer < transitionTime) {
             timer += Time.deltaTime;
             transform.position = Vector3.Lerp(transform.position, position, timer / transitionTime);
-            Debug.Log(timer / transitionTime);
+
             yield return null;
         }
         isTransitioning = false;

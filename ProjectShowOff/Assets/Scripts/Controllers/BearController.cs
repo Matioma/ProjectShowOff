@@ -40,9 +40,8 @@ public class BearController : CharachterModel
     void AttachPushable(PushableObject pushable) {
         pushable.transform.parent = transform;
         attachedPushable = pushable;
+        attachedPushable.GetPlatformTrigger()?.Decrement();
         SetSpeed(moveSpeedWhenPushing);
-        //speed = moveSpeedWhenPushing;
-        //onUseSkill?.Invoke();
         base.SpecialAction();
     }
 
@@ -50,6 +49,7 @@ public class BearController : CharachterModel
     {
         if (attachedPushable == null) return;
         attachedPushable.transform.parent = attachedPushable.GetInitialParent;
+        attachedPushable.GetPlatformTrigger()?.Decrement();
         attachedPushable = null;
 
         SetSpeed(initialmovementSpeed);
