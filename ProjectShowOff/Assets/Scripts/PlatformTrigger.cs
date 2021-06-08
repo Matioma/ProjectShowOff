@@ -24,6 +24,11 @@ public class PlatformTrigger : MonoBehaviour
         }
     }
 
+    public void Decrement() {
+        numPushingObjects--;
+        Debug.LogWarning("Decreased");
+    }
+
     private void Awake()
     {
         Rigidbody rigidbody = GetComponent<Rigidbody>();
@@ -36,13 +41,11 @@ public class PlatformTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log(other.name);
         PushableObject pushableObject = other.gameObject.GetComponent<PushableObject>();
-
-
         if (pushableObject != null) {
-            if (!pushableObject.IsBeingGrabbed()) {
-                NumPushingObjects++;
-            }
+            pushableObject.SetPlatformTrigger(this);
+            NumPushingObjects++;
         }
 
         if ( other.gameObject.GetComponent<CharachterModel>())
@@ -55,16 +58,15 @@ public class PlatformTrigger : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         PushableObject pushableObject = other.gameObject.GetComponent<PushableObject>();
-        if (pushableObject != null) {
-            if (!pushableObject.IsBeingGrabbed())
-            {
-                NumPushingObjects--;
-            }
+        if (pushableObject != null)
+        {
+            pushableObject.SetPlatformTrigger(null);
+            NumPushingObjects--;
         }
-        if (
-         other.gameObject.GetComponent<CharachterModel>())
+        if (other.gameObject.GetComponent<CharachterModel>())
         {
             NumPushingObjects--;
         }
     }
+
 }
