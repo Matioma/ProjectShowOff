@@ -41,7 +41,7 @@ public class PlatformTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.name);
+
         PushableObject pushableObject = other.gameObject.GetComponent<PushableObject>();
         if (pushableObject != null) {
             pushableObject.SetPlatformTrigger(this);
