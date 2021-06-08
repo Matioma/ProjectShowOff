@@ -151,7 +151,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4092881359698836900}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.62, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6243128901339703494}
@@ -186,7 +186,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6243128901339703495}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.02, z: 0}
+  m_LocalPosition: {x: 0, y: 0.054, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3130164811429542359}
@@ -267,7 +267,6 @@ GameObject:
   - component: {fileID: 6623836691494255906}
   - component: {fileID: 2334549629747663001}
   - component: {fileID: 4781209553091925112}
-  - component: {fileID: 7600092231366088028}
   - component: {fileID: 1838126944268583266}
   m_Layer: 10
   m_Name: Rabbit
@@ -284,7 +283,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6243128901803473555}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.4, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3130164811429542359}
@@ -309,7 +308,7 @@ CharacterController:
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0.68, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2334549629747663001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -380,9 +379,9 @@ MonoBehaviour:
   acceletation: 8
   speed: 9
   gravity: 20
-  surfaceTolerance: 0
   drag: 0.5
-  maxAngleFromUp: 50
+  maxAngleFromUp: 60.6
+  slidingAccelerator: 2
   jumpSpeed: 9
 --- !u!136 &4781209553091925112
 CapsuleCollider:
@@ -393,24 +392,11 @@ CapsuleCollider:
   m_GameObject: {fileID: 6243128901803473555}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.62
-  m_Height: 2.08
+  m_Height: 1.1
   m_Direction: 1
-  m_Center: {x: 0, y: 1.02, z: 0}
---- !u!135 &7600092231366088028
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6243128901803473555}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.05, z: 0}
 --- !u!114 &1838126944268583266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -473,7 +459,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 18e1caa8bc5fbec4d943a31ad38f0037, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.21
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 18e1caa8bc5fbec4d943a31ad38f0037, type: 3}
       propertyPath: m_LocalPosition.z
