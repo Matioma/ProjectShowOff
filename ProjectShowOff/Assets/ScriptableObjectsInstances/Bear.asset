@@ -13,18 +13,8 @@ MonoBehaviour:
   m_Name: Bear
   m_EditorClassIdentifier: 
   AudioClips:
-  - aniomationType: 0
-    clips:
-    - {fileID: 8300000, guid: 9c79ddbcf2638f449a14d3916baaa922, type: 3}
-    - {fileID: 8300000, guid: a7200574c1da7d749b35618314b82a89, type: 3}
-    - {fileID: 8300000, guid: 23629fa324eaca248ad6db40c46bb817, type: 3}
   - aniomationType: 1
-    clips:
-    - {fileID: 8300000, guid: 63a4d79672373ac4db7c8bc312005cfa, type: 3}
-    - {fileID: 8300000, guid: 8ff76ea688f2ec6438818f3df04dae64, type: 3}
-  - aniomationType: 1
-    clips:
-    - {fileID: 8300000, guid: 33e461fb707924c4297815ceb46620be, type: 3}
+    clips: []
   - aniomationType: 3
     clips:
-    - {fileID: 8300000, guid: ae011979adedd234b909ef1f3bfb8da3, type: 3}
+    - {fileID: 8300000, guid: d58e2e6639f989042a18b56c4dd07630, type: 3}

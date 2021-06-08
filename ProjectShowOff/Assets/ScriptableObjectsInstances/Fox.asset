@@ -13,15 +13,8 @@ MonoBehaviour:
   m_Name: Fox
   m_EditorClassIdentifier: 
   AudioClips:
-  - aniomationType: 0
-    clips:
-    - {fileID: 8300000, guid: 395d2a924330f114fa1b8292baba9873, type: 3}
-    - {fileID: 8300000, guid: 5fab4978a9642ca469556f9050ef40f5, type: 3}
-    - {fileID: 8300000, guid: 09d6342dc860e074fb9af70b56d7869e, type: 3}
   - aniomationType: 1
+    clips: []
+  - aniomationType: 3
     clips:
-    - {fileID: 8300000, guid: 193546a7d94da4b49aaf6b91ec047e62, type: 3}
-    - {fileID: 8300000, guid: 6f05f37b80be810459e28e0bf5bb1019, type: 3}
-  - aniomationType: 2
-    clips:
-    - {fileID: 8300000, guid: 33e461fb707924c4297815ceb46620be, type: 3}
+    - {fileID: 8300000, guid: 8fee157e81b8e8142a59ba53979cd47c, type: 3}

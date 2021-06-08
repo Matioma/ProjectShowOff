@@ -13,14 +13,8 @@ MonoBehaviour:
   m_Name: Rabbit
   m_EditorClassIdentifier: 
   AudioClips:
-  - aniomationType: 0
-    clips:
-    - {fileID: 8300000, guid: 812bab4af481e3c4cb1b9c139d92673c, type: 3}
-    - {fileID: 8300000, guid: 08561a5cc2c2c0a47b39933758727787, type: 3}
-    - {fileID: 8300000, guid: f3e12e6b4c1acd647af67990eb424802, type: 3}
   - aniomationType: 1
+    clips: []
+  - aniomationType: 3
     clips:
-    - {fileID: 8300000, guid: c8cbfa16253a0d042b8894983831dc79, type: 3}
-  - aniomationType: 2
-    clips:
-    - {fileID: 8300000, guid: 33e461fb707924c4297815ceb46620be, type: 3}
+    - {fileID: 8300000, guid: 9aaf2dbd6580b0f479ce190fb5d3fbc7, type: 3}
