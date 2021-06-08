@@ -150,7 +150,6 @@ public class CharachterModel : MonoBehaviour, ICharacterController
 
 
     void Update() {
-
     }
 
     public void Move(Vector3 pDirection)
@@ -183,7 +182,7 @@ public class CharachterModel : MonoBehaviour, ICharacterController
 
         if (Physics.Raycast(transform.position, Vector3.down, out ray, 10)) {
 
-            Debug.DrawRay(transform.position, ray.normal, Color.green);
+          
             Vector3 right = Vector3.Cross(ray.normal, Vector3.up);
             Vector3 slideDirection = Vector3.Cross(ray.normal, right);
             Debug.DrawRay(transform.position, slideDirection, Color.green);
@@ -209,19 +208,17 @@ public class CharachterModel : MonoBehaviour, ICharacterController
     protected bool canStand()
     {
         RaycastHit ray;
+        Debug.DrawRay(transform.position, Vector3.down * 10, Color.yellow, 10.0f);
+
 
         if (Physics.Raycast(transform.position, Vector3.down, out ray, 10))
         {
-            Debug.DrawRay(transform.position, ray.normal*10, Color.red);
+            Debug.DrawRay(transform.position, Vector3.down * 10, Color.cyan, 10.0f);
+            Debug.Log(canStand(ray.normal, maxAngleFromUp));
             return canStand(ray.normal, maxAngleFromUp);
-            
-            //Debug.DrawRay(transform.position, ray.normal, Color.green);
-            //Vector3 right = Vector3.Cross(ray.normal, Vector3.up);
-            //Vector3 slideDirection = Vector3.Cross(ray.normal, right);
-            //Debug.DrawRay(transform.position, slideDirection, Color.green);
-            //Debug.Log(maxAngleFromUp);
-            //Debug.Log(canStand(ray.normal, maxAngle));
-
+        }
+        else {
+           
         }
         return false;
     }
