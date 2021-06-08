@@ -27,8 +27,19 @@ public class CharacterAudioManager : MonoBehaviour
         AudioClip audio = characterAudioSet.getSoundOfType(EAudioClipType.Landing);
         if (audio != null) audioSource.PlayOneShot(audio);
     }
-    
 
+
+    public void StartPlayingBackgroundMusic() {
+        if (audioSource.clip != characterAudioSet.getSoundOfType(EAudioClipType.BackgroundMusic)) { 
+            audioSource.clip = characterAudioSet.getSoundOfType(EAudioClipType.BackgroundMusic);
+        }
+        audioSource.loop = true;
+        audioSource.Play();
+    }
+    public void StopPlayingBackgroundMusic() {
+        audioSource.Stop();
+        audioSource.loop = false;
+    }
 
 
     public void PlayAudio(AudioClip audio) {

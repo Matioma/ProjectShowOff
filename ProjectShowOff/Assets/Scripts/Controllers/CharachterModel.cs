@@ -16,6 +16,9 @@ public class CharachterModel : MonoBehaviour, ICharacterController
     public UnityEvent OnWalking;
     public UnityEvent OnStanding;
 
+    public UnityEvent onSelected;
+    public UnityEvent onDiselected;
+
 
     bool skillsIsEnabled = true;
     public bool SkillIsEnabled
@@ -27,6 +30,14 @@ public class CharachterModel : MonoBehaviour, ICharacterController
         private set {
             skillsIsEnabled = value;
         }
+    }
+
+    public void CharacterSeleted() {
+        onSelected?.Invoke();
+    }
+    public void CharacterDeselected()
+    {
+        onDiselected?.Invoke();
     }
 
     public void DisableSkills() {
