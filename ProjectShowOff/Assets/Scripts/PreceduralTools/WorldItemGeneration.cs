@@ -2,6 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+[System.Serializable]
+public class WorldPlacementSettings {
+    [SerializeField]
+    List<GameObject> assets;
+
+    [SerializeField]
+    float perlinScale = 1;
+
+    [SerializeField]
+    float offsetX;
+    [SerializeField]
+    float offsetZ;
+}
+
+
+
+
 public class WorldItemGeneration : MonoBehaviour, IProcedural
 {
     [SerializeField]
@@ -48,7 +66,6 @@ public class WorldItemGeneration : MonoBehaviour, IProcedural
 
 
     void Start() {
-        Generate();
     }
 
 
@@ -65,7 +82,7 @@ public class WorldItemGeneration : MonoBehaviour, IProcedural
     {
         clearChildren();
 
-        offsetX = Random.Range(0, 999.0f);
+        offsetX =Random.Range(0, 999.0f);
         offsetZ = Random.Range(0, 999.0f);
 
         float[,] perlinMap = getPerlinMap();
@@ -73,18 +90,28 @@ public class WorldItemGeneration : MonoBehaviour, IProcedural
         {
             for (int z = 0; z < perlinMapDepth; z += 1 * densityReducer)
             {
-
-                Debug.Log(x + " = " + perlinMap[x, z]);
                 if (perlinMap[x, z] > minValue)
                 {
 
                     GameObject asset = Instantiate(assets[0], transform);
-                    asset.transform.position = new Vector3(x, 20, z);
+                    asset.transform.rotation = Quaternion.Euler(Random.Range(-90.0f, 90f), Random.Range(-90.0f, 90.0f), Random.Range(-90.0f, 90.0f));
+                    asset.transform.position = getGroundPosition(x,z);
                 }
             }
         }
     }
     public void GenerateSameSeed()
     {
+    }
+
+
+    Vector3 getGroundPosition(float x, float z) {
+        RaycastHit raycastHit;
+
+        float positionY =0;
+        if (Physics.Raycast(new Vector3(x, 120, z),Vector3.down, out raycastHit)){
+            positionY = raycastHit.point.y;
+        }
+        return new Vector3(x, positionY, z);       
     }
 }
