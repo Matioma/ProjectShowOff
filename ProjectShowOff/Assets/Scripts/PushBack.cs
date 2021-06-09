@@ -8,6 +8,8 @@ public class PushBack : MonoBehaviour
 {
     [SerializeField]
     float pushBackVelocity;
+    [SerializeField]
+    float pushBackTime= 1;
 
     [SerializeField]
     UnityEvent onPushTrigger;
@@ -21,8 +23,20 @@ public class PushBack : MonoBehaviour
 
         if (charachter != null)
         {
-            charachter.AddAceeleration(pushBackDirection * pushBackVelocity);
+            //charachter.AddAceeleration(pushBackDirection * pushBackVelocity);
+            StartCoroutine(Pushback(charachter, pushBackDirection));
             onPushTrigger?.Invoke();
+        }
+    }
+
+
+    IEnumerator Pushback(CharachterModel character,Vector3 direction)
+    {
+        float startTime = Time.time;
+        while (Time.time < startTime + pushBackTime)
+        {
+            character.AddAceeleration(direction * pushBackVelocity);
+            yield return null;
         }
     }
 }
