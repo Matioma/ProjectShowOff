@@ -18,16 +18,9 @@ public class TerrainBuilderEditor : Editor
             terrainBuilder.Generate();
         }
 
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (GUILayout.Button("Build Terrain Same Seed"))
+        {
+            terrainBuilder.GenerateSameSeed();
+        }
     }
 }

@@ -628,11 +628,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   width: 512
   depth: 512
-  height: 65
-  offsetX: 6446.4404
-  offsetZ: 6944.056
-  scale: 2
-  scale2: 12
+  height: 50
+  perlinNoises:
+  - operationType: 0
+    offsetX: 6534.4546
+    offsetZ: 209.49414
+    scale: 4.12
+    prominance: 1
+  - operationType: 1
+    offsetX: 3856.138
+    offsetZ: 9390.56
+    scale: 7.5
+    prominance: 1
+  - operationType: 0
+    offsetX: 7233.2837
+    offsetZ: 1878.107
+    scale: 51.19
+    prominance: 0.058
 --- !u!1 &1990431993
 GameObject:
   m_ObjectHideFlags: 0
