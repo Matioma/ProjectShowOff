@@ -101,65 +101,6 @@ public class TerrainBuilder : MonoBehaviour, IProcedural
 
         return Mathf.PerlinNoise(xCoord, zCoord);
     }
-
-
-    //float[,] generateHeights(PerlinNoiseParameters perlinNoiseParameters) {
-    //    float[,] newHeights = new float[width, depth];
-
-    //    for (int x = 0; x < width; x++)
-    //    {
-    //        for (int z = 0; z < depth; z++)
-    //        {
-    //            heights[x, z] = CalculateHeight(x, z, scale);
-    //        }
-    //    }
-    //    return f
-    //}
-
-
-    //float[,] generateHeights(float[,] heights) {
-
-    //    float[,] newHeights = heights;
-    //    if (scale2 == 0) return newHeights;
-    //    for (int x = 0; x < width; x++)
-    //    {
-    //        for (int z = 0; z < depth; z++)
-    //        {
-    //            newHeights[x, z] -= CalculateHeight(x, z, perlinNoises[1]);
-    //        }
-    //    }
-    //    return newHeights;
-    //}
-
-
-
-    //float[,] generateHeights() {
-
-    //    float[,] heights = new float[width, depth];
-    //    for (int x = 0; x < width; x++) {
-    //        for (int z = 0; z < depth; z++) {
-    //            heights[x, z] = CalculateHeight(x, z, perlinNoises[0]);
-    //         }
-    //    }
-
-    //    return heights;
-    //}
-
-    //float CalculateHeight(int x , int z,float scale) {
-    //    float xCoord = (float)x / width * scale + offsetX;
-    //    float zCoord = (float)z / depth * scale + offsetZ;
-
-    //    return Mathf.PerlinNoise(xCoord, zCoord);
-    //}
-
-
-    float CalculateHeight(int x, int z, PerlinNoiseParameters pPerlinNoiseParam)
-    {
-        float xCoord = (float)x / width * pPerlinNoiseParam.scale + pPerlinNoiseParam.offsetX;
-        float zCoord = (float)z / depth * pPerlinNoiseParam.scale + pPerlinNoiseParam.offsetZ;
-
-        return Mathf.PerlinNoise(xCoord, zCoord);
-    }
     public void Generate()
     {
         foreach(var data in perlinNoises)

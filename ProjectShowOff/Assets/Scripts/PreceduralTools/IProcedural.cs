@@ -5,4 +5,5 @@ using UnityEngine;
 public interface IProcedural
 {
     void Generate();
+    void GenerateSameSeed();
 }

@@ -7,18 +7,12 @@ public class WorldBuilder : MonoBehaviour, IProcedural
     [SerializeField]
     public static int seed;
 
-
     public static int SEED{
             get{return seed;}
             private set { seed = value; }
     }
 
-
     System.Random r;
-
-
-    [SerializeField]
-    GameObject terrain;
 
     private void Awake()
     {
@@ -31,4 +25,8 @@ public class WorldBuilder : MonoBehaviour, IProcedural
 
     }
 
+    public void GenerateSameSeed()
+    {
+        throw new System.NotImplementedException();
+    }
 }
