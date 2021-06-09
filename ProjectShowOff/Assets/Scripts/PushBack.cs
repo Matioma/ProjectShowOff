@@ -33,6 +33,7 @@ public class PushBack : MonoBehaviour
     IEnumerator Pushback(CharachterModel character,Vector3 direction)
     {
         float startTime = Time.time;
+        direction.y = 0;
         while (Time.time < startTime + pushBackTime)
         {
             character.AddAceeleration(direction * pushBackVelocity);

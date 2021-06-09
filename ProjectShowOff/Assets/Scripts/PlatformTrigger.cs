@@ -48,10 +48,10 @@ public class PlatformTrigger : MonoBehaviour
             NumPushingObjects++;
         }
 
-        if ( other.gameObject.GetComponent<CharachterModel>())
-        {
-            NumPushingObjects++;
-        }
+        //if ( other.gameObject.GetComponent<CharachterModel>())
+        //{
+        //    NumPushingObjects++;
+        //}
     }
 
 
@@ -63,10 +63,10 @@ public class PlatformTrigger : MonoBehaviour
             pushableObject.SetPlatformTrigger(null);
             NumPushingObjects--;
         }
-        if (other.gameObject.GetComponent<CharachterModel>())
-        {
-            NumPushingObjects--;
-        }
+        //if (other.gameObject.GetComponent<CharachterModel>())
+        //{
+        //    NumPushingObjects--;
+        //}
     }
 
 }
