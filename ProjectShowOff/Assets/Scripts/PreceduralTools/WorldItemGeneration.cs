@@ -66,7 +66,6 @@ public class WorldItemGeneration : MonoBehaviour, IProcedural
 
 
     void Start() {
-        Generate();
     }
 
 
@@ -91,15 +90,12 @@ public class WorldItemGeneration : MonoBehaviour, IProcedural
         {
             for (int z = 0; z < perlinMapDepth; z += 1 * densityReducer)
             {
-
-                Debug.Log(x + " = " + perlinMap[x, z]);
                 if (perlinMap[x, z] > minValue)
                 {
 
                     GameObject asset = Instantiate(assets[0], transform);
                     asset.transform.rotation = Quaternion.Euler(Random.Range(-90.0f, 90f), Random.Range(-90.0f, 90.0f), Random.Range(-90.0f, 90.0f));
                     asset.transform.position = getGroundPosition(x,z);
-                    
                 }
             }
         }
