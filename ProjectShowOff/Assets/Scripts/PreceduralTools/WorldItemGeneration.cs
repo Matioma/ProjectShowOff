@@ -18,10 +18,25 @@ public class WorldPlacementSettings {
 }
 
 
+enum RotationProperties{ 
+    NoRotation,
+    RandomRotationX,
+    RandomRotationY,
+    RandomRotationZ,
+    RandomRotation,
+    AlongNormal,
+    AlongNormalRandomY
+
+}
+
+
 
 
 public class WorldItemGeneration : MonoBehaviour, IProcedural
 {
+
+    [SerializeField]
+    RotationProperties rotation;
     [SerializeField]
     List<GameObject> assets;
 
@@ -43,6 +58,7 @@ public class WorldItemGeneration : MonoBehaviour, IProcedural
     float minValue = 0.5f;
 
     [SerializeField]
+    [Range(1,100)]
     int densityReducer = 1;
 
 
@@ -51,7 +67,7 @@ public class WorldItemGeneration : MonoBehaviour, IProcedural
 
         for (int x = 0; x < perlinMapWidth; x++) {
             for (int z = 0; z < perlinMapDepth; z++) {
-                newHeights[x,z] = getPerlinNoiseValue(x, z);
+                newHeights[x, z] = getPerlinNoiseValue(x, z);
             }
         }
         return newHeights;
@@ -72,7 +88,7 @@ public class WorldItemGeneration : MonoBehaviour, IProcedural
     void clearChildren() {
         int childs = transform.childCount;
 
-        for (int i = childs-1; i >= 0; i--) {
+        for (int i = childs - 1; i >= 0; i--) {
             DestroyImmediate(transform.GetChild(i).gameObject);
         }
     }
@@ -82,7 +98,7 @@ public class WorldItemGeneration : MonoBehaviour, IProcedural
     {
         clearChildren();
 
-        offsetX =Random.Range(0, 999.0f);
+        offsetX = Random.Range(0, 999.0f);
         offsetZ = Random.Range(0, 999.0f);
 
         float[,] perlinMap = getPerlinMap();
@@ -93,9 +109,36 @@ public class WorldItemGeneration : MonoBehaviour, IProcedural
                 if (perlinMap[x, z] > minValue)
                 {
 
-                    GameObject asset = Instantiate(assets[0], transform);
-                    asset.transform.rotation = Quaternion.Euler(Random.Range(-90.0f, 90f), Random.Range(-90.0f, 90.0f), Random.Range(-90.0f, 90.0f));
-                    asset.transform.position = getGroundPosition(x,z);
+                    int assetId = Random.Range(0, assets.Count);
+                    GameObject asset = Instantiate(assets[assetId], transform);
+
+                    switch (rotation) {
+                        case RotationProperties.NoRotation:
+                            break;
+                        case RotationProperties.RandomRotation:
+                            asset.transform.rotation = Quaternion.Euler(Random.Range(-90.0f, 90f), Random.Range(-90.0f, 90.0f), Random.Range(-90.0f, 90.0f));
+                            break;
+
+                        case RotationProperties.RandomRotationX:
+                            asset.transform.rotation = Quaternion.Euler(Random.Range(-90.0f, 90f), 0, 0);
+                            break;
+                        case RotationProperties.RandomRotationY:
+                            asset.transform.rotation = Quaternion.Euler(0, Random.Range(-90.0f, 90f), 0);
+                            break;
+                        case RotationProperties.RandomRotationZ:
+                            asset.transform.rotation = Quaternion.Euler(0, 0, Random.Range(-90.0f, 90f));
+                            break;
+                        case RotationProperties.AlongNormal:
+                            asset.transform.rotation = Quaternion.LookRotation(Vector3.forward, getNormal(x, z));
+                            break;
+                        case RotationProperties.AlongNormalRandomY:
+                            asset.transform.rotation = Quaternion.LookRotation(Vector3.forward, getNormal(x, z));
+                            Vector3 rotation = asset.transform.localEulerAngles;
+                            asset.transform.localRotation = Quaternion.Euler(rotation.x, Random.Range(-90.0f, 90.0f), rotation.z);
+                            break;
+                    }
+
+                    asset.transform.position = getGroundPosition(x, z);
                 }
             }
         }
@@ -105,13 +148,25 @@ public class WorldItemGeneration : MonoBehaviour, IProcedural
     }
 
 
+
+
     Vector3 getGroundPosition(float x, float z) {
         RaycastHit raycastHit;
 
-        float positionY =0;
-        if (Physics.Raycast(new Vector3(x, 120, z),Vector3.down, out raycastHit)){
+        float positionY = 0;
+        if (Physics.Raycast(new Vector3(x, 120, z), Vector3.down, out raycastHit)) {
             positionY = raycastHit.point.y;
         }
-        return new Vector3(x, positionY, z);       
+        return new Vector3(x, positionY, z);
+    }
+
+    Vector3 getNormal(float x, float z) {
+
+        RaycastHit raycastHit;
+        if (Physics.Raycast(new Vector3(x, 120, z), Vector3.down, out raycastHit))
+        {
+          return  raycastHit.normal;
+        }
+        return Vector3.up;
     }
 }
