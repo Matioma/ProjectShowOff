@@ -12,6 +12,9 @@ public class PlatformTrigger : MonoBehaviour
     UnityEvent onReleaseTrigger;
 
     int numPushingObjects;
+
+    [SerializeField]
+    bool triggredByCharacter = false;
     int NumPushingObjects {
         get { return numPushingObjects; }
         set {
@@ -48,10 +51,10 @@ public class PlatformTrigger : MonoBehaviour
             NumPushingObjects++;
         }
 
-        //if ( other.gameObject.GetComponent<CharachterModel>())
-        //{
-        //    NumPushingObjects++;
-        //}
+        if (triggredByCharacter && other.gameObject.GetComponent<CharachterModel>())
+        {
+            NumPushingObjects++;
+        }
     }
 
 
@@ -63,10 +66,10 @@ public class PlatformTrigger : MonoBehaviour
             pushableObject.SetPlatformTrigger(null);
             NumPushingObjects--;
         }
-        //if (other.gameObject.GetComponent<CharachterModel>())
-        //{
-        //    NumPushingObjects--;
-        //}
+        if (triggredByCharacter && other.gameObject.GetComponent<CharachterModel>())
+        {
+            NumPushingObjects--;
+        }
     }
 
 }
