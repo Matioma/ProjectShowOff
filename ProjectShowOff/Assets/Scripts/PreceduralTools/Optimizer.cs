@@ -16,6 +16,10 @@ public class Optimizer : MonoBehaviour
         MeshFilter[] meshFilters = GetComponentsInChildren<MeshFilter>();
 
 
+        Vector3 position = transform.position;
+        transform.position = Vector3.zero;
+
+
         //List<Mesh> mesh = GroupedMeshes(meshFilters);
 
         //Debug.Log(mesh.Count);
@@ -52,6 +56,7 @@ public class Optimizer : MonoBehaviour
         transform.GetComponent<MeshFilter>().sharedMesh.CombineMeshes(combine);
 
         transform.gameObject.SetActive(true);
+        transform.position = position;
     }
 
 
