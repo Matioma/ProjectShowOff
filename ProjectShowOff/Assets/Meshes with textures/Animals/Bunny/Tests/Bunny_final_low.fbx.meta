@@ -1,9 +1,19 @@
 fileFormatVersion: 2
-guid: 6bd20250834bb2146972993846f540f7
+guid: f0d6f5dcc676bc440a78f4dc3c7ae683
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bunny_Add
+    second: {fileID: 2100000, guid: 437bd245ab073444481641fef5aca5dd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bunny_body
+    second: {fileID: 2100000, guid: 682b6114c0e9afa47abd45aafa6409ff, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

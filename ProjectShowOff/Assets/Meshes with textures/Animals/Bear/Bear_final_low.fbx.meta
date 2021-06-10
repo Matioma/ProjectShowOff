@@ -1,9 +1,19 @@
 fileFormatVersion: 2
-guid: a2bcfedfd6f9db146ab5b8b592c08c8c
+guid: 2598b2e8f93d48e48b391c716108ce14
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bear_Add
+    second: {fileID: 2100000, guid: ec25dbe5df0447148a85e7bae8edefcc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bear_Body
+    second: {fileID: 2100000, guid: 7ef9d0627278d904ca7a1cc568d52187, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
