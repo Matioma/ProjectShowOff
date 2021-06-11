@@ -3,7 +3,12 @@ guid: b790a4efb5138944390a67ee68cb0a7a
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: UI_Push
+    second: {fileID: 2800000, guid: 696cc474f936e1d43b82bc6de8d28a9c, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
