@@ -17,19 +17,19 @@ public class CheckPoint : MonoBehaviour
     string targetScene;
 
 
+    bool everReached = false;
+
+
 
     public static Dictionary<CharachterModel, Vector3> SavedPosition = new Dictionary<CharachterModel, Vector3>();
-    
+
+    Player player;
 
 
     private void Awake()
     {
         playerModel = FindObjectOfType<Player>();
-
         onCheckPointReached.AddListener(SaveProgress);
-
-
-
     }
 
 
@@ -40,10 +40,11 @@ public class CheckPoint : MonoBehaviour
     }
     void CharacterEnterZone() {
         charactersInZone++;
-        //if (charactersInZone >= playerModel.ControlledCharacters.Count) {
-            //Debug.Log("SavePoint reached");
-            onCheckPointReached?.Invoke();
-        //}
+
+        if (!everReached) { 
+                onCheckPointReached?.Invoke();
+            player.newCheckPointReached();
+        }
     }
     void CharacterExitZone() {
         charactersInZone--;

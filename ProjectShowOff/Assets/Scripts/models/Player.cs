@@ -7,6 +7,15 @@ using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour
 {
     int score;
+    int checkPoints;
+    int numberOfCheckpointsReached;
+    public UnityEvent onCheckPointReached;
+
+    public float getProgress() { 
+        return (float)numberOfCheckpointsReached / (float)checkPoints;
+    }
+
+
 
     [SerializeField]
     string FilePath = "/Data/player.data";
@@ -25,6 +34,17 @@ public class Player : MonoBehaviour
         playerData.SavePlayerData(Application.dataPath + FilePath);
     }
 
+
+    public void newCheckPointReached() {
+        numberOfCheckpointsReached++;
+        onCheckPointReached?.Invoke();
+    }
+
+
+    void Awake(){
+        checkPoints = FindObjectsOfType<CheckPoint>().Length;
+        playerData = PlayerData.Load(Application.dataPath + FilePath);
+    }
 
     public bool AudioEnabled { get; set; } = false;
 
@@ -49,7 +69,7 @@ public class Player : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    public void LoadProgress() {
+    public void LoadCheckPoint() {
         CheckPoint.LoadProgress();
     }
 
@@ -57,14 +77,9 @@ public class Player : MonoBehaviour
         onDeath?.Invoke();
     }
 
-    private void Awake()
-    {
-        playerData = PlayerData.Load(Application.dataPath + FilePath);
-    }
-
     private void Start()
     {
-        onDeath.AddListener(LoadProgress);
+        onDeath.AddListener(LoadCheckPoint);
     }
 
     public void SwitchCharacter() {
@@ -79,6 +94,6 @@ public class Player : MonoBehaviour
 
     private void OnDestroy()
     {
-        onDeath.RemoveListener(LoadProgress);
+        onDeath.RemoveListener(LoadCheckPoint);
     }
 }
