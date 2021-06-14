@@ -16,8 +16,7 @@ ScriptedImporter:
     graphDescIndex: 0
     generateAllOutputs: 0
     generateMipMaps: 1
-    preset: " <sbspreset pkgurl=\"pkg://Dirt\" label=\"\" >\n  <presetinput identifier=\"$outputsize\"
-      uid=\"2338686538\" type=\"8\" value=\"9,9\" />\n </sbspreset>\n"
+    preset: " <sbspreset pkgurl=\"pkg://Dirt\" label=\"\" >\n </sbspreset>\n"
     shaderName: HDRP/LitTessellation
     materialProperties:
       shader: {fileID: 4800000, guid: 756bac9090102564582875f4c7e30202, type: 3}
@@ -27,7 +26,7 @@ ScriptedImporter:
       lightmapFlags: 4
       enableInstancingVariants: 0
       doubleSidedGI: 0
-      customRenderQueue: -1
+      customRenderQueue: 2225
       texEnvs:
       - name: _AnisotropyMap
         texture: {instanceID: 0}
@@ -35,7 +34,7 @@ ScriptedImporter:
         offset: {x: 0, y: 0}
       - name: _BaseColorMap
         texture: {fileID: 8473215084559306064, guid: 1ade55de897d2d14997f894b29cf298f, type: 3}
-        scale: {x: 1, y: 1}
+        scale: {x: 20, y: 20}
         offset: {x: 0, y: 0}
       - name: _BentNormalMap
         texture: {instanceID: 0}
@@ -203,11 +202,11 @@ ScriptedImporter:
       - name: _EnergyConservingSpecularColor
         float: 1
       - name: _HeightAmplitude
-        float: 0.02
+        float: 0
       - name: _HeightCenter
         float: 0.5
       - name: _HeightMapParametrization
-        float: 0
+        float: 1
       - name: _HeightMax
         float: 1
       - name: _HeightMin
@@ -217,11 +216,11 @@ ScriptedImporter:
       - name: _HeightPoMAmplitude
         float: 2
       - name: _HeightTessAmplitude
-        float: 2
+        float: 0
       - name: _HeightTessCenter
         float: 0.5
       - name: _InvTilingScale
-        float: 1
+        float: 0.05
       - name: _Ior
         float: 1
       - name: _IridescenceMask
@@ -275,19 +274,19 @@ ScriptedImporter:
       - name: _StencilRef
         float: 0
       - name: _StencilRefDepth
-        float: 0
+        float: 8
       - name: _StencilRefGBuffer
-        float: 2
+        float: 10
       - name: _StencilRefMV
-        float: 32
+        float: 40
       - name: _StencilWriteMask
-        float: 3
+        float: 6
       - name: _StencilWriteMaskDepth
         float: 8
       - name: _StencilWriteMaskGBuffer
-        float: 3
+        float: 14
       - name: _StencilWriteMaskMV
-        float: 32
+        float: 40
       - name: _SubsurfaceMask
         float: 1
       - name: _SupportDecals
@@ -297,7 +296,7 @@ ScriptedImporter:
       - name: _TessellationBackFaceCullEpsilon
         float: -0.25
       - name: _TessellationFactor
-        float: 4
+        float: 29.3
       - name: _TessellationFactorMaxDistance
         float: 50
       - name: _TessellationFactorMinDistance
@@ -343,7 +342,7 @@ ScriptedImporter:
       - name: _UseShadowThreshold
         float: 0
       - name: _ZTestDepthEqualForOpaque
-        float: 4
+        float: 3
       - name: _ZTestGBuffer
         float: 4
       - name: _ZTestTransparent
