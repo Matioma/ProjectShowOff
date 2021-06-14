@@ -28,10 +28,7 @@ public class PlayerData
             // If the file does exist then read the entire file to a string.
             string contents = File.ReadAllText(filePath);
 
-            // If debug is on then tell us the file we read and its contents.
-            //if (DEBUG_ON)
-            //    Debug.LogFormat("ReadFromFile({0})\ncontents:\n{1}", filePath, contents);
-
+           
             // If it happens that the file is somehow empty then tell us and return a new SaveData object.
             if (string.IsNullOrEmpty(contents))
             {
@@ -46,9 +43,6 @@ public class PlayerData
 
     public void SavePlayerData(string path) {
         string json = JsonUtility.ToJson(this, true);
-
         File.WriteAllText(path, json);
-
     }
-
 }
