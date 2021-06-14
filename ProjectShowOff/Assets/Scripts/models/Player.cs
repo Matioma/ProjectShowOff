@@ -7,9 +7,24 @@ using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour
 {
     int score;
+
+    [SerializeField]
+    string FilePath = "/Data/player.data";
+
+
     public void AddScore(int amount) {
         score += amount;
+        playerData.trashCollectected += amount;
     }
+
+
+    PlayerData playerData;
+
+
+    public void SaveProgress() {
+        playerData.SavePlayerData(Application.dataPath + FilePath);
+    }
+
 
     public bool AudioEnabled { get; set; } = false;
 
@@ -38,9 +53,13 @@ public class Player : MonoBehaviour
         CheckPoint.LoadProgress();
     }
 
-
     public void Die() {
         onDeath?.Invoke();
+    }
+
+    private void Awake()
+    {
+        playerData = PlayerData.Load(Application.dataPath + FilePath);
     }
 
     private void Start()
