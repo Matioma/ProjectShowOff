@@ -7,6 +7,12 @@ public class RabbitController : CharachterModel
     [Header("Skill Related")]
     public float jumpSpeed = 8.0f;
 
+
+    public void TriggerJumpAnimation()
+    {
+        animator.SetTrigger("TriggerJump");
+    }
+
     public override void SpecialAction()
     {
         if (!canStand()) return;
@@ -15,6 +21,7 @@ public class RabbitController : CharachterModel
         {
             base.SpecialAction();
             velocity.y = jumpSpeed;
+            TriggerJumpAnimation();
         }
     }
 }

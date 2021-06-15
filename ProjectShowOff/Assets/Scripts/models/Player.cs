@@ -27,7 +27,7 @@ public class Player : MonoBehaviour
     int trashCollectedCount;
     public UnityEvent onTrashCollected;
     public float getTrashPercent() {
-        return (float)trashCount / trashCollectedCount;
+        return (float)trashCollectedCount / trashCount;
     }
     public void AddTrashCollectedCount(int amount = 1) {
         trashCollectedCount += amount;

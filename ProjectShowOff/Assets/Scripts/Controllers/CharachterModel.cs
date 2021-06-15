@@ -61,7 +61,7 @@ public class CharachterModel : MonoBehaviour, ICharacterController
         }
     }
 
-    public void PushBack( Vector3 velocity) {
+    public void PushBack(Vector3 velocity) {
         this.velocity = velocity;
         //controller.Move(velocity);
 
@@ -104,6 +104,16 @@ public class CharachterModel : MonoBehaviour, ICharacterController
     {
         controller = GetComponent<CharacterController>();
     }
+
+    void UpdateAnimatorVelocityComponent(float value) {
+        if (animator != null) animator.SetFloat("Velocity", value);
+    }
+
+    void updateIsGroundedAnimation(bool value) {
+        if (animator != null) animator.SetBool("IsGrounded", value);
+    
+    }
+
     private void FixedUpdate()
     {
         if (wasInAir && controller.isGrounded)
@@ -117,7 +127,9 @@ public class CharachterModel : MonoBehaviour, ICharacterController
 
         Vector3 XZVelocity = new Vector3(velocity.x, 0, velocity.z);
 
-        if (animator != null) animator.SetFloat("Velocity", XZVelocity.sqrMagnitude);
+        updateIsGroundedAnimation(controller.isGrounded);
+        UpdateAnimatorVelocityComponent(XZVelocity.sqrMagnitude);
+        //if (animator != null) animator.SetFloat("Velocity",);
 
         if (XZVelocity.sqrMagnitude > 0)
         {

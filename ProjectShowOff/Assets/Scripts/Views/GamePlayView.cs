@@ -7,8 +7,8 @@ public class GamePlayView : MonoBehaviour
 {
     Player player;
 
-    [SerializeField]
-    Slider CheckPointsProgress;
+    //[SerializeField]
+    //Slider CheckPointsProgress;
     [SerializeField]
     Slider TrashProgress;
    
@@ -21,9 +21,10 @@ public class GamePlayView : MonoBehaviour
     }
     public void updateCheckPointProgress()
     {
-        CheckPointsProgress.value = player.getCheckPointProgress();
+       // CheckPointsProgress.value = player.getCheckPointProgress();
     }
     public void updateTrashCountProgress() {
+        Debug.Log(player.getTrashPercent());
         TrashProgress.value = player.getTrashPercent();
     }
 
