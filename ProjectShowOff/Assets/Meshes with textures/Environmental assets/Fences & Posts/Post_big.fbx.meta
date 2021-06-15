@@ -3,7 +3,17 @@ guid: 374f4fae4b8540e4c825abece6ef18a7
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Place_UI
+    second: {fileID: 2100000, guid: 92c8b79843758c1498b5acebde196871, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wooden_Beams
+    second: {fileID: 2100000, guid: b504f86b3381b014c83593663ebdc64b, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

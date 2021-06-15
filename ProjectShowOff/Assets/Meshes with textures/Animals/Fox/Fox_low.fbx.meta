@@ -1,9 +1,19 @@
 fileFormatVersion: 2
-guid: 6bd20250834bb2146972993846f540f7
+guid: 20704a082a6735f4b88d450c51cce2df
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fox_Add
+    second: {fileID: 2100000, guid: 92edadc043b536d458651646dc4b1aa3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fox_Body
+    second: {fileID: 2100000, guid: 78baae7a59e4bb748865b6df11834b7e, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
