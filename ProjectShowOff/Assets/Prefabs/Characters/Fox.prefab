@@ -208,9 +208,9 @@ MonoBehaviour:
   acceletation: 9
   speed: 10
   gravity: 20
-  surfaceTolerance: 0
-  drag: 0.5
+  drag: 0.2
   maxAngleFromUp: 50
+  slidingAccelerator: 2
   dashTime: 0.4
   dashSpeed: 18
 --- !u!136 &2639395515962379635

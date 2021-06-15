@@ -208,7 +208,7 @@ MonoBehaviour:
   acceletation: 7
   speed: 8
   gravity: 20
-  drag: 0.5
+  drag: 0.2
   maxAngleFromUp: 50
   slidingAccelerator: 2
   pushPower: 0
