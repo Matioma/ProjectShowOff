@@ -7,14 +7,34 @@ using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour
 {
     int score;
+
     int checkPoints;
     int numberOfCheckpointsReached;
     public UnityEvent onCheckPointReached;
-
-    public float getProgress() { 
-        return (float)numberOfCheckpointsReached / (float)checkPoints;
+    public float getCheckPointProgress()
+    {
+        return (float)numberOfCheckpointsReached / checkPoints;
+    }
+    public void nextCheckPointReached()
+    {
+        numberOfCheckpointsReached++;
+        onCheckPointReached?.Invoke();
     }
 
+
+
+    int trashCount;
+    int trashCollectedCount;
+    public UnityEvent onTrashCollected;
+    public float getTrashPercent() {
+        return (float)trashCount / trashCollectedCount;
+    }
+    public void AddTrashCollectedCount(int amount = 1) {
+        trashCollectedCount += amount;
+        onTrashCollected?.Invoke();
+    }
+
+   
 
 
     [SerializeField]
@@ -35,15 +55,13 @@ public class Player : MonoBehaviour
     }
 
 
-    public void newCheckPointReached() {
-        numberOfCheckpointsReached++;
-        onCheckPointReached?.Invoke();
-    }
+  
 
 
     void Awake(){
         checkPoints = FindObjectsOfType<CheckPoint>().Length;
         playerData = PlayerData.Load(Application.dataPath + FilePath);
+        trashCount = FindObjectsOfType<Pickup>().Length;
     }
 
     public bool AudioEnabled { get; set; } = false;

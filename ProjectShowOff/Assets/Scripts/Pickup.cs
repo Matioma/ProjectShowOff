@@ -40,13 +40,8 @@ public class Pickup : MonoBehaviour
     {
         if (other.GetComponent<CharachterModel>() != null) {
             onPickedUp?.Invoke();
+            playerModel.AddTrashCollectedCount();
         }
-        //Debug.Log(other.gameObject.name);
-        //foreach (var character in characters) {
-        //    if (other.gameObject == character.gameObject) {
-        //        onPickedUp?.Invoke();
-        //    }
-        //}
     }
 
     private void OnDestroy()
