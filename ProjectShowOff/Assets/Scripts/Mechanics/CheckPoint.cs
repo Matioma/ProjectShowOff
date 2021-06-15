@@ -43,7 +43,7 @@ public class CheckPoint : MonoBehaviour
 
         if (!everReached) { 
                 onCheckPointReached?.Invoke();
-            player.newCheckPointReached();
+                player.nextCheckPointReached();
         }
     }
     void CharacterExitZone() {
