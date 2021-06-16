@@ -16,6 +16,7 @@ public class IntroScreenModel : MonoBehaviour
     public void StartGame(string sceneName) {
         PlayerData playerData = new PlayerData();
         playerData.Name = introView.Input.text;
+        playerData.trashCollectected = 0;
         playerData.SavePlayerData(Player.FilePath);
         SceneManager.LoadScene(sceneName);
     }

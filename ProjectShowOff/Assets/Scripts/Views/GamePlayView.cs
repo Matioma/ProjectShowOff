@@ -11,7 +11,13 @@ public class GamePlayView : MonoBehaviour
     //Slider CheckPointsProgress;
     [SerializeField]
     Slider TrashProgress;
-   
+
+
+    [SerializeField]
+    ProgressBar trashProgressBar;
+
+    [SerializeField]
+    ProgressBar checkPointProgressBar;
 
     private void Awake()
     {
@@ -21,11 +27,16 @@ public class GamePlayView : MonoBehaviour
     }
     public void updateCheckPointProgress()
     {
-       // CheckPointsProgress.value = player.getCheckPointProgress();
+
+        if (checkPointProgressBar != null) checkPointProgressBar.Progress = player.getCheckPointProgress();
+        // CheckPointsProgress.value = player.getCheckPointProgress();
     }
     public void updateTrashCountProgress() {
-        Debug.Log(player.getTrashPercent());
+        //Debug.Log(player.getTrashPercent());
+
         TrashProgress.value = player.getTrashPercent();
+
+        if(TrashProgress != null) trashProgressBar.Progress = player.getTrashPercent();
     }
 
     private void OnDestroy()
