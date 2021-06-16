@@ -3,7 +3,32 @@ guid: 732a634d54ace644c8da97ed3862708c
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Car_1_Pile
+    second: {fileID: 2100000, guid: bc8b5c55438626e43a4ca4dcffd10e1a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Car_2_Pile
+    second: {fileID: 2100000, guid: c0706b9fc6b03fb4f863ccbdd3285a1a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Car_3_Pile
+    second: {fileID: 2100000, guid: 53bbbfb32b6dad748968e1689d126fd8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Car_4_Pile
+    second: {fileID: 2100000, guid: bc8b5c55438626e43a4ca4dcffd10e1a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Car_5_Pile
+    second: {fileID: 2100000, guid: e80b43966a6fcfd40ab27cea81860006, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
