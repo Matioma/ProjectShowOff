@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class IntroScreenModel : MonoBehaviour
 {
@@ -12,9 +13,10 @@ public class IntroScreenModel : MonoBehaviour
     }
 
 
-    public void StartGame() {
+    public void StartGame(string sceneName) {
         PlayerData playerData = new PlayerData();
         playerData.Name = introView.Input.text;
         playerData.SavePlayerData(Player.FilePath);
+        SceneManager.LoadScene(sceneName);
     }
 }

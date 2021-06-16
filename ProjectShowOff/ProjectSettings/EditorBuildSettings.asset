@@ -23,7 +23,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Level 3 Merged.unity
     guid: ceb579d33df889d4cbb828e2836ef266
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Final Scenes/Level 1.unity
     guid: 9f7bad96222c1ac4dbfdbefd98473ce5
   m_configObjects: {}
