@@ -6,11 +6,11 @@ TerrainLayer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: NewLayer 1
-  m_DiffuseTexture: {fileID: 2800000, guid: 734e253d21e25f74683e0909b6433a40, type: 3}
-  m_NormalMapTexture: {fileID: 6510170783424759710, guid: 4307c87770fe07640aa7483ec202d2f3, type: 3}
+  m_Name: Forestground
+  m_DiffuseTexture: {fileID: 8473215084559306064, guid: 4307c87770fe07640aa7483ec202d2f3, type: 3}
+  m_NormalMapTexture: {fileID: 2800000, guid: 19e871024db02674fa3353920f4949fc, type: 3}
   m_MaskMapTexture: {fileID: 0}
-  m_TileSize: {x: 2, y: 2}
+  m_TileSize: {x: 9, y: 9}
   m_TileOffset: {x: 0, y: 0}
   m_Specular: {r: 0, g: 0, b: 0, a: 0}
   m_Metallic: 0
