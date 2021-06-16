@@ -1,5 +1,19 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!64 &815999980544137237
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5706953059084715981}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 290673448666574322, guid: 905f12d57ee3cf74c824fc6f75614f92, type: 3}
 --- !u!1 &5940027621312229387
 GameObject:
   m_ObjectHideFlags: 0
@@ -10,7 +24,7 @@ GameObject:
   m_Component:
   - component: {fileID: 46838046355758153}
   m_Layer: 0
-  m_Name: New Prefab
+  m_Name: Car_2_normal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -88,6 +102,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 905f12d57ee3cf74c824fc6f75614f92, type: 3}
+--- !u!1 &5706953059084715981 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 905f12d57ee3cf74c824fc6f75614f92, type: 3}
+  m_PrefabInstance: {fileID: 4896048604338191004}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4933969638009773431 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 905f12d57ee3cf74c824fc6f75614f92, type: 3}
