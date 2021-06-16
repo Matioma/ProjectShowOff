@@ -276,6 +276,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 358701059}
     m_Modifications:
+    - target: {fileID: 834731594795867381, guid: 13e61efd18d595141b95173db83ae17d, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3176631874503499662, guid: 13e61efd18d595141b95173db83ae17d, type: 3}
       propertyPath: onPressTrigger.m_PersistentCalls.m_Calls.Array.size
       value: 2
@@ -340,17 +344,21 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4481951598939387092, guid: 13e61efd18d595141b95173db83ae17d, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7463854017043694330, guid: 13e61efd18d595141b95173db83ae17d, type: 3}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7463854017043694330, guid: 13e61efd18d595141b95173db83ae17d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.73
+      value: 3.78
       objectReference: {fileID: 0}
     - target: {fileID: 7463854017043694330, guid: 13e61efd18d595141b95173db83ae17d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.51
+      value: -4.91
       objectReference: {fileID: 0}
     - target: {fileID: 7463854017043694330, guid: 13e61efd18d595141b95173db83ae17d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -387,6 +395,10 @@ PrefabInstance:
     - target: {fileID: 7463854017043799770, guid: 13e61efd18d595141b95173db83ae17d, type: 3}
       propertyPath: m_Name
       value: MushroomPlatformTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 7463854017043799770, guid: 13e61efd18d595141b95173db83ae17d, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7463854017045987354, guid: 13e61efd18d595141b95173db83ae17d, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1593,36 +1605,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 70557820}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &73768828
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 73768829}
-  m_Layer: 0
-  m_Name: Environment
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &73768829
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 73768828}
-  m_LocalRotation: {x: -0, y: 0.0087093655, z: -0, w: -0.99996215}
-  m_LocalPosition: {x: -1.5064392, y: -9.464201, z: 240.01065}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 359.002, z: 0}
 --- !u!4 &73941657 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2947967624653410582, guid: 92d026130599cf84f80beacfb1531588, type: 3}
@@ -1695,6 +1677,14 @@ PrefabInstance:
     - target: {fileID: 1295369018802933986, guid: 63baea975cde3934baf95f3ae0ba922b, type: 3}
       propertyPath: m_Name
       value: Rock4Wasteland
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295369018802933986, guid: 63baea975cde3934baf95f3ae0ba922b, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5009572826209914552, guid: 63baea975cde3934baf95f3ae0ba922b, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5678550247207425026, guid: 63baea975cde3934baf95f3ae0ba922b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2276,6 +2266,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tire (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1152182907853703080, guid: a5dab5e24f13ce14baa6f5eea0570551, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5151616416621842234, guid: a5dab5e24f13ce14baa6f5eea0570551, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 9066814855109651579, guid: a5dab5e24f13ce14baa6f5eea0570551, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -2501,6 +2499,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tire (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1152182907853703080, guid: a5dab5e24f13ce14baa6f5eea0570551, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5151616416621842234, guid: a5dab5e24f13ce14baa6f5eea0570551, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 9066814855109651579, guid: a5dab5e24f13ce14baa6f5eea0570551, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -2631,6 +2637,14 @@ PrefabInstance:
     - target: {fileID: 1152182907853703080, guid: a5dab5e24f13ce14baa6f5eea0570551, type: 3}
       propertyPath: m_Name
       value: Tire (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1152182907853703080, guid: a5dab5e24f13ce14baa6f5eea0570551, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5151616416621842234, guid: a5dab5e24f13ce14baa6f5eea0570551, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9066814855109651579, guid: a5dab5e24f13ce14baa6f5eea0570551, type: 3}
       propertyPath: m_RootOrder
@@ -3094,6 +3108,14 @@ PrefabInstance:
     - target: {fileID: 1152182907853703080, guid: a5dab5e24f13ce14baa6f5eea0570551, type: 3}
       propertyPath: m_Name
       value: Tire (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1152182907853703080, guid: a5dab5e24f13ce14baa6f5eea0570551, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5151616416621842234, guid: a5dab5e24f13ce14baa6f5eea0570551, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9066814855109651579, guid: a5dab5e24f13ce14baa6f5eea0570551, type: 3}
       propertyPath: m_RootOrder
@@ -4039,7 +4061,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &280394473 stripped
 Transform:
@@ -5465,6 +5487,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tire (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 1152182907853703080, guid: a5dab5e24f13ce14baa6f5eea0570551, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5151616416621842234, guid: a5dab5e24f13ce14baa6f5eea0570551, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 9066814855109651579, guid: a5dab5e24f13ce14baa6f5eea0570551, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -6692,7 +6722,7 @@ Transform:
   m_LocalScale: {x: 1003.7254, y: 1003.7254, z: 2409.5432}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &430095332 stripped
 Transform:
@@ -6946,7 +6976,7 @@ Transform:
   - {fileID: 1568261668}
   - {fileID: 1589276978}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &453167508 stripped
 Transform:
@@ -8025,6 +8055,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tire (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 1152182907853703080, guid: a5dab5e24f13ce14baa6f5eea0570551, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5151616416621842234, guid: a5dab5e24f13ce14baa6f5eea0570551, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 9066814855109651579, guid: a5dab5e24f13ce14baa6f5eea0570551, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -8995,6 +9033,14 @@ PrefabInstance:
     - target: {fileID: 1152182907853703080, guid: a5dab5e24f13ce14baa6f5eea0570551, type: 3}
       propertyPath: m_Name
       value: Tire (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1152182907853703080, guid: a5dab5e24f13ce14baa6f5eea0570551, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5151616416621842234, guid: a5dab5e24f13ce14baa6f5eea0570551, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9066814855109651579, guid: a5dab5e24f13ce14baa6f5eea0570551, type: 3}
       propertyPath: m_RootOrder
@@ -12980,37 +13026,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1686021177305034388, guid: ebee340de387f334f9ac44e044abd8fb, type: 3}
   m_PrefabInstance: {fileID: 838543670}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &841408119
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 841408120}
-  m_Layer: 0
-  m_Name: Lake/Hole/Spikes
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &841408120
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 841408119}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.808436, y: 4.0737505, z: 157.4746}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1682609088}
-  m_Father: {fileID: 0}
-  m_RootOrder: 14
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &844430370 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1939651875760995773, guid: bf2b2b93c336bc540813734d87a80cef, type: 3}
@@ -13697,6 +13712,14 @@ PrefabInstance:
     - target: {fileID: 1152182907853703080, guid: a5dab5e24f13ce14baa6f5eea0570551, type: 3}
       propertyPath: m_Name
       value: Tire (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1152182907853703080, guid: a5dab5e24f13ce14baa6f5eea0570551, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5151616416621842234, guid: a5dab5e24f13ce14baa6f5eea0570551, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9066814855109651579, guid: a5dab5e24f13ce14baa6f5eea0570551, type: 3}
       propertyPath: m_RootOrder
@@ -14715,6 +14738,14 @@ PrefabInstance:
     - target: {fileID: 1848302386687308428, guid: ef5420be6fbb74449bae425ca4f43653, type: 3}
       propertyPath: m_Name
       value: Rock3Wasteland
+      objectReference: {fileID: 0}
+    - target: {fileID: 1848302386687308428, guid: ef5420be6fbb74449bae425ca4f43653, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2880551559763829919, guid: ef5420be6fbb74449bae425ca4f43653, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef5420be6fbb74449bae425ca4f43653, type: 3}
@@ -16658,6 +16689,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock3Wasteland (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1848302386687308428, guid: ef5420be6fbb74449bae425ca4f43653, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2880551559763829919, guid: ef5420be6fbb74449bae425ca4f43653, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef5420be6fbb74449bae425ca4f43653, type: 3}
 --- !u!4 &1130063797 stripped
@@ -17579,7 +17618,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1219845262}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Tirestack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18203,7 +18242,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1267088813}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Appearing Stones
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18223,7 +18262,7 @@ Transform:
   m_Children:
   - {fileID: 2008204791}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1268982680
 PrefabInstance:
@@ -18443,7 +18482,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1277690567}
   - component: {fileID: 1277690568}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Stones
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19787,6 +19826,14 @@ PrefabInstance:
     - target: {fileID: 1152182907853703080, guid: a5dab5e24f13ce14baa6f5eea0570551, type: 3}
       propertyPath: m_Name
       value: Tire (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1152182907853703080, guid: a5dab5e24f13ce14baa6f5eea0570551, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5151616416621842234, guid: a5dab5e24f13ce14baa6f5eea0570551, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9066814855109651579, guid: a5dab5e24f13ce14baa6f5eea0570551, type: 3}
       propertyPath: m_RootOrder
@@ -21507,6 +21554,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock3Wasteland (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1848302386687308428, guid: ef5420be6fbb74449bae425ca4f43653, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2880551559763829919, guid: ef5420be6fbb74449bae425ca4f43653, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef5420be6fbb74449bae425ca4f43653, type: 3}
 --- !u!4 &1506163759 stripped
@@ -21705,7 +21760,7 @@ Transform:
   - {fileID: 1446516587}
   - {fileID: 322213663}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1526976772
 PrefabInstance:
@@ -22739,7 +22794,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1622293759}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Tirestack (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23717,134 +23772,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eba287a39b20eeb49b4f8fd460571eb3, type: 3}
---- !u!1 &1682609087
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1682609088}
-  - component: {fileID: 1682609093}
-  - component: {fileID: 1682609092}
-  - component: {fileID: 1682609091}
-  - component: {fileID: 1682609090}
-  - component: {fileID: 1682609089}
-  m_Layer: 0
-  m_Name: Hole/Spikes (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1682609088
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1682609087}
-  m_LocalRotation: {x: -0, y: -0.5593819, z: -0, w: 0.8289101}
-  m_LocalPosition: {x: -1.83, y: -3.42, z: -2.35}
-  m_LocalScale: {x: 7.5014606, y: 0.81387395, z: 9.21598}
-  m_Children: []
-  m_Father: {fileID: 841408120}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -68.026, z: 0}
---- !u!114 &1682609089
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1682609087}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c59b0ec4a7b4c19409744b3fd956469a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onCollisionWithCharacter:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!54 &1682609090
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1682609087}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!65 &1682609091
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1682609087}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 0.5729018, z: 1}
-  m_Center: {x: 0, y: -0.21354891, z: 0}
---- !u!23 &1682609092
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1682609087}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 257
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 6a4a9cd798f58bf419164a016513c59e, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1682609093
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1682609087}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1684781052
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25350,6 +25277,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tire (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 1152182907853703080, guid: a5dab5e24f13ce14baa6f5eea0570551, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5151616416621842234, guid: a5dab5e24f13ce14baa6f5eea0570551, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 9066814855109651579, guid: a5dab5e24f13ce14baa6f5eea0570551, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -26539,7 +26474,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1898645645 stripped
 Transform:
@@ -27098,7 +27033,7 @@ Transform:
   m_LocalScale: {x: 11.025206, y: 11.025206, z: 11.025206}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: -37.81, z: 0}
 --- !u!1001 &1994735083
 PrefabInstance:
@@ -27297,6 +27232,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tire (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 1152182907853703080, guid: a5dab5e24f13ce14baa6f5eea0570551, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5151616416621842234, guid: a5dab5e24f13ce14baa6f5eea0570551, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 9066814855109651579, guid: a5dab5e24f13ce14baa6f5eea0570551, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -27432,7 +27375,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2008204791}
   - component: {fileID: 2008204792}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Animation Root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28722,7 +28665,7 @@ Transform:
   m_Children:
   - {fileID: 878254406}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2117158502
 PrefabInstance:
