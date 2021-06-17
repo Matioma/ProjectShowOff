@@ -77,7 +77,11 @@ public class Player : MonoBehaviour
         }
     }
 
+    [HideInInspector]
     public static bool IsGamePaused { get;private set; } = false;
+
+    public UnityEvent onGamePaused;
+    public UnityEvent onGameUnPaused;
     public void TogglePause() {
         IsGamePaused = !IsGamePaused;
         if (IsGamePaused)
@@ -85,11 +89,13 @@ public class Player : MonoBehaviour
             Time.timeScale = 0;
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
+            onGamePaused?.Invoke();
         }
         else {
             Time.timeScale = 1;
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
+            onGameUnPaused?.Invoke();
         }
     }
 

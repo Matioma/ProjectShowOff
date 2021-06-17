@@ -13,13 +13,29 @@ public class GamePlayView : MonoBehaviour
     [SerializeField]
     ProgressBar checkPointProgressBar;
 
+
+    [SerializeField]
+    GameObject menuParent;
+
     private void Awake()
     {
+        onGameUnPaused();
         player = FindObjectOfType<Player>();
 
         player.onCheckPointReached.AddListener(updateCheckPointProgress);
         player.onTrashCollected.AddListener(updateTrashCountProgress);
+        player.onGamePaused.AddListener(onGamePaused);
+        player.onGameUnPaused.AddListener(onGameUnPaused);
     }
+
+    void onGamePaused() {
+        menuParent.gameObject.SetActive(true);
+    }
+
+    void onGameUnPaused() {
+        menuParent.gameObject.SetActive(false);
+    }
+
     public void updateCheckPointProgress()
     {
         if (checkPointProgressBar != null) checkPointProgressBar.Progress = player.getCheckPointProgress();
@@ -32,6 +48,8 @@ public class GamePlayView : MonoBehaviour
     {
         player.onCheckPointReached.RemoveListener(updateCheckPointProgress);
         player.onTrashCollected.RemoveListener(updateTrashCountProgress);
+        player.onGamePaused.RemoveListener(onGamePaused);
+        player.onGameUnPaused.RemoveListener(onGameUnPaused);
     }
 
     public void ToggleAudio() {
