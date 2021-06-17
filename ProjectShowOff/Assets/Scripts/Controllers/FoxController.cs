@@ -45,14 +45,26 @@ public class FoxController : CharachterModel
         yield return null;
     }
 
-    public void OnControllerColliderHit(ControllerColliderHit collision)
+
+    public void OnTriggerEnter(Collider other)
     {
         if (!isDashing) return;
 
-        Destroyable destroyable = collision.gameObject.GetComponent<Destroyable>();
-        if (collision.gameObject.GetComponent<Destroyable>())
+        Destroyable destroyable = other.gameObject.GetComponent<Destroyable>();
+        if (other.gameObject.GetComponent<Destroyable>())
         {
             destroyable.onCollisionEvent();
         }
     }
+
+    //public void OnControllerColliderHit(ControllerColliderHit collision)
+    //{
+    //    if (!isDashing) return;
+
+    //    Destroyable destroyable = collision.gameObject.GetComponent<Destroyable>();
+    //    if (collision.gameObject.GetComponent<Destroyable>())
+    //    {
+    //        destroyable.onCollisionEvent();
+    //    }
+    //}
 }
