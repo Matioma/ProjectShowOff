@@ -65,7 +65,33 @@ public class Player : MonoBehaviour
     }
 
     public bool AudioEnabled { get; set; } = false;
+    public void ToggleAudio() {
+        AudioEnabled = !AudioEnabled;
+        if (AudioEnabled)
+        {
+            AudioListener.volume = 1;
+        }
+        else
+        {
+            AudioListener.volume = 0;
+        }
+    }
 
+    public static bool IsGamePaused { get;private set; } = false;
+    public void TogglePause() {
+        IsGamePaused = !IsGamePaused;
+        if (IsGamePaused)
+        {
+            Time.timeScale = 0;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+        else {
+            Time.timeScale = 1;
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+    }
 
     [SerializeField]
     List<CharachterModel> characterControllers;

@@ -15,9 +15,16 @@ public class PlayerController : MonoBehaviour, ICharacterController
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.F1))
+        {
+            playerModel.TogglePause();
+        }
+
+        if (Player.IsGamePaused) return;
+
+
         Vector3 moveDirection = transform.right * Input.GetAxis("Horizontal") + transform.forward * Input.GetAxis("Vertical");
         Move(moveDirection.normalized);
-
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -32,19 +39,23 @@ public class PlayerController : MonoBehaviour, ICharacterController
             playerModel.SwitchCharacter();
         }
 
-
         if (Input.GetKeyDown(KeyCode.X)) {
-            playerModel.AudioEnabled = !playerModel.AudioEnabled;
-            if (playerModel.AudioEnabled)
-            {
-                AudioListener.volume = 1;
-            }
-            else {
-                AudioListener.volume = 0;
-            }
-            
+            ToggleAudio();
+        }
+
+       
+    }
+
+    public void ToggleAudio() {
+        playerModel.AudioEnabled = !playerModel.AudioEnabled;
+        if (playerModel.AudioEnabled)
+        {
+            AudioListener.volume = 1;
+        } else {
+            AudioListener.volume = 0;
         }
     }
+
     public void Move(Vector3 direction)
     {
         playerModel.ControlledCharacter?.Move(direction);

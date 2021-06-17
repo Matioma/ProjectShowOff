@@ -23,20 +23,15 @@ public class BearController : CharachterModel
         base.Awake();
         initialmovementSpeed = speed;
     }
-
-
-
     public override void SpecialAction()
     {
         if (!SkillIsEnabled) return;
         bearTriesToPush = true;
     }
-
     public override void ReleaseSpecialAction() {
         bearTriesToPush = false;
         DetachPushable();
     }
-
     void AttachPushable(PushableObject pushable) {
         pushable.transform.parent = transform;
         attachedPushable = pushable;
