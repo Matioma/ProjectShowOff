@@ -322,6 +322,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abc305a8c92591f4e8f9943731937a4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterMeshParent: {fileID: 4092881359698836900}
   animator: {fileID: 3959050182089511897}
   OnLanding:
     m_PersistentCalls:

@@ -7,6 +7,7 @@ public class CharachterModel : MonoBehaviour, ICharacterController
 {
     protected CharacterController controller;
 
+    [Tooltip("Reference to the mesh parent used for proper rotation")]
     [SerializeField]
     GameObject characterMeshParent;
 
@@ -120,7 +121,7 @@ public class CharachterModel : MonoBehaviour, ICharacterController
     protected void RotateCharacterModelInVelocityDirection(Vector3 velocity) {
         if (characterMeshParent == null) return;
 
-        characterMeshParent.transform.rotation = Quaternion.LookRotation(velocity, Vector3.up);
+        characterMeshParent.transform.localRotation = Quaternion.LookRotation(velocity, Vector3.up);
     }
 
     private void FixedUpdate()
@@ -149,7 +150,7 @@ public class CharachterModel : MonoBehaviour, ICharacterController
         }
 
         velocity.y -= gravity * Time.deltaTime; // gravity Acceleration
-        RotateCharacterModelInVelocityDirection(XZVelocity);
+        
 
         controller.Move(velocity * Time.deltaTime);
 
@@ -176,6 +177,8 @@ public class CharachterModel : MonoBehaviour, ICharacterController
     public void Move(Vector3 pDirection)
     {
         Vector3 localDirection = transform.forward * pDirection.z + transform.right * pDirection.x;
+        
+        RotateCharacterModelInVelocityDirection(new Vector3(pDirection.x, 0, pDirection.z));
 
         float yVelocity = velocity.y;
         velocity.y = 0;
