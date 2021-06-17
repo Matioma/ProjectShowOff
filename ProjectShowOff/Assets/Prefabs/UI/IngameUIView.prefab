@@ -623,6 +623,7 @@ GameObject:
   - component: {fileID: 1775250947050556782}
   - component: {fileID: 1775250947050556780}
   - component: {fileID: 1775250947050556783}
+  - component: {fileID: 2924907894895426939}
   m_Layer: 5
   m_Name: 'Cleaning Text BGrnd '
   m_TagString: Untagged
@@ -688,6 +689,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2924907894895426939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1775250947050556785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed460b8900908ae499750769abaf39af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TrashProgress: {fileID: 0}
+  trashProgressBar: {fileID: 0}
+  checkPointProgressBar: {fileID: 0}
 --- !u!1 &1775250947050833241
 GameObject:
   m_ObjectHideFlags: 0
