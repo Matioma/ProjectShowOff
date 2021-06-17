@@ -25,6 +25,13 @@ public class ProgressBar : MonoBehaviour
     [SerializeField]
     Image ProgressMaskImage;
 
+    private void Start()
+    {
+        ProgressMaskImage.fillAmount = progress;
+    }
+
+
+
     void updateProgress()
     {
         ProgressMaskImage.fillAmount = progress;
