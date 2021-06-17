@@ -207,7 +207,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   acceletation: 7
-  speed: 8
+  speed: 9
   gravity: 20
   drag: 0.2
   maxAngleFromUp: 50
