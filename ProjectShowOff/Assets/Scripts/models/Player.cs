@@ -38,7 +38,7 @@ public class Player : MonoBehaviour
 
 
     [SerializeField]
-    public static string FilePath = "/Data/player.data";
+    public static string FilePath = Application.dataPath+ "/Data/player.data";
 
 
     public void AddScore(int amount) {
@@ -51,7 +51,7 @@ public class Player : MonoBehaviour
 
 
     public void SaveProgress() {
-        playerData.SavePlayerData(Application.dataPath + FilePath);
+        playerData.SavePlayerData(FilePath);
     }
 
 
@@ -60,7 +60,7 @@ public class Player : MonoBehaviour
 
     void Awake(){
         checkPoints = FindObjectsOfType<CheckPoint>().Length;
-        playerData = PlayerData.Load(Application.dataPath + FilePath);
+        playerData = PlayerData.Load(FilePath);
         trashCount = FindObjectsOfType<Pickup>().Length;
     }
 
