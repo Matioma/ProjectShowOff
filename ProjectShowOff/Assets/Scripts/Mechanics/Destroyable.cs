@@ -10,9 +10,9 @@ public class Destroyable : MonoBehaviour
     UnityEvent onDestroying;
 
     public void onCollisionEvent() {
-        Debug.Log("Cool");
+        //Debug.Log("Cool");
         onDestroying?.Invoke();
-        Destroy(this.gameObject, 0.1f);
+        //Destroy(this.gameObject, 0.1f);
     }
 
    
