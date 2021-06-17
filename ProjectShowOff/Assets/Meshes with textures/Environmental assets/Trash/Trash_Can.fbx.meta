@@ -1,14 +1,9 @@
 fileFormatVersion: 2
-guid: 516f635fc31a0284e8fe724abf278f99
+guid: 36800a55103ed2b4185b80b8ec76a532
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Trash_Can_Mat
-    second: {fileID: 2100000, guid: cb83327a6f476d246802ad3b00039295, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0

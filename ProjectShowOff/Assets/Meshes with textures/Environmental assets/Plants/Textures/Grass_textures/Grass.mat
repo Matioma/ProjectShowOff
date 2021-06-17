@@ -32,8 +32,8 @@ Material:
     RenderType: Transparent
   disabledShaderPasses:
   - RayTracingPrepass
-  - TransparentDepthPostpass
   - MOTIONVECTORS
+  - TransparentDepthPostpass
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -139,7 +139,7 @@ Material:
     - _AlphaCutoffEnable: 1
     - _AlphaCutoffPostpass: 0.5
     - _AlphaCutoffPrepass: 0.5
-    - _AlphaCutoffShadow: 0.5
+    - _AlphaCutoffShadow: 0
     - _AlphaDstBlend: 10
     - _AlphaSrcBlend: 1
     - _AlphaToMask: 1
