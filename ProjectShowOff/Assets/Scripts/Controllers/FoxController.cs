@@ -23,9 +23,28 @@ public class FoxController : CharachterModel
         }
     }
 
+
+    void SetAnimatorTriggerStartDashing() {
+        animator.SetTrigger("StartDash");
+    }
+
+    void SetAnimatorTriggerEndDashing()
+    {
+        animator.SetTrigger("EndDash");
+    }
+
+    void SetBoolValue()
+    {
+        animator.SetBool("isDashing", isDashing);
+
+    }
+
+
     IEnumerator Dash()
     {
         isDashing = true;
+        SetBoolValue();
+        //SetAnimatorTriggerStartDashing();
         Vector3 lastDirection = velocity;
         lastDirection.y = 0;
         lastDirection.Normalize();
@@ -37,6 +56,8 @@ public class FoxController : CharachterModel
             yield return null;
         }
         isDashing = false;
+        //SetAnimatorTriggerEndDashing();
+        SetBoolValue();
     }
 
 
