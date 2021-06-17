@@ -8,6 +8,9 @@ public class CharachterModel : MonoBehaviour, ICharacterController
     protected CharacterController controller;
 
     [SerializeField]
+    GameObject characterMeshParent;
+
+    [SerializeField]
     protected Animator animator;
 
 
@@ -114,6 +117,12 @@ public class CharachterModel : MonoBehaviour, ICharacterController
     
     }
 
+    protected void RotateCharacterModelInVelocityDirection(Vector3 velocity) {
+        if (characterMeshParent == null) return;
+
+        characterMeshParent.transform.rotation = Quaternion.LookRotation(velocity, Vector3.up);
+    }
+
     private void FixedUpdate()
     {
         if (wasInAir && controller.isGrounded)
@@ -140,6 +149,8 @@ public class CharachterModel : MonoBehaviour, ICharacterController
         }
 
         velocity.y -= gravity * Time.deltaTime; // gravity Acceleration
+        RotateCharacterModelInVelocityDirection(XZVelocity);
+
         controller.Move(velocity * Time.deltaTime);
 
         checkSlope();

@@ -17,7 +17,7 @@ public class IntroScreenModel : MonoBehaviour
         PlayerData playerData = new PlayerData();
         playerData.Name = introView.Input.text;
         playerData.trashCollectected = 0;
-        playerData.SavePlayerData(Player.FilePath);
+        playerData.SavePlayerData(Application.dataPath + Player.FilePath);
 
 
         LevelLoader.LoadLevel(sceneName);
