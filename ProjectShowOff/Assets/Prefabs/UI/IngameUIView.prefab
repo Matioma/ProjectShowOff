@@ -159,7 +159,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.8000001, g: 0.8862746, b: 0.80392164, a: 1}
     m_HighlightedColor: {r: 0.5411765, g: 0.6627451, b: 0.21176472, a: 1}
     m_PressedColor: {r: 0.2392157, g: 0.2901961, b: 0.13725491, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.2392157, g: 0.2901961, b: 0.13725491, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -214,7 +214,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 5, y: -5}
+  m_AnchoredPosition: {x: 33, y: -31}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &1775250946493515417
@@ -775,7 +775,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.8000001, g: 0.8862746, b: 0.80392164, a: 1}
     m_HighlightedColor: {r: 0.5411765, g: 0.6627451, b: 0.21176472, a: 1}
     m_PressedColor: {r: 0.2392157, g: 0.2901961, b: 0.13725491, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.2392157, g: 0.2901961, b: 0.13725491, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -1018,7 +1018,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed460b8900908ae499750769abaf39af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TrashProgress: {fileID: 0}
   trashProgressBar: {fileID: 0}
   checkPointProgressBar: {fileID: 0}
 --- !u!1 &1775250947050833241
@@ -1674,7 +1673,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.8000001, g: 0.8862746, b: 0.80392164, a: 1}
     m_HighlightedColor: {r: 0.5411765, g: 0.6627451, b: 0.21176472, a: 1}
     m_PressedColor: {r: 0.2392157, g: 0.2901961, b: 0.13725491, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.2392157, g: 0.2901961, b: 0.13725491, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -1772,7 +1771,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4278723914
-  m_fontColor: {r: 0.2901961, g: 0.14509805, b: 0.03137255, a: 1}
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2156,11 +2155,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2182771809996159416, guid: 7ad00068b2dd7904391d1aa6d026defa, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -5
+      value: -35
       objectReference: {fileID: 0}
     - target: {fileID: 2182771809996159416, guid: 7ad00068b2dd7904391d1aa6d026defa, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -5.700012
+      value: -31.700012
       objectReference: {fileID: 0}
     - target: {fileID: 2182771809996159416, guid: 7ad00068b2dd7904391d1aa6d026defa, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2262,11 +2261,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2182771809996159416, guid: 7ad00068b2dd7904391d1aa6d026defa, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -5
+      value: -35
       objectReference: {fileID: 0}
     - target: {fileID: 2182771809996159416, guid: 7ad00068b2dd7904391d1aa6d026defa, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -70.7
+      value: -96.70001
       objectReference: {fileID: 0}
     - target: {fileID: 2182771809996159416, guid: 7ad00068b2dd7904391d1aa6d026defa, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

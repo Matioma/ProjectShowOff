@@ -27980,6 +27980,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1523566048}
     m_Modifications:
+    - target: {fileID: 2577200941834073050, guid: 8be3c07e15c7b0348a7adf72be0d73c7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -124
+      objectReference: {fileID: 0}
     - target: {fileID: 3971656907334828111, guid: 8be3c07e15c7b0348a7adf72be0d73c7, type: 3}
       propertyPath: progress
       value: 0.54
@@ -28067,6 +28071,14 @@ PrefabInstance:
     - target: {fileID: 4047309040372777739, guid: 8be3c07e15c7b0348a7adf72be0d73c7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5760522658014561985, guid: 8be3c07e15c7b0348a7adf72be0d73c7, type: 3}
+      propertyPath: m_text
+      value: Cleaning progress
+      objectReference: {fileID: 0}
+    - target: {fileID: 6569444151404082515, guid: 8be3c07e15c7b0348a7adf72be0d73c7, type: 3}
+      propertyPath: m_text
+      value: Level progress
       objectReference: {fileID: 0}
     - target: {fileID: 6616995910071298002, guid: 8be3c07e15c7b0348a7adf72be0d73c7, type: 3}
       propertyPath: m_Name
