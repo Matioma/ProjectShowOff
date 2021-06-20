@@ -516,11 +516,7 @@ MonoBehaviour:
   m_Name: Timeline
   m_EditorClassIdentifier: 
   m_Version: 0
-  m_Tracks:
-  - {fileID: -7875952688634365332}
-  - {fileID: 622404927479292200}
-  - {fileID: -8128694770224178288}
-  - {fileID: 7562299517848838975}
+  m_Tracks: []
   m_FixedDuration: 0
   m_EditorSettings:
     m_Framerate: 60
