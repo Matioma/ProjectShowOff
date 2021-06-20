@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1124.8665, g: 463.06128, b: 197.69238, a: 1}
+  m_IndirectSpecularColor: {r: 469.6031, g: 608.4746, b: 343.78223, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4242,6 +4242,7 @@ Transform:
   - {fileID: 1456965128}
   - {fileID: 596526011}
   - {fileID: 446899380}
+  - {fileID: 1618635137}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -52380,6 +52381,68 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63baea975cde3934baf95f3ae0ba922b, type: 3}
+--- !u!1 &1618635136
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1618635137}
+  - component: {fileID: 1618635139}
+  - component: {fileID: 1618635138}
+  m_Layer: 0
+  m_Name: Box Volume
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1618635137
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1618635136}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.5, y: -5.33, z: 39.5}
+  m_LocalScale: {x: 71.73572, y: 44.07454, z: 308.9134}
+  m_Children: []
+  m_Father: {fileID: 162430886}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1618635138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1618635136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGlobal: 0
+  priority: 0
+  blendDistance: 1
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: ed305826577a6ab4ab1f4dba8a2d20b0, type: 2}
+--- !u!65 &1618635139
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1618635136}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1620864614
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -55569,7 +55632,7 @@ Transform:
   - {fileID: 309049719}
   - {fileID: 1022152521}
   - {fileID: 1039501285}
-  - {fileID: 1824783201}
+  - {fileID: 835256003}
   - {fileID: 906225541}
   - {fileID: 653819270}
   - {fileID: 2105554786}
@@ -55606,9 +55669,9 @@ Transform:
   - {fileID: 326797637}
   - {fileID: 1422756155}
   - {fileID: 369488037}
-  - {fileID: 835256003}
   - {fileID: 1369906004}
   - {fileID: 506578277}
+  - {fileID: 1824783201}
   - {fileID: 147010822}
   - {fileID: 1952663818}
   - {fileID: 909447732}
