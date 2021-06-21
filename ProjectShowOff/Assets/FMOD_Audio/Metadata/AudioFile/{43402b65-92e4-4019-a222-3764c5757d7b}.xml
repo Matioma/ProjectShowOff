@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{43402b65-92e4-4019-a222-3764c5757d7b}">
+		<property name="assetPath">
+			<value>Trash_PickUp.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.5</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{16f98978-3bce-4450-97cb-34cc22dc37e2}</destination>
+		</relationship>
+	</object>
+</objects>

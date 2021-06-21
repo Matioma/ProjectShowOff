@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{4c39c847-30b7-4eaa-a31f-8a648b2e340c}">
+		<property name="assetPath">
+			<value>365056__ryntjie__plastic-bottle-landing-on-floor.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>5.3319999999999999</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{16f98978-3bce-4450-97cb-34cc22dc37e2}</destination>
+		</relationship>
+	</object>
+</objects>

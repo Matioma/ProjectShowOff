@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{ade22fa1-e394-48c9-b2b7-c5c2a655881a}">
+		<property name="assetPath">
+			<value>60013__qubodup__whoosh.flac</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.42616780045351477</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{16f98978-3bce-4450-97cb-34cc22dc37e2}</destination>
+		</relationship>
+	</object>
+</objects>

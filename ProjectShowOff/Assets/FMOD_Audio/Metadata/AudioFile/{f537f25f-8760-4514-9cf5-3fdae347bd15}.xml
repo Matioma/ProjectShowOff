@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{f537f25f-8760-4514-9cf5-3fdae347bd15}">
+		<property name="assetPath">
+			<value>119757__jesabat__plastic-bag.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>11.888616780045352</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{16f98978-3bce-4450-97cb-34cc22dc37e2}</destination>
+		</relationship>
+	</object>
+</objects>
