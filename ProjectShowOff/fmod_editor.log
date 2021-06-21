@@ -9,7 +9,7 @@
 [LOG] DownMix::init                            : done.
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x8000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0000023C0DF18C08 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0000025663460178 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -18,9 +18,11 @@
 [LOG] Manager::init                            : done.
 [LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 135)
 [LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 135)
-[LOG] SoundI::release                          : Bear_MOOD4 (0000023BE84D58A8)
-[LOG] SoundI::release                          :     Bear_MOOD4 (0000023A8F7941D8)
-[LOG] SoundI::release                          :     Bear_MOOD4 (0000023BE84DA2E8)
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 135)
+[LOG] SoundI::release                          : Bear_MOOD4 (00000255ABA63448)
+[LOG] SoundI::release                          :     Bear_MOOD4 (00000255204B37A8)
+[LOG] SoundI::release                          :     Bear_MOOD4 (00000255ABA62BD8)
 [LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
