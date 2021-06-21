@@ -14,6 +14,10 @@ public class PushableObject : MonoBehaviour
     Rigidbody rigidbody;
     Transform initialParent;
 
+    [SerializeField]
+    bool isBigBox;
+    public bool IsBigBox { get { return isBigBox; } } 
+
 
 
     [SerializeField]

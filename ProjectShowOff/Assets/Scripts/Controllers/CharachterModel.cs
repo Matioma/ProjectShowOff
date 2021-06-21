@@ -9,7 +9,7 @@ public class CharachterModel : MonoBehaviour, ICharacterController
 
     [Tooltip("Reference to the mesh parent used for proper rotation")]
     [SerializeField]
-    GameObject characterMeshParent;
+    protected GameObject characterMeshParent;
 
     [SerializeField]
     protected Animator animator;
@@ -125,9 +125,8 @@ public class CharachterModel : MonoBehaviour, ICharacterController
 
     }
 
-    protected void RotateCharacterModelInVelocityDirection(Vector3 velocity) {
+    virtual protected void RotateCharacterModelInVelocityDirection(Vector3 velocity) {
         if (characterMeshParent == null) return;
-
         characterMeshParent.transform.localRotation = Quaternion.LookRotation(velocity, Vector3.up);
     }
 
@@ -143,7 +142,7 @@ public class CharachterModel : MonoBehaviour, ICharacterController
         }
 
         Vector3 XZVelocity = new Vector3(velocity.x, 0, velocity.z);
-        Debug.Log(XZVelocity + transform.name);
+        //Debug.Log(XZVelocity + transform.name);
 
         updateIsGroundedAnimation(controller.isGrounded);
         UpdateAnimatorVelocityComponent(XZVelocity.sqrMagnitude);
