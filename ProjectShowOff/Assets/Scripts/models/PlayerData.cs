@@ -1,4 +1,5 @@
 
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -7,7 +8,7 @@ using UnityEngine;
 
 
 [System.Serializable]
-public class PlayerData
+public class PlayerData: IComparable<PlayerData>
 {
     public string Name;
     public int trashCollectected;
@@ -44,5 +45,13 @@ public class PlayerData
     public void SavePlayerData(string path) {
         string json = JsonUtility.ToJson(this, true);
         File.WriteAllText(path, json);
+    }
+
+    public int CompareTo(PlayerData other)
+    {
+        if (other == null)
+            return 1;
+        else
+            return trashCollectected.CompareTo(other.trashCollectected);
     }
 }

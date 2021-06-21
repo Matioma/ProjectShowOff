@@ -54,10 +54,6 @@ public class Player : MonoBehaviour
         playerData.SavePlayerData(Application.dataPath + FilePath);
     }
 
-
-  
-
-
     void Awake(){
         checkPoints = FindObjectsOfType<CheckPoint>().Length;
         playerData = PlayerData.Load(Application.dataPath + FilePath);

@@ -1,0 +1,24 @@
+{
+    "players": [
+        {
+            "Name": "asd",
+            "trashCollectected": 6
+        },
+        {
+            "Name": "asd",
+            "trashCollectected": 6
+        },
+        {
+            "Name": "asd",
+            "trashCollectected": 6
+        },
+        {
+            "Name": "Artiom",
+            "trashCollectected": 12
+        },
+        {
+            "Name": "Andrew",
+            "trashCollectected": 25
+        }
+    ]
+}
