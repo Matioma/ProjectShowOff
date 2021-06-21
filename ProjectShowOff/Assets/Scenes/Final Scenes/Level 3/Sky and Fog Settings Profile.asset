@@ -60,7 +60,7 @@ MonoBehaviour:
     m_Value: 70
   meanFreePath:
     m_OverrideState: 1
-    m_Value: 75
+    m_Value: 80
     min: 1
   enableVolumetricFog:
     m_OverrideState: 1
@@ -610,6 +610,6 @@ MonoBehaviour:
     max: 100
   tint:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: -9
     min: -100
     max: 100
