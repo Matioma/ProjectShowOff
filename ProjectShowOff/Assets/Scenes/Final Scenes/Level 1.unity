@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1121.4075, g: 372.45728, b: 99.798096, a: 1}
+  m_IndirectSpecularColor: {r: 1118.5615, g: 371.45825, b: 99.58765, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -20876,17 +20876,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47c5cf8faa3d154408e8a70d30e9e9ea, type: 3}
---- !u!114 &807741706 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7185301131663235050, guid: 47c5cf8faa3d154408e8a70d30e9e9ea, type: 3}
-  m_PrefabInstance: {fileID: 807741705}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd56e57fe4acd654dbd774661ace842f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &807741707 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3562642945320618778, guid: 47c5cf8faa3d154408e8a70d30e9e9ea, type: 3}
@@ -30364,7 +30353,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2334549629747663001, guid: b7e7326288e687841ab67ad7bbba2c34, type: 3}
       propertyPath: speed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2334549629747663001, guid: b7e7326288e687841ab67ad7bbba2c34, type: 3}
       propertyPath: jumpSpeed
@@ -35583,7 +35572,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8102638679887913729, guid: f4de830e9efbaa6409b3c3e8633c10d1, type: 3}
       propertyPath: characterControllers.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8102638679887913729, guid: f4de830e9efbaa6409b3c3e8633c10d1, type: 3}
       propertyPath: characterControllers.Array.data[0]
@@ -35592,7 +35581,7 @@ PrefabInstance:
     - target: {fileID: 8102638679887913729, guid: f4de830e9efbaa6409b3c3e8633c10d1, type: 3}
       propertyPath: characterControllers.Array.data[1]
       value: 
-      objectReference: {fileID: 807741706}
+      objectReference: {fileID: 0}
     - target: {fileID: 8102638679887913729, guid: f4de830e9efbaa6409b3c3e8633c10d1, type: 3}
       propertyPath: characterControllers.Array.data[2]
       value: 
