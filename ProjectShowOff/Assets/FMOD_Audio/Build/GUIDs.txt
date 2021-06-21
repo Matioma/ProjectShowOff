@@ -1,0 +1,19 @@
+{3560bcb9-f2a2-490e-88e9-0f06e6e5b403} bank:/Master
+{ad7d9c6d-83d9-054c-0ea0-85f81716b29b} bank:/Master.strings
+{9d5937b5-8ba5-40d7-9685-107de6bd1b19} bus:/
+{a43aa0c0-3173-41f6-af9a-617ff0945b1b} bus:/Reverb
+{f725e69f-7558-4efd-a4a8-507c3763bf87} event:/Animal Music/Bear
+{f732a5ac-bd25-44c0-8d7d-e7a9607da3af} event:/Animal Music/Bunny
+{d63122cb-14c9-4efe-b419-91c15d85dc17} event:/Animal Music/Fox
+{77b42b6f-3d78-413e-a958-dbf30467b459} event:/Feedback Sounds/Box Movement - Bear
+{84bf9674-2c72-45b9-b578-a871d0f08a0c} event:/Feedback Sounds/Dead
+{86addab6-fd86-47de-83fd-687965904c41} event:/Feedback Sounds/Door Opening 3D Log
+{6235ee3a-8a58-494d-a57c-957c888fd235} event:/Feedback Sounds/Door Opening 3D Stone
+{b583a141-d49b-482d-851d-4d34dbed88a0} event:/Feedback Sounds/Fence Break
+{8f0424e4-cc6e-49bb-ab32-860f97d631b4} event:/Feedback Sounds/Fly Ambient 3D
+{4317e9fb-efc5-4aa5-ad69-255bc3a6c583} event:/Feedback Sounds/Fox Woosh
+{49817b96-a2ce-4944-ae0d-d37e079ca104} event:/Feedback Sounds/Garbage Pickup
+{a7860d7c-1bcf-468a-8a98-55533fa1a710} event:/Feedback Sounds/Level Finish and Checkpoint
+{126241fe-a8e6-41d8-9db7-cd043c76aa85} event:/Feedback Sounds/Mushroom
+{32fc9b6c-4deb-492a-89b9-0657bbe13825} event:/Feedback Sounds/Toxic Water Bubbles - Splash 3D
+{dc07da47-0625-4f93-a43c-8feb599a7ff6} event:/UI (2D Event)/Start Screen

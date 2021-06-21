@@ -9,7 +9,7 @@
 [LOG] DownMix::init                            : done.
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x8000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 000001AD27F5C6B8 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0000023C0DF18C08 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -18,51 +18,9 @@
 [LOG] Manager::init                            : done.
 [LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 135)
 [LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 135)
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 135)
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 135)
-[LOG] SystemI::createSound                     : filename = Assets/FMOD_Audio/Build\Desktop/Master.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001AF845A0B18 : node = 000001AF8D85B770
-[LOG] SystemI::createSound                     : add node to async list : head = 000001AF8D820AD8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001AF845A0B18
-[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD_Audio/Build\Desktop/Master.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 14773696
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 24160
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001AF8D85B880
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 117301
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Emmanuel Séjourné Attraction (short version) performed by Christoph Sietzen', format=5, channels=2, frequency=48000, lengthbytes=2184544, lengthpcm=7983438, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001AF845A0B18
-[LOG] SoundI::release                          : Emmanuel Séjourné Attraction (short version) performed by Christoph Sietzen (000001AF8DEC30D8)
-[LOG] SoundI::release                          :     Emmanuel Séjourné Attraction (short version) performed by Christoph Sietzen (000001AD288A26C8)
-[LOG] SoundI::release                          :     Emmanuel Séjourné Attraction (short version) performed by Christoph Sietzen (000001AF8DEC5E68)
-[LOG] SystemI::createSound                     : filename = Assets/FMOD_Audio/Build\Desktop/Master.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001AF845A07B8 : node = 000001AF8D85B9F0
-[LOG] SystemI::createSound                     : add node to async list : head = 000001AF8D820AD8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001AF845A07B8
-[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD_Audio/Build\Desktop/Master.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 14773696
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 24160
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001AF8D85BB00
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 95802
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Emmanuel Séjourné Attraction (short version) performed by Christoph Sietzen', format=5, channels=2, frequency=48000, lengthbytes=2184544, lengthpcm=7983438, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001AF845A07B8
-[LOG] SoundI::release                          : Emmanuel Séjourné Attraction (short version) performed by Christoph Sietzen (000001AF845A0B18)
-[LOG] SoundI::release                          :     Emmanuel Séjourné Attraction (short version) performed by Christoph Sietzen (000001AD2889E288)
-[LOG] SoundI::release                          :     Emmanuel Séjourné Attraction (short version) performed by Christoph Sietzen (000001AF8459FA38)
-[LOG] SoundI::release                          : Emmanuel Séjourné Attraction (short version) performed by Christoph Sietzen (000001AF845A07B8)
-[LOG] SoundI::release                          :     Emmanuel Séjourné Attraction (short version) performed by Christoph Sietzen (000001AD288A26C8)
-[LOG] SoundI::release                          :     Emmanuel Séjourné Attraction (short version) performed by Christoph Sietzen (000001AF845A1388)
+[LOG] SoundI::release                          : Bear_MOOD4 (0000023BE84D58A8)
+[LOG] SoundI::release                          :     Bear_MOOD4 (0000023A8F7941D8)
+[LOG] SoundI::release                          :     Bear_MOOD4 (0000023BE84DA2E8)
 [LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
