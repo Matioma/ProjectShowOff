@@ -111,11 +111,18 @@ public class CharachterModel : MonoBehaviour, ICharacterController
 
     void UpdateAnimatorVelocityComponent(float value) {
         if (animator != null) animator.SetFloat("Velocity", value);
+        else {
+            Debug.LogWarning("Animator reference is missing");
+        }
     }
 
     void updateIsGroundedAnimation(bool value) {
         if (animator != null) animator.SetBool("IsGrounded", value);
-    
+        else
+        {
+            Debug.LogWarning("Animator reference is missing");
+        }
+
     }
 
     protected void RotateCharacterModelInVelocityDirection(Vector3 velocity) {
@@ -136,6 +143,7 @@ public class CharachterModel : MonoBehaviour, ICharacterController
         }
 
         Vector3 XZVelocity = new Vector3(velocity.x, 0, velocity.z);
+        Debug.Log(XZVelocity + transform.name);
 
         updateIsGroundedAnimation(controller.isGrounded);
         UpdateAnimatorVelocityComponent(XZVelocity.sqrMagnitude);
