@@ -7,7 +7,7 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x8000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 000001F573FC1548 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0000022EE82B6178 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -16,184 +16,121 @@
 [LOG] Manager::init                            : done.
 [LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 135)
 [LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 135)
-[LOG] SystemI::createSound                     : filename = Assets/FMOD_Audio/Build\Desktop/Master.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001F5277D3B98 : node = 000001F3603F7620
-[LOG] SystemI::createSound                     : add node to async list : head = 000001F57ADFE458.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F5277D3B98
-[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD_Audio/Build\Desktop/Master.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 17112128
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 27296
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001F3603F7730
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 17603
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Emmanuel Séjourné Attraction (short version) performed by Christoph Sietzen', format=5, channels=2, frequency=48000, lengthbytes=2184544, lengthpcm=7983438, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F5277D3B98
-[LOG] SoundI::release                          : Folk Harp Music Sailing Softly (000001F5277F0338)
-[LOG] SoundI::release                          :     Folk Harp Music Sailing Softly (000001F39F28CA08)
-[LOG] SoundI::release                          :     Folk Harp Music Sailing Softly (000001F5277EE688)
-[LOG] SystemI::createSound                     : filename = Assets/FMOD_Audio/Build\Desktop/Master.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001F5277D4918 : node = 000001F3922F1D20
-[LOG] SystemI::createSound                     : add node to async list : head = 000001F57ADFE458.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F5277D4918
-[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD_Audio/Build\Desktop/Master.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 17112128
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 27296
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001F3922F1E30
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Bear_MOOD4', format=5, channels=2, frequency=48000, lengthbytes=141696, lengthpcm=594000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.939087.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F5277D4918
-[LOG] SoundI::release                          : Emmanuel Séjourné Attraction (short version) performed by Christoph Sietzen (000001F5277D3B98)
-[LOG] SoundI::release                          :     Emmanuel Séjourné Attraction (short version) performed by Christoph Sietzen (000001F39F27D308)
-[LOG] SoundI::release                          :     Emmanuel Séjourné Attraction (short version) performed by Christoph Sietzen (000001F5277D45B8)
-[LOG] SystemI::createSound                     : filename = Assets/FMOD_Audio/Build\Desktop/Master.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001F5277D7198 : node = 000001F3922F1960
-[LOG] SystemI::createSound                     : add node to async list : head = 000001F57ADFE458.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F5277D7198
-[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD_Audio/Build\Desktop/Master.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 17112128
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 27296
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001F3922F1A70
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 21254
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Folk Harp Music Sailing Softly', format=5, channels=2, frequency=48000, lengthbytes=10330304, lengthpcm=37063366, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.834869.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F5277D7198
-[LOG] SoundI::release                          : Bear_MOOD4 (000001F5277D4918)
-[LOG] SoundI::release                          :     Bear_MOOD4 (000001F39F28CA08)
-[LOG] SoundI::release                          :     Bear_MOOD4 (000001F5277D7A08)
-[LOG] SystemI::createSound                     : filename = Assets/FMOD_Audio/Build\Desktop/Master.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001F5277D4768 : node = 000001F39DAC4DD0
-[LOG] SystemI::createSound                     : add node to async list : head = 000001F57ADFE458.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F5277D4768
-[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD_Audio/Build\Desktop/Master.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 17112128
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 27296
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001F39DAC4EE0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 17603
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Emmanuel Séjourné Attraction (short version) performed by Christoph Sietzen', format=5, channels=2, frequency=48000, lengthbytes=2184544, lengthpcm=7983438, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F5277D4768
-[LOG] SoundI::release                          : Folk Harp Music Sailing Softly (000001F5277D7198)
-[LOG] SoundI::release                          :     Folk Harp Music Sailing Softly (000001F39F27D308)
-[LOG] SoundI::release                          :     Folk Harp Music Sailing Softly (000001F5277D45B8)
-[LOG] SystemI::createSound                     : filename = Assets/FMOD_Audio/Build\Desktop/Master.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001F5277D3B98 : node = 000001F427F46970
-[LOG] SystemI::createSound                     : add node to async list : head = 000001F57ADFE458.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F5277D3B98
-[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD_Audio/Build\Desktop/Master.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 17112128
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 27296
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001F427F46A80
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Bear_MOOD4', format=5, channels=2, frequency=48000, lengthbytes=141696, lengthpcm=594000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.939087.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F5277D3B98
-[LOG] SoundI::release                          : Emmanuel Séjourné Attraction (short version) performed by Christoph Sietzen (000001F5277D4768)
-[LOG] SoundI::release                          :     Emmanuel Séjourné Attraction (short version) performed by Christoph Sietzen (000001F39F28CA08)
-[LOG] SoundI::release                          :     Emmanuel Séjourné Attraction (short version) performed by Christoph Sietzen (000001F5277D4918)
 [LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
 [LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 17112128
 [LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 27296
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000077103EF408
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000005F01B6F0D8
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD42FA7D70
 [LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD42FA7D40
 [LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD42FA7E40
 [LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD42FA7F00
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001F574CD3278
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000022EF48BDA38
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Checkpoint', format=5, channels=2, frequency=48000, lengthbytes=21280, lengthpcm=76768, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.396210.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 17112128
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 27296
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000005F01B6F0D8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD42FA7D70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD42FA7D40
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD42FA7E40
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD42FA7F00
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000022BA938BFF8
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='467610__triqystudio__pickupitem', format=5, channels=2, frequency=48000, lengthbytes=5568, lengthpcm=24149, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.272644.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 17112128
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 27296
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000005F01B6F0D8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD42FA7D70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD42FA7D40
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD42FA7E40
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD42FA7F00
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000022BA938BFF8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='254818__kwahmah-02__rattling-glass-bottles-impact', format=5, channels=2, frequency=48000, lengthbytes=11680, lengthpcm=48137, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.726105.
 [LOG] SystemI::createSound                     : filename = Assets/FMOD_Audio/Build\Desktop/Master.bank : mode 02010082
 [LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001F5277D7A08 : node = 000001F4F4767CB0
-[LOG] SystemI::createSound                     : add node to async list : head = 000001F57ADFE458.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F5277D7A08
+[LOG] SystemI::createSound                     : setdata soundi = 0000022EE8A0BA68 : node = 0000023027208180
+[LOG] SystemI::createSound                     : add node to async list : head = 0000023017941498.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000022EE8A0BA68
 [LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD_Audio/Build\Desktop/Master.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 17112128
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 27296
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001F4F4767DC0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000023027208290
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 21254
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Bear_MOOD4', format=5, channels=2, frequency=48000, lengthbytes=141696, lengthpcm=594000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.939087.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F5277D7A08
-[LOG] SoundI::release                          : Bear_MOOD4 (000001F5277D3B98)
-[LOG] SoundI::release                          :     Bear_MOOD4 (000001F39F27D308)
-[LOG] SoundI::release                          :     Bear_MOOD4 (000001F5277D45B8)
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Folk Harp Music Sailing Softly', format=5, channels=2, frequency=48000, lengthbytes=10330304, lengthpcm=37063366, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.834869.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000022EE8A0BA68
+[LOG] SoundI::release                          : Folk Harp Music Sailing Softly (0000022EE8086E68)
+[LOG] SoundI::release                          :     Folk Harp Music Sailing Softly (0000022D99EEA288)
+[LOG] SoundI::release                          :     Folk Harp Music Sailing Softly (0000022EE80876D8)
 [LOG] SystemI::createSound                     : filename = Assets/FMOD_Audio/Build\Desktop/Master.bank : mode 02010082
 [LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001F5277D3B98 : node = 000001F3922F1960
-[LOG] SystemI::createSound                     : add node to async list : head = 000001F57ADFE458.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F5277D3B98
+[LOG] SystemI::createSound                     : setdata soundi = 0000022E22D37A98 : node = 0000023027207F00
+[LOG] SystemI::createSound                     : add node to async list : head = 0000023017941498.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000022E22D37A98
 [LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD_Audio/Build\Desktop/Master.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 17112128
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 27296
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001F3922F1A70
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000023027208010
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 21254
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Bear_MOOD4', format=5, channels=2, frequency=48000, lengthbytes=141696, lengthpcm=594000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.939087.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F5277D3B98
-[LOG] SoundI::release                          : Bear_MOOD4 (000001F5277D7A08)
-[LOG] SoundI::release                          :     Bear_MOOD4 (000001F39C4AD068)
-[LOG] SoundI::release                          :     Bear_MOOD4 (000001F5277D4FD8)
-[LOG] SystemI::createSound                     : filename = Assets/FMOD_Audio/Build\Desktop/Master.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001F5277D4918 : node = 000001F42B3718B0
-[LOG] SystemI::createSound                     : add node to async list : head = 000001F57ADFE458.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F5277D4918
-[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD_Audio/Build\Desktop/Master.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 17112128
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 27296
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001F42B3719C0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Bear_MOOD4', format=5, channels=2, frequency=48000, lengthbytes=141696, lengthpcm=594000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.939087.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F5277D4918
-[LOG] SoundI::release                          : Bear_MOOD4 (000001F5277D3B98)
-[LOG] SoundI::release                          :     Bear_MOOD4 (000001F39C49F028)
-[LOG] SoundI::release                          :     Bear_MOOD4 (000001F5277D45B8)
-[LOG] SoundI::release                          : Bear_MOOD4 (000001F5277D4918)
-[LOG] SoundI::release                          :     Bear_MOOD4 (000001F39C4A3FC8)
-[LOG] SoundI::release                          :     Bear_MOOD4 (000001F5277D4AC8)
-[LOG] SoundI::release                          :  (000001F4E85BEA48)
-[LOG] SoundI::release                          :     467610__triqystudio__pickupitem (000001F39193F238)
-[LOG] SoundI::release                          :  (000001F39423B2C8)
-[LOG] SoundI::release                          :     60013__qubodup__whoosh (000001F39F290CA8)
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Folk Harp Music Sailing Softly', format=5, channels=2, frequency=48000, lengthbytes=10330304, lengthpcm=37063366, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.834869.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000022E22D37A98
+[LOG] SoundI::release                          : Folk Harp Music Sailing Softly (0000022EE8A0BA68)
+[LOG] SoundI::release                          :     Folk Harp Music Sailing Softly (0000022D99EF7F88)
+[LOG] SoundI::release                          :     Folk Harp Music Sailing Softly (0000022EE8A0BC18)
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 17112128
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 27296
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000005F01B6F0D8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD42FA7D70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD42FA7D40
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD42FA7E40
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD42FA7F00
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000022F2F2D2B78
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Death_v2', format=5, channels=2, frequency=48000, lengthbytes=11904, lengthpcm=51272, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.458801.
+[LOG] SoundI::release                          : Folk Harp Music Sailing Softly (0000022E22D37A98)
+[LOG] SoundI::release                          :     Folk Harp Music Sailing Softly (0000022D99EF8FC8)
+[LOG] SoundI::release                          :     Folk Harp Music Sailing Softly (0000022E22D38308)
+[LOG] SoundI::release                          :  (0000022D9B6B3448)
+[LOG] SoundI::release                          :     254818__kwahmah-02__rattling-glass-bottles-impact (0000022D99EF94A8)
+[LOG] SoundI::release                          :  (0000022D9B6B3898)
+[LOG] SoundI::release                          :     467610__triqystudio__pickupitem (0000022D99EF7768)
+[LOG] SoundI::release                          :  (0000022E22829648)
+[LOG] SoundI::release                          :     Checkpoint (0000022D99EF6A68)
+[LOG] SoundI::release                          :  (0000022BAB101528)
+[LOG] SoundI::release                          :     Death_v2 (0000022D99EFC088)
 [LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
