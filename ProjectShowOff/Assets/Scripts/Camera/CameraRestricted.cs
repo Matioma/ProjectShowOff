@@ -62,6 +62,10 @@ public class CameraRestricted : MonoBehaviour
 
     Player playerModel;
 
+    [Range(0,1)]
+    [SerializeField]
+    float cameraLerp = 1;
+
 
     List<MakeTransparent> occludingObjects = new List<MakeTransparent>();
 
@@ -95,8 +99,8 @@ public class CameraRestricted : MonoBehaviour
         if (!isTransitioning)
         {
             FreeCamera();
-            transform.position = Vector3.Lerp(transform.position, targetBody.position + rotatedOffsetVector, 1);
-            //HideObjectsInFront();
+            transform.position = Vector3.Lerp(transform.position, targetBody.position + rotatedOffsetVector, cameraLerp);
+            HideObjectsInFront();
         }
         
         //transform.position = targetBody.position + rotatedOffsetVector;
@@ -210,7 +214,7 @@ public class CameraRestricted : MonoBehaviour
     Vector3 getNewCameraOffsetDirection(Quaternion rotation) {
         Vector3 offsetDirection  = (rotation * initialOffset).normalized;
 
-        int layer_mask = LayerMask.GetMask("Default");
+        int layer_mask = LayerMask.GetMask("Blocking");
         RaycastHit hit;
         if (Physics.Raycast(targetBody.position, offsetDirection, out hit, Mathf.Infinity, layer_mask)) {
             Debug.DrawRay(targetBody.position, offsetDirection * hit.distance, Color.yellow,0.1f);
