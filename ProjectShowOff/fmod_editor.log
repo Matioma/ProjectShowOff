@@ -7,7 +7,7 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x8000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 00000267B1B1BD58 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0000026823759868 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -20,28 +20,133 @@
 [LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 135)
 [LOG] SystemI::createSound                     : filename = Assets/FMOD_Audio/Build\Desktop/Master.bank : mode 02010082
 [LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] Thread::initThread                       : Init FMOD nonblocking thread (0). Affinity: 0x8000000000000003, Priority: 0xFFFF7FFC, Stack Size: 114688, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
-[LOG] SystemI::createSound                     : setdata soundi = 00000266E0FF7788 : node = 00000266E0F95710
-[LOG] SystemI::createSound                     : add node to async list : head = 00000267C14B9E58.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000266E0FF7788
+[LOG] SystemI::createSound                     : setdata soundi = 000002671247C108 : node = 00000268966FCD80
+[LOG] SystemI::createSound                     : add node to async list : head = 00000267165C56B8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002671247C108
 [LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD_Audio/Build\Desktop/Master.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 17126144
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28608
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000266E0F95820
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000268966FCE90
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 17603
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Emmanuel Séjourné Attraction (short version) performed by Christoph Sietzen', format=5, channels=2, frequency=48000, lengthbytes=2184544, lengthpcm=7983438, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
-[LOG] Thread::initThread                       :     Init FMOD file thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFC, Stack Size: 49152, Semaphore: No, Sleep Time: 10, Looping: Yes.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000266E0FF7788
-[LOG] SoundI::release                          : Emmanuel Séjourné Attraction (short version) performed by Christoph Sietzen (00000266E0FF7788)
-[LOG] SoundI::release                          :     Emmanuel Séjourné Attraction (short version) performed by Christoph Sietzen (00000267ED079ED8)
-[LOG] SoundI::release                          :     Emmanuel Séjourné Attraction (short version) performed by Christoph Sietzen (00000267B29D43C8)
-[LOG] SoundI::release                          :  (00000268971BFB78)
-[LOG] SoundI::release                          :     Death_v2 (00000267AE09EDA8)
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002671247C108
+[LOG] SoundI::release                          : Folk Harp Music Sailing Softly (00000268CCE65D88)
+[LOG] SoundI::release                          :     Folk Harp Music Sailing Softly (000002678FD72458)
+[LOG] SoundI::release                          :     Folk Harp Music Sailing Softly (00000267AE2F1108)
+[LOG] SystemI::createSound                     : filename = Assets/FMOD_Audio/Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002671247CCD8 : node = 00000268966FD280
+[LOG] SystemI::createSound                     : add node to async list : head = 00000267165C56B8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002671247CCD8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD_Audio/Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 17126144
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28608
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000268966FD390
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Bear_MOOD4', format=5, channels=2, frequency=48000, lengthbytes=141696, lengthpcm=594000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.939087.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002671247CCD8
+[LOG] SoundI::release                          : Emmanuel Séjourné Attraction (short version) performed by Christoph Sietzen (000002671247C108)
+[LOG] SoundI::release                          :     Emmanuel Séjourné Attraction (short version) performed by Christoph Sietzen (0000026714281438)
+[LOG] SoundI::release                          :     Emmanuel Séjourné Attraction (short version) performed by Christoph Sietzen (00000268E1645048)
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000268E1642108
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000268E1642108
+[LOG] SystemI::createSound                     : filename = Assets/FMOD_Audio/Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002681CC129E8 : node = 0000026721723300
+[LOG] SystemI::createSound                     : add node to async list : head = 00000267165C56B8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002681CC129E8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD_Audio/Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 17126144
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28608
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000026721723410
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 21254
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Folk Harp Music Sailing Softly', format=5, channels=2, frequency=48000, lengthbytes=10330304, lengthpcm=37063366, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.834869.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002681CC129E8
+[LOG] SoundI::release                          : Bear_MOOD4 (000002671247CCD8)
+[LOG] SoundI::release                          :     Bear_MOOD4 (000002671427E378)
+[LOG] SoundI::release                          :     Bear_MOOD4 (00000268E1642108)
+[LOG] SystemI::createSound                     : filename = Assets/FMOD_Audio/Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002670EC65828 : node = 000002681CB228B0
+[LOG] SystemI::createSound                     : add node to async list : head = 00000267165C56B8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002670EC65828
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD_Audio/Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 17126144
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28608
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002681CB229C0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 17603
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Emmanuel Séjourné Attraction (short version) performed by Christoph Sietzen', format=5, channels=2, frequency=48000, lengthbytes=2184544, lengthpcm=7983438, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002670EC65828
+[LOG] SoundI::release                          : Folk Harp Music Sailing Softly (000002681CC129E8)
+[LOG] SoundI::release                          :     Folk Harp Music Sailing Softly (00000267142800B8)
+[LOG] SoundI::release                          :     Folk Harp Music Sailing Softly (00000268E1642CD8)
+[LOG] SystemI::createSound                     : filename = Assets/FMOD_Audio/Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 00000267AE2F17C8 : node = 00000267F097A740
+[LOG] SystemI::createSound                     : add node to async list : head = 00000267165C56B8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000267AE2F17C8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD_Audio/Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 17126144
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28608
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000267F097A850
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 117301
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Emmanuel Séjourné Attraction (short version) performed by Christoph Sietzen', format=5, channels=2, frequency=48000, lengthbytes=2184544, lengthpcm=7983438, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000267AE2F17C8
+[LOG] SoundI::release                          : Emmanuel Séjourné Attraction (short version) performed by Christoph Sietzen (000002670EC65828)
+[LOG] SoundI::release                          :     Emmanuel Séjourné Attraction (short version) performed by Christoph Sietzen (00000267B12B04A8)
+[LOG] SoundI::release                          :     Emmanuel Séjourné Attraction (short version) performed by Christoph Sietzen (00000268CCE66448)
+[LOG] SystemI::createSound                     : filename = Assets/FMOD_Audio/Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 00000267AD300028 : node = 00000266E109E7B0
+[LOG] SystemI::createSound                     : add node to async list : head = 00000267165C56B8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000267AD300028
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD_Audio/Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 17126144
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28608
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000266E109E8C0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Bear_MOOD4', format=5, channels=2, frequency=48000, lengthbytes=141696, lengthpcm=594000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.939087.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000267AD300028
+[LOG] SoundI::release                          : Emmanuel Séjourné Attraction (short version) performed by Christoph Sietzen (00000267AE2F17C8)
+[LOG] SoundI::release                          :     Emmanuel Séjourné Attraction (short version) performed by Christoph Sietzen (00000267142803F8)
+[LOG] SoundI::release                          :     Emmanuel Séjourné Attraction (short version) performed by Christoph Sietzen (00000268E16407B8)
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000268E1640458
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000268E1640458
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000268E1640458
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000268E1640458
+[LOG] SoundI::release                          : Bear_MOOD4 (00000267AD300028)
+[LOG] SoundI::release                          :     Bear_MOOD4 (000002671427EED8)
+[LOG] SoundI::release                          :     Bear_MOOD4 (00000268E1640458)
+[LOG] SoundI::release                          :  (00000267AD7A1D48)
+[LOG] SoundI::release                          :     60013__qubodup__whoosh (000002671427FD78)
 [LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients

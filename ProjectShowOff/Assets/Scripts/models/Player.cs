@@ -126,6 +126,7 @@ public class Player : MonoBehaviour
     private void Start()
     {
         onDeath.AddListener(LoadCheckPoint);
+        ControlledCharacter?.CharacterSeleted();
     }
 
     public void SwitchCharacter() {

@@ -139,6 +139,7 @@ GameObject:
   - component: {fileID: 8102638679887913728}
   - component: {fileID: 8102638679887913729}
   - component: {fileID: 6774558129992347138}
+  - component: {fileID: 3770075327178509632}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -185,6 +186,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a279066fc76854438aa5ecef989b9d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onCheckPointReached:
+    m_PersistentCalls:
+      m_Calls: []
+  onTrashCollected:
+    m_PersistentCalls:
+      m_Calls: []
+  onGamePaused:
+    m_PersistentCalls:
+      m_Calls: []
+  onGameUnPaused:
+    m_PersistentCalls:
+      m_Calls: []
   characterControllers: []
   onSwitchCharacter:
     m_PersistentCalls:
@@ -192,13 +205,13 @@ MonoBehaviour:
   onDeath:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2539120814923124733}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: PlayOneShot
-        m_Mode: 2
+      - m_Target: {fileID: 3770075327178509632}
+        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+        m_MethodName: Play
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 02b651bbcf65d0546a93fcd89fbab933, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -300,3 +313,26 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &3770075327178509632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8102638679887913742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Feedback Sounds/Dead
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0

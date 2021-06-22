@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 6062823007408272103}
   - component: {fileID: 9099062761152874421}
   - component: {fileID: 1854655379862712787}
+  - component: {fileID: 7740686010249840100}
   m_Layer: 0
   m_Name: CheckPoint
   m_TagString: Untagged
@@ -183,19 +184,42 @@ MonoBehaviour:
   onCheckPointReached:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8109679096537361379}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: PlayOneShot
-        m_Mode: 2
+      - m_Target: {fileID: 7740686010249840100}
+        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+        m_MethodName: Play
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 2c9c9fa841829fd41a3fe68619591d72, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
   targetScene: PrototypeMovement
+--- !u!114 &7740686010249840100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4056011234822579762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Feedback Sounds/Level Finish and Checkpoint 3D
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 10
+  OverrideMaxDistance: 50
 --- !u!1 &5815816869641306627
 GameObject:
   m_ObjectHideFlags: 0

@@ -110,7 +110,6 @@ GameObject:
   - component: {fileID: 1228291624806410752}
   - component: {fileID: 4098828172811334020}
   - component: {fileID: 38809338726026164}
-  - component: {fileID: 5657719252188848349}
   m_Layer: 10
   m_Name: Bear
   m_TagString: Untagged
@@ -267,19 +266,6 @@ MonoBehaviour:
   OverrideAttenuation: 1
   OverrideMinDistance: 10
   OverrideMaxDistance: 50
---- !u!114 &5657719252188848349
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2723778934439330149}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4eb2af00aa9cce499ebe226a25014e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  emitter: {fileID: 38809338726026164}
 --- !u!1 &5450507577586615890
 GameObject:
   m_ObjectHideFlags: 0
