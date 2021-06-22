@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class LevelLoader : MonoBehaviour
 {
-    public static string loadingSceneName ="LoadLevelScene";
+    public static string loadingSceneName = "LoadLevelScene";
 
     public static void LoadLevel(string targetScene) {
         PlayerPrefs.SetString("TargetScene", targetScene);
@@ -13,14 +13,23 @@ public class LevelLoader : MonoBehaviour
     }
 
     void Start() {
-        StartCoroutine(LoadLevelAsync());
+        Invoke("StartLoading", 1.0f);
+    }
+    private void Update()
+    {
+        Debug.Log(Time.deltaTime);
     }
 
+
+    private void StartLoading() {
+        StartCoroutine(LoadLevelAsync());
+    }
     IEnumerator LoadLevelAsync() {
         string targetScene = PlayerPrefs.GetString("TargetScene");
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(targetScene);
 
         while (!asyncLoad.isDone) {
+            Debug.Log($"progress : {asyncLoad.progress}");
             yield return null;
         }
     }

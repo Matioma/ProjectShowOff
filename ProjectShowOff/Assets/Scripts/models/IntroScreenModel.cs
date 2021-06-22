@@ -20,8 +20,8 @@ public class IntroScreenModel : MonoBehaviour
         playerData.SavePlayerData(Application.dataPath + Player.FilePath);
 
 
-        //LevelLoader.LoadLevel(sceneName);/
-        LevelLoader.DirectlyLoad(sceneName);
+        LevelLoader.LoadLevel(sceneName);
+        //LevelLoader.DirectlyLoad(sceneName);
         //SceneManager.LoadScene(sceneName);
     }
 }
