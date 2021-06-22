@@ -36,6 +36,21 @@ public class CharachterModel : MonoBehaviour, ICharacterController
         }
     }
 
+
+    float slowedDown = 0;
+    bool IsSlowed { get { return slowedDown != 0; } }
+
+    float nonSlowedSpeed;
+
+    public void ResetSelfs()
+    {
+        if (IsSlowed) {
+            ReverseSlow(slowedDown);
+            Debug.Log("Reveser");
+        }   
+    }
+
+
     public void CharacterSeleted() {
         onSelected?.Invoke();
     }
@@ -74,11 +89,19 @@ public class CharachterModel : MonoBehaviour, ICharacterController
     public void Slow(float percentage)
     {
         float percentSlow = percentage / 100.0f;
+        slowedDown = percentSlow;
+        
         speed = speed * (1 - percentSlow);
+
+
+
     }
     public void ReverseSlow(float percentage) {
-        float percentSlow = percentage / 100.0f;
-        speed = speed / (1 - percentSlow);
+        //float percentSlow = percentage / 100.0f;
+        //speed = speed / (1 - percentSlow);
+
+        speed = nonSlowedSpeed;
+        slowedDown = 0;
     }
 
     [SerializeField]
@@ -107,6 +130,7 @@ public class CharachterModel : MonoBehaviour, ICharacterController
     protected void Awake()
     {
         controller = GetComponent<CharacterController>();
+        nonSlowedSpeed = speed;
     }
 
     void UpdateAnimatorVelocityComponent(float value) {

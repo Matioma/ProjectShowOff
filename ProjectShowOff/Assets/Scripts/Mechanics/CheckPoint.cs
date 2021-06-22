@@ -43,7 +43,7 @@ public class CheckPoint : MonoBehaviour
 
         if (!everReached) { 
                 onCheckPointReached?.Invoke();
-                player.nextCheckPointReached();
+                player?.nextCheckPointReached();
         }
     }
     void CharacterExitZone() {
@@ -81,9 +81,11 @@ public class CheckPoint : MonoBehaviour
     public static void LoadProgress()
     {
         foreach (var pair in SavedPosition) {
+            pair.Key.ResetSelfs();
             pair.Key.GetComponent<CharacterController>().enabled = false;
             pair.Key.transform.position =  new Vector3(pair.Value.x, pair.Value.y, pair.Value.z);
             pair.Key.GetComponent<CharacterController>().enabled = true;
+           
         }
     }
 

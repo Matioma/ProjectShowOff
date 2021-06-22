@@ -79,10 +79,6 @@ public class TarTrap : MonoBehaviour
                 if (disableBearSkill) charachter.EnableSkills();
                 if (SLowBear) charachter.ReverseSlow(slowPercent);
             }
-
-            //if (charachter is FoxController) { if (disableFoxSkill) charachter.EnableSkills(); }
-            //if (charachter is RabbitController) { if (disableRabbitSkill) charachter.EnableSkills(); }
-            //if (charachter is BearController) { if (disableBearSkill) charachter.EnableSkills(); }
         }
     }
 }
