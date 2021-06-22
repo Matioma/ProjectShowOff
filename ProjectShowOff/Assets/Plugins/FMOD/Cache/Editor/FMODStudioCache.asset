@@ -71,6 +71,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1068
+--- !u!114 &-7789979907418312336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Test
+  m_EditorClassIdentifier: 
+  Path: event:/Test
+  guid: f31fc86c67fadc48ad9e79d9eefd6a0f
+  Banks:
+  - {fileID: -2212236885542906992}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 853
 --- !u!114 &-7783349936734557826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -94,6 +117,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 503
+--- !u!114 &-7721307326631779412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Feedback Sounds/Dead
+  m_EditorClassIdentifier: 
+  Path: event:/Feedback Sounds/Dead
+  guid: 7496bf84722cb945b578a871d0f08a0c
+  Banks:
+  - {fileID: -2212236885542906992}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1068
 --- !u!114 &-7616208438413177723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,6 +160,29 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &-7137330258671440340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI (2D Event)/Start Screen
+  m_EditorClassIdentifier: 
+  Path: event:/UI (2D Event)/Start Screen
+  guid: 47da07dc2506934fa43c8feb599a7ff6
+  Banks:
+  - {fileID: -2212236885542906992}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 23100
 --- !u!114 &-7073257732014356480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,6 +203,75 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &-6811795780538287149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Feedback Sounds/Toxic Water Bubbles - Splash 3D
+  m_EditorClassIdentifier: 
+  Path: event:/Feedback Sounds/Toxic Water Bubbles - Splash 3D
+  guid: 6c9bfc32eb4d2a4989b90657bbe13825
+  Banks:
+  - {fileID: -2212236885542906992}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 6666
+--- !u!114 &-6337521881528142584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Feedback Sounds/Box Movement - Bear
+  m_EditorClassIdentifier: 
+  Path: event:/Feedback Sounds/Box Movement - Bear
+  guid: 6f2bb477783d3e41a958dbf30467b459
+  Banks:
+  - {fileID: -2212236885542906992}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 503
+--- !u!114 &-6233565956808407562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Feedback Sounds/Mushroom
+  m_EditorClassIdentifier: 
+  Path: event:/Feedback Sounds/Mushroom
+  guid: fe416212e6a8d8419db7cd043c76aa85
+  Banks:
+  - {fileID: -2212236885542906992}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1194
 --- !u!114 &-6107687335441760882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,6 +340,29 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 6666
+--- !u!114 &-5330504212035115991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Animal Music/Bunny
+  m_EditorClassIdentifier: 
+  Path: event:/Animal Music/Bunny
+  guid: aca532f725bdc0448d7de7a9607da3af
+  Banks:
+  - {fileID: -2212236885542906992}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 27499
 --- !u!114 &-5319729785882138974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -349,6 +510,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 6163
+--- !u!114 &-3786679425273872480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Feedback Sounds/Door Opening 3D Stone
+  m_EditorClassIdentifier: 
+  Path: event:/Feedback Sounds/Door Opening 3D Stone
+  guid: 3aee3562588a4d49a57c957c888fd235
+  Banks:
+  - {fileID: -2212236885542906992}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5000
 --- !u!114 &-3662271711863541604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -465,6 +649,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 25577
+--- !u!114 &-3023873780645874331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Animal Music/Bear
+  m_EditorClassIdentifier: 
+  Path: event:/Animal Music/Bear
+  guid: 9fe625f75875fd4ea4a8507c3763bf87
+  Banks:
+  - {fileID: -2212236885542906992}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 12375
 --- !u!114 &-3014024316336255436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -484,6 +691,25 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
+  Exists: 1
+--- !u!114 &-2212236885542906992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD_Audio/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 637598895021056315
+  LoadResult: 0
+  FileSizes: []
   Exists: 1
 --- !u!114 &-1946547049345556910
 MonoBehaviour:
@@ -616,6 +842,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1599
+--- !u!114 &-1161493483848096234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Animal Music/Fox
+  m_EditorClassIdentifier: 
+  Path: event:/Animal Music/Fox
+  guid: cb2231d6c914fe4eb41991c15d85dc17
+  Banks:
+  - {fileID: -2212236885542906992}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 103697
 --- !u!114 &-1074204444840742719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -785,28 +1034,28 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 2289661060221692566}
-  - {fileID: 5434941005664603363}
+  - {fileID: 9047019996397170508}
+  - {fileID: -2212236885542906992}
   EditorEvents:
-  - {fileID: 2565272246914919552}
-  - {fileID: -1946547049345556910}
-  - {fileID: -8494329766452397853}
-  - {fileID: -6107687335441760882}
-  - {fileID: -1738616382628555138}
-  - {fileID: -7878165230497707962}
-  - {fileID: -1321063829353775029}
-  - {fileID: -7783349936734557826}
-  - {fileID: 1212720868499543469}
-  - {fileID: 8018652820776864016}
-  - {fileID: -5258215360929744131}
-  - {fileID: -5724565547278134523}
-  - {fileID: -3300322063530834255}
-  - {fileID: 1214040990653617173}
-  - {fileID: 2974744377196874454}
-  - {fileID: 2666324638332471240}
+  - {fileID: -3786679425273872480}
+  - {fileID: 2562668409195501706}
+  - {fileID: -7137330258671440340}
+  - {fileID: -6811795780538287149}
+  - {fileID: -6337521881528142584}
+  - {fileID: -7721307326631779412}
+  - {fileID: 5933144053505719192}
+  - {fileID: 4298934633984355446}
+  - {fileID: -3023873780645874331}
+  - {fileID: -5330504212035115991}
+  - {fileID: 5647613316865404766}
+  - {fileID: -1161493483848096234}
+  - {fileID: 2257622349997141747}
+  - {fileID: -7789979907418312336}
+  - {fileID: 1448964919298843648}
+  - {fileID: -6233565956808407562}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 5434941005664603363}
+  - {fileID: -2212236885542906992}
   StringsBanks:
   - {fileID: 2289661060221692566}
   stringsBankWriteTime: 637598906372812850
@@ -1012,6 +1261,52 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 853
+--- !u!114 &1448964919298843648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Feedback Sounds/Fox Woosh
+  m_EditorClassIdentifier: 
+  Path: event:/Feedback Sounds/Fox Woosh
+  guid: fbe91743c5efa54aad69255bc3a6c583
+  Banks:
+  - {fileID: -2212236885542906992}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 426
+--- !u!114 &2257622349997141747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Feedback Sounds/Fly Ambient 3D
+  m_EditorClassIdentifier: 
+  Path: event:/Feedback Sounds/Fly Ambient 3D
+  guid: e424048f6eccbb49ab32860f97d631b4
+  Banks:
+  - {fileID: -2212236885542906992}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 7000
 --- !u!114 &2289661060221692566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1057,6 +1352,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 180120
+--- !u!114 &2562668409195501706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Feedback Sounds/Fence Break
+  m_EditorClassIdentifier: 
+  Path: event:/Feedback Sounds/Fence Break
+  guid: 41a183b59bd42d48851d4d34dbed88a0
+  Banks:
+  - {fileID: -2212236885542906992}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1209
 --- !u!114 &2565272246914919552
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1193,6 +1511,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1599
+--- !u!114 &4298934633984355446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Feedback Sounds/Garbage Pickup
+  m_EditorClassIdentifier: 
+  Path: event:/Feedback Sounds/Garbage Pickup
+  guid: 967b8149cea24449ae0dd37e079ca104
+  Banks:
+  - {fileID: -2212236885542906992}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 503
 --- !u!114 &4372292414694338089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1328,6 +1669,52 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &5647613316865404766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Feedback Sounds/Door Opening 3D Log
+  m_EditorClassIdentifier: 
+  Path: event:/Feedback Sounds/Door Opening 3D Log
+  guid: b6daad8686fdde4783fd687965904c41
+  Banks:
+  - {fileID: -2212236885542906992}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1950
+--- !u!114 &5933144053505719192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Feedback Sounds/Level Finish and Checkpoint
+  m_EditorClassIdentifier: 
+  Path: event:/Feedback Sounds/Level Finish and Checkpoint
+  guid: 7c0d86a7cf1b8a468a9855533fa1a710
+  Banks:
+  - {fileID: -2212236885542906992}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1599
 --- !u!114 &6355350248845495065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1546,4 +1933,25 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
+  Exists: 1
+--- !u!114 &9047019996397170508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD_Audio/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 637598895021106176
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 1502
   Exists: 1
