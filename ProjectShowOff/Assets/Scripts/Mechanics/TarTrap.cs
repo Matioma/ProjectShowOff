@@ -19,6 +19,16 @@ public class TarTrap : MonoBehaviour
     bool disableBearSkill;
 
 
+
+    [Header("Slowing")]
+    [SerializeField]
+    bool SlowFox;
+    [SerializeField]
+    bool SLowRabbit;
+    [SerializeField]
+    bool SLowBear;
+
+
     private void Start()
     {
         GetComponent<BoxCollider>().isTrigger = true;
@@ -30,9 +40,19 @@ public class TarTrap : MonoBehaviour
         if (charachter !=null) {
             charachter.Slow(slowPercent);
 
-            if (charachter is FoxController) { if(disableFoxSkill) charachter.DisableSkills(); }
-            if (charachter is RabbitController) { if (disableRabbitSkill) charachter.DisableSkills(); }
-            if (charachter is BearController) { if (disableBearSkill) charachter.DisableSkills(); }
+            if (charachter is FoxController) { 
+                if(disableFoxSkill) charachter.DisableSkills();
+                if (SlowFox) charachter.Slow(slowPercent);
+            
+            }
+            if (charachter is RabbitController) { 
+                if (disableRabbitSkill) charachter.DisableSkills();
+                if (SLowRabbit) charachter.Slow(slowPercent);
+            }
+            if (charachter is BearController) { 
+                if (disableBearSkill) charachter.DisableSkills();
+                if (SLowBear) charachter.Slow(slowPercent);
+            }
         }
     }
 
@@ -41,11 +61,28 @@ public class TarTrap : MonoBehaviour
         CharachterModel charachter = other.GetComponent<CharachterModel>();
         if (charachter != null)
         {
-            charachter.ReverseSlow(slowPercent);
+            //charachter.ReverseSlow(slowPercent);
 
-            if (charachter is FoxController) { if (disableFoxSkill) charachter.EnableSkills(); }
-            if (charachter is RabbitController) { if (disableRabbitSkill) charachter.EnableSkills(); }
-            if (charachter is BearController) { if (disableBearSkill) charachter.EnableSkills(); }
+            if (charachter is FoxController)
+            {
+                if (disableFoxSkill) charachter.EnableSkills();
+                if (SlowFox) charachter.ReverseSlow(slowPercent);
+
+            }
+            if (charachter is RabbitController)
+            {
+                if (disableRabbitSkill) charachter.EnableSkills();
+                if (SLowRabbit) charachter.ReverseSlow(slowPercent);
+            }
+            if (charachter is BearController)
+            {
+                if (disableBearSkill) charachter.EnableSkills();
+                if (SLowBear) charachter.ReverseSlow(slowPercent);
+            }
+
+            //if (charachter is FoxController) { if (disableFoxSkill) charachter.EnableSkills(); }
+            //if (charachter is RabbitController) { if (disableRabbitSkill) charachter.EnableSkills(); }
+            //if (charachter is BearController) { if (disableBearSkill) charachter.EnableSkills(); }
         }
     }
 }
