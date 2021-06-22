@@ -38,7 +38,7 @@ public class TarTrap : MonoBehaviour
     {
         CharachterModel charachter = other.GetComponent<CharachterModel>();
         if (charachter !=null) {
-            charachter.Slow(slowPercent);
+            //charachter.Slow(slowPercent);
 
             if (charachter is FoxController) { 
                 if(disableFoxSkill) charachter.DisableSkills();
