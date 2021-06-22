@@ -127,6 +127,8 @@ public class CharachterModel : MonoBehaviour, ICharacterController
 
     virtual protected void RotateCharacterModelInVelocityDirection(Vector3 velocity) {
         if (characterMeshParent == null) return;
+
+        if (velocity.sqrMagnitude <= 0) return;
         characterMeshParent.transform.localRotation = Quaternion.LookRotation(velocity, Vector3.up);
     }
 
