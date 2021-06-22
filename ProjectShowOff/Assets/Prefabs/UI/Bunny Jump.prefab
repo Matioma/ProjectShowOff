@@ -248,6 +248,20 @@ MonoBehaviour:
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 0
   m_AreaLightEmissiveMeshLayer: -1
+--- !u!64 &1508311590554358888
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7552258821800922594}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8797702951070832387, guid: 374f4fae4b8540e4c825abece6ef18a7, type: 3}
 --- !u!1001 &7209817372130816179
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -285,6 +299,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: cba6e1a315d11ac47a39efcbd956de2f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 374f4fae4b8540e4c825abece6ef18a7, type: 3}
+--- !u!1 &7552258821800922594 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 374f4fae4b8540e4c825abece6ef18a7, type: 3}
+  m_PrefabInstance: {fileID: 7209817372130816179}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7171089388933306200 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 374f4fae4b8540e4c825abece6ef18a7, type: 3}

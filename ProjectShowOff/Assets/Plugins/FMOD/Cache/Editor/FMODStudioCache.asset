@@ -267,7 +267,7 @@ MonoBehaviour:
   - {fileID: -2212236885542906992}
   IsStream: 0
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
@@ -730,7 +730,7 @@ MonoBehaviour:
   Path: Assets/FMOD_Audio/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637599537613173794
+  lastModified: 637599618622503127
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -1071,7 +1071,6 @@ MonoBehaviour:
   - {fileID: 5647613316865404766}
   - {fileID: -1161493483848096234}
   - {fileID: 2257622349997141747}
-  - {fileID: -7789979907418312336}
   - {fileID: 1448964919298843648}
   - {fileID: -6233565956808407562}
   - {fileID: -9184025110549079408}
@@ -1080,7 +1079,7 @@ MonoBehaviour:
   - {fileID: -2212236885542906992}
   StringsBanks:
   - {fileID: 2289661060221692566}
-  stringsBankWriteTime: 637599537609804812
+  stringsBankWriteTime: 637599618621341714
   cacheVersion: 6
 --- !u!114 &155228916719133943
 MonoBehaviour:
@@ -1344,11 +1343,11 @@ MonoBehaviour:
   Path: Assets/FMOD_Audio/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637599537609804812
+  lastModified: 637599618621341714
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1506
+    Value: 1470
   Exists: 1
 --- !u!114 &2444617594224177139
 MonoBehaviour:
@@ -1392,7 +1391,7 @@ MonoBehaviour:
   - {fileID: -2212236885542906992}
   IsStream: 0
   Is3D: 0
-  IsOneShot: 0
+  IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
