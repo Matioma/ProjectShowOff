@@ -213,7 +213,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetBody: {fileID: 0}
-  rotationSensitivity: 90
+  rotationSensitivity: 70
   isRestricted: 0
   maxRotationX: 30
   maxRotationY: 30
