@@ -16,7 +16,6 @@ public class LevelLoader : MonoBehaviour
         StartCoroutine(LoadLevelAsync());
     }
 
-
     IEnumerator LoadLevelAsync() {
         string targetScene = PlayerPrefs.GetString("TargetScene");
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(targetScene);
@@ -26,8 +25,7 @@ public class LevelLoader : MonoBehaviour
         }
     }
 
-    public void OpenTargetScene() {
-        
-        //Scene
+    public static void DirectlyLoad(string target) {
+        SceneManager.LoadScene(target);
     }
 }
