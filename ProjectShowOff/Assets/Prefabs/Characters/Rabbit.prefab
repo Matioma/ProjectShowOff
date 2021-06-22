@@ -331,19 +331,7 @@ MonoBehaviour:
       m_Calls: []
   onUseSkill:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1838126944268583266}
-        m_TargetAssemblyTypeName: CharacterAudioManager, Assembly-CSharp
-        m_MethodName: PlayStep
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   OnWalking:
     m_PersistentCalls:
       m_Calls: []
@@ -353,9 +341,9 @@ MonoBehaviour:
   onSelected:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1838126944268583266}
-        m_TargetAssemblyTypeName: CharacterAudioManager, Assembly-CSharp
-        m_MethodName: StartPlayingBackgroundMusic
+      - m_Target: {fileID: 5864335886387525458}
+        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -368,9 +356,9 @@ MonoBehaviour:
   onDiselected:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1838126944268583266}
-        m_TargetAssemblyTypeName: CharacterAudioManager, Assembly-CSharp
-        m_MethodName: StopPlayingBackgroundMusic
+      - m_Target: {fileID: 5864335886387525458}
+        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+        m_MethodName: Stop
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

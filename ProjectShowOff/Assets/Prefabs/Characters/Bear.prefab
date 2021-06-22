@@ -109,6 +109,8 @@ GameObject:
   - component: {fileID: 7725581517119564611}
   - component: {fileID: 1228291624806410752}
   - component: {fileID: 4098828172811334020}
+  - component: {fileID: 38809338726026164}
+  - component: {fileID: 5657719252188848349}
   m_Layer: 10
   m_Name: Bear
   m_TagString: Untagged
@@ -179,9 +181,9 @@ MonoBehaviour:
   onSelected:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4098828172811334020}
-        m_TargetAssemblyTypeName: CharacterAudioManager, Assembly-CSharp
-        m_MethodName: StartPlayingBackgroundMusic
+      - m_Target: {fileID: 38809338726026164}
+        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -194,9 +196,9 @@ MonoBehaviour:
   onDiselected:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4098828172811334020}
-        m_TargetAssemblyTypeName: CharacterAudioManager, Assembly-CSharp
-        m_MethodName: StopPlayingBackgroundMusic
+      - m_Target: {fileID: 38809338726026164}
+        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+        m_MethodName: Stop
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -207,7 +209,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   acceletation: 7
-  speed: 9
+  speed: 6
   gravity: 20
   drag: 0.2
   maxAngleFromUp: 50
@@ -242,6 +244,42 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 8983312894609656352}
   characterAudioSet: {fileID: 11400000, guid: b252a0072bd0b0d4ba43e0baa4dff4ef, type: 2}
+--- !u!114 &38809338726026164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2723778934439330149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Animal Music/Bear
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 10
+  OverrideMaxDistance: 50
+--- !u!114 &5657719252188848349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2723778934439330149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4eb2af00aa9cce499ebe226a25014e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emitter: {fileID: 38809338726026164}
 --- !u!1 &5450507577586615890
 GameObject:
   m_ObjectHideFlags: 0
