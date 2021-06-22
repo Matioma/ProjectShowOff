@@ -81,8 +81,10 @@ crashlytics-build.properties
 # Log-files
 fmod.log
 fmod_editor.log
+ProjectShowOff/fmod_editor.log
 
 # FMOD 1.10.x (Legacy)
 /Assets/FMODAssets/*
 /Assets/FMODStudioCache.meta
+
 
