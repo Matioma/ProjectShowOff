@@ -61,7 +61,8 @@ public class GamePlayView : MonoBehaviour
     }
 
     public void RestartLevel() {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        LevelLoader.LoadLevel(SceneManager.GetActiveScene().name)
+        //SceneManager.LoadScene();
         player.TogglePause();
     }
     public void QuitGame()

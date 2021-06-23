@@ -2413,8 +2413,8 @@ MonoBehaviour:
   CollisionTag: 
   Event: event:/UI (2D Event)/Start Screen
   PlayEvent: 1
-  StopEvent: 0
-  AllowFadeout: 1
+  StopEvent: 2
+  AllowFadeout: 0
   TriggerOnce: 0
   Preload: 0
   Params: []
