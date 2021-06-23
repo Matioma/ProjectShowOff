@@ -53,6 +53,10 @@ public class ScoreBoard
     public void SaveScore(string path)
     {
         string json = JsonUtility.ToJson(this, true);
+
+        if (!File.Exists(path)) {
+            File.Create(path);
+        }
         File.WriteAllText(path, json);
     }
 }
