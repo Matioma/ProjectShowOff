@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour, ICharacterController
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F1))
+        if (Input.GetKeyDown(KeyCode.F1) || Input.GetKeyDown(KeyCode.Escape))
         {
             playerModel.TogglePause();
         }
