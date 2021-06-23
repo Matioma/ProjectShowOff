@@ -214,12 +214,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetBody: {fileID: 0}
   rotationSensitivity: 70
+  transperencySourcerayPositionOffset: {x: 0, y: 0.34, z: 0}
   isRestricted: 0
   maxRotationX: 30
   maxRotationY: 30
   transitionTime: 0.5
   learpingRotation: 1
   learpingPosition: 10
+  cameraLerp: 1
 --- !u!114 &7781438615416805924
 MonoBehaviour:
   m_ObjectHideFlags: 0

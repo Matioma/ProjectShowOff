@@ -22,6 +22,9 @@ public class CameraRestricted : MonoBehaviour
     Vector3 rotatedOffsetVector;
 
 
+    [SerializeField]
+    Vector3 transperencySourcerayPositionOffset;
+
 
 
 
@@ -90,10 +93,6 @@ public class CameraRestricted : MonoBehaviour
 
     private void Update()
     {
-        //if (!isRestricted) 
-        //FreeCamera();
-        //else 
-        //RestrictedCamera();
 
 
         if (!isTransitioning)
@@ -115,12 +114,14 @@ public class CameraRestricted : MonoBehaviour
         occludingObjects.Clear();
 
         RaycastHit[] hits;
-        hits = Physics.RaycastAll(transform.position,targetBody.position- transform.position, Mathf.Infinity);
-        Debug.DrawRay(transform.position, (targetBody.position - transform.position )* 1000f,Color.green );
+
+        Vector3 distanceVector = (targetBody.position - transform.position + transperencySourcerayPositionOffset);
+        hits = Physics.RaycastAll(transform.position+ transperencySourcerayPositionOffset, targetBody.position- transform.position, Mathf.Infinity);
+        Debug.DrawRay(transform.position, distanceVector, Color.green );
 
 
         foreach (RaycastHit hit in hits) {
-            if (hit.transform == targetBody){
+            if (hit.transform == targetBody || hit.transform.GetComponentInParent<CharachterModel>()){
                 continue;
             }
 
@@ -130,40 +131,6 @@ public class CameraRestricted : MonoBehaviour
             }
         } 
     }
-
-
-    
-
-
-
-    //void RestrictedCamera()
-    //{
-    //    float deltaX = Input.GetAxis("Mouse X") * rotationSensitivity * Time.deltaTime;
-    //    yRotation += deltaX;
-
-    //    yRotation = Mathf.Clamp(yRotation, -maxRotationY, maxRotationY);
-    //    yRotation = Mathf.Clamp(yRotation, -maxRotationX, maxRotationX);
-
-
-    //    float deltaY = Input.GetAxis("Mouse Y") * rotationSensitivity * Time.deltaTime;
-    //    xRotation -= deltaY;
-    //    xRotation = Mathf.Clamp(xRotation, -maxRotationX, maxRotationX);
-
-
-    //    if (deltaX != 0 || deltaY != 0)
-    //    {
-    //        transform.SetPositionAndRotation(initialPosition, initialRotation);
-    //        transform.RotateAround(targetBody.position, Vector3.right, xRotation);
-    //        transform.RotateAround(targetBody.position, Vector3.up, yRotation);
-    //    }
-    //    Quaternion offsetQuaternion = Quaternion.Euler(xRotation, yRotation, 0);
-     
-
-    //    transform.position = targetBody.position + offsetQuaternion * offset;
-    //}
-
-
-
     void FreeCamera() {
         float deltaX = Input.GetAxis("Mouse X") * rotationSensitivity * Time.deltaTime;
         yRotation += deltaX;
@@ -215,8 +182,11 @@ public class CameraRestricted : MonoBehaviour
         Vector3 offsetDirection  = (rotation * initialOffset).normalized;
 
         int layer_mask = LayerMask.GetMask("Blocking");
+        //Vector3 Offset = new Vector3(0,1,0)
+
+
         RaycastHit hit;
-        if (Physics.Raycast(targetBody.position, offsetDirection, out hit, Mathf.Infinity, layer_mask)) {
+        if (Physics.Raycast(targetBody.position+ transperencySourcerayPositionOffset, offsetDirection, out hit, Mathf.Infinity, layer_mask)) {
             Debug.DrawRay(targetBody.position, offsetDirection * hit.distance, Color.yellow,0.1f);
 
             Vector3 hitDirection = hit.point - targetBody.position;
@@ -242,5 +212,15 @@ public class CameraRestricted : MonoBehaviour
     private void OnDestroy()
     {
         playerModel.onSwitchCharacter.RemoveListener(UpdateFollowedCharacter);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        
     }
 }
