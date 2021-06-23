@@ -40,7 +40,8 @@ public class CheckPoint : MonoBehaviour
     void CharacterEnterZone() {
         charactersInZone++;
 
-        if (!everReached) { 
+        if (!everReached) {
+            everReached = true;
             onCheckPointReached?.Invoke();
             playerModel?.nextCheckPointReached();
         }
