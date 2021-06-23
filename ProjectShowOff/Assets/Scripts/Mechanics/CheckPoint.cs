@@ -23,12 +23,10 @@ public class CheckPoint : MonoBehaviour
 
     public static Dictionary<CharachterModel, Vector3> SavedPosition = new Dictionary<CharachterModel, Vector3>();
 
-    Player player;
-
 
     private void Awake()
     {
-        playerModel = FindObjectOfType<Player>();
+       
         onCheckPointReached.AddListener(SaveProgress);
     }
 
@@ -36,14 +34,15 @@ public class CheckPoint : MonoBehaviour
 
     private void Start()
     {
+        playerModel = FindObjectOfType<Player>();
         SaveProgress();
     }
     void CharacterEnterZone() {
         charactersInZone++;
 
         if (!everReached) { 
-                onCheckPointReached?.Invoke();
-                player?.nextCheckPointReached();
+            onCheckPointReached?.Invoke();
+            playerModel?.nextCheckPointReached();
         }
     }
     void CharacterExitZone() {
