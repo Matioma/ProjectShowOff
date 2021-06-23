@@ -623,6 +623,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 819de71f94137534dae5bac40d4faea8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: aa601c3b4de892c43b30d8da1371b10f, type: 2}
     - target: {fileID: 919132149155446097, guid: 819de71f94137534dae5bac40d4faea8, type: 3}
       propertyPath: m_Name
       value: Mush_01_LP_button_animated
