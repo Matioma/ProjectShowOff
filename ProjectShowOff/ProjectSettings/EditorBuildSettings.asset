@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/IntroMenu.unity
+    guid: 872f353a349a85b4ea9d50156eefeb1a
+  - enabled: 1
     path: Assets/Scenes/Final Scenes/Level 1.unity
     guid: 9f7bad96222c1ac4dbfdbefd98473ce5
   - enabled: 1
@@ -15,9 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Final Scenes/Level 3.unity
     guid: a8ba2097748a22546a4f342534ac2efa
   - enabled: 1
-    path: Assets/Scenes/IntroMenu.unity
-    guid: 872f353a349a85b4ea9d50156eefeb1a
-  - enabled: 1
     path: Assets/Scenes/LoadLevelScene.unity
     guid: c81cca4b173c5b44984464773c596344
+  - enabled: 1
+    path: Assets/Scenes/Final Scenes/IntroCinematic.unity
+    guid: 4d306f2e1cbeccf4fa3c76f4bd4eac6c
   m_configObjects: {}
