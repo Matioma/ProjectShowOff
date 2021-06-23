@@ -503,6 +503,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Checkpoint_LP
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b013bb66d05b72646aa963c2f8339abe, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b013bb66d05b72646aa963c2f8339abe, type: 3}
 --- !u!1 &2287823906586329543 stripped
@@ -528,51 +532,55 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b013bb66d05b72646aa963c2f8339abe, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.0025405835
+      value: 0.0013612525
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b013bb66d05b72646aa963c2f8339abe, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.009999999
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b013bb66d05b72646aa963c2f8339abe, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.004974207
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b013bb66d05b72646aa963c2f8339abe, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 119.33993
+      value: -0.06200007
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b013bb66d05b72646aa963c2f8339abe, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.82880795
+      value: -0.69
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b013bb66d05b72646aa963c2f8339abe, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 139.0249
+      value: -0.12999916
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b013bb66d05b72646aa963c2f8339abe, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.2621607
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b013bb66d05b72646aa963c2f8339abe, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.00000003853348
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b013bb66d05b72646aa963c2f8339abe, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.96502423
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b013bb66d05b72646aa963c2f8339abe, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.00000041723254
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b013bb66d05b72646aa963c2f8339abe, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 2100000, guid: 71dd2497411b37442ac58b0d8ca7625e, type: 2}
     - target: {fileID: 919132149155446097, guid: b013bb66d05b72646aa963c2f8339abe, type: 3}
       propertyPath: m_Name
       value: CheckpointComplete
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b013bb66d05b72646aa963c2f8339abe, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b013bb66d05b72646aa963c2f8339abe, type: 3}
