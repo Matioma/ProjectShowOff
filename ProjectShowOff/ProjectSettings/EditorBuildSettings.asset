@@ -21,6 +21,12 @@ EditorBuildSettings:
     path: Assets/Scenes/LoadLevelScene.unity
     guid: c81cca4b173c5b44984464773c596344
   - enabled: 1
+    path: Assets/Scenes/Resolution.unity
+    guid: 297c7ad4a33f5cb4382871808ce682db
+  - enabled: 1
     path: Assets/Scenes/Final Scenes/IntroCinematic.unity
     guid: 4d306f2e1cbeccf4fa3c76f4bd4eac6c
+  - enabled: 1
+    path: Assets/Scenes/Final Scenes/FinalCinematic.unity
+    guid: 21869ed8a33910e488409e7848828468
   m_configObjects: {}
