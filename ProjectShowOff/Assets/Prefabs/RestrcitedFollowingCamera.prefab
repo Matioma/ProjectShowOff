@@ -222,7 +222,7 @@ MonoBehaviour:
   maxRotationY: 30
   transitionTime: 0.5
   learpingRotation: 1
-  learpingPosition: 10
+  learpingPosition: 4.35
   cameraLerp: 1
 --- !u!114 &7781438615416805924
 MonoBehaviour:

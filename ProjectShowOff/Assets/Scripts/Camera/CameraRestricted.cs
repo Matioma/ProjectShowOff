@@ -101,7 +101,7 @@ public class CameraRestricted : MonoBehaviour
         {
             FreeCamera();
             transform.position = Vector3.Lerp(transform.position, targetBody.position + rotatedOffsetVector, cameraLerp);
-            HideObjectsInFront();
+            //HideObjectsInFront();
         }
         
     }
