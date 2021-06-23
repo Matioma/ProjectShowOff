@@ -20,7 +20,7 @@ public class Pickup : MonoBehaviour
     {
         characters = FindObjectsOfType<CharachterModel>();
         playerModel = FindObjectOfType<Player>();
-        onPickedUp.AddListener(DestroySelf);
+        //onPickedUp.AddListener(DestroySelf);
         onPickedUp.AddListener(AddScore);
     }
 
@@ -29,7 +29,7 @@ public class Pickup : MonoBehaviour
     }
 
     void DestroySelf() {
-        Destroy(this.gameObject,0.1f);
+        
     }
 
     void Update() {
@@ -40,13 +40,14 @@ public class Pickup : MonoBehaviour
     {
         if (other.GetComponent<CharachterModel>() != null) {
             onPickedUp?.Invoke();
+            Destroy(this.gameObject, 0.1f);
             playerModel.AddTrashCollectedCount();
         }
     }
 
     private void OnDestroy()
     {
-        onPickedUp.RemoveListener(DestroySelf);
+        //onPickedUp.RemoveListener(DestroySelf);
         onPickedUp.RemoveListener(AddScore);
     }
 
