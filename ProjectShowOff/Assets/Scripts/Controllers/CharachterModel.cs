@@ -251,7 +251,7 @@ public class CharachterModel : MonoBehaviour, ICharacterController
             else {
                 Vector3 newVelocity = new Vector3(velocity.x, velocity.y, velocity.z);
                 float newSlidingVelocity = Vector3.Dot(newVelocity, slideDirection);
-                Debug.Log(velocity);
+
 
                 if (controller.isGrounded) {
                     //Debug.Log(slideDirection * newSlidingVelocity);

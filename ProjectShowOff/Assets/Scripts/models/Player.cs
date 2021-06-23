@@ -61,11 +61,17 @@ public class Player : MonoBehaviour
     }
 
     public bool AudioEnabled { get; set; } = false;
+
     public void ToggleAudio() {
         AudioEnabled = !AudioEnabled;
+        //FMODUnity.RuntimeManager.MuteAllEvents(AudioEnabled);
         if (AudioEnabled)
         {
+            
             AudioListener.volume = 1;
+            
+            //FMODUnity.StudioListener studioListener;
+            //studioListener.
         }
         else
         {

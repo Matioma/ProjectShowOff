@@ -29,7 +29,7 @@ public class GamePlayView : MonoBehaviour
     }
 
     void onGamePaused() {
-        menuParent.gameObject.SetActive(true);
+        menuParent?.gameObject.SetActive(true);
     }
 
     void onGameUnPaused() {

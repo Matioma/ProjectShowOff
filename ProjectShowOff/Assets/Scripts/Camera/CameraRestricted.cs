@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System.Linq;
 public class CameraRestricted : MonoBehaviour
 {
     [SerializeField]
@@ -72,6 +72,8 @@ public class CameraRestricted : MonoBehaviour
 
     List<MakeTransparent> occludingObjects = new List<MakeTransparent>();
 
+    Dictionary<Transform, MakeTransparent> transformCollided = new Dictionary<Transform, MakeTransparent>();
+
 
     private void Start()
     {
@@ -102,32 +104,52 @@ public class CameraRestricted : MonoBehaviour
             HideObjectsInFront();
         }
         
-        //transform.position = targetBody.position + rotatedOffsetVector;
-        //transform.position = Vector3.Lerp(transform.position, targetPosition, 0.9f);
     }
 
 
     void HideObjectsInFront() {
-        foreach (var occuldingObject in occludingObjects) {
-            occuldingObject.MakeObjectNormal();
-        }
-        occludingObjects.Clear();
 
         RaycastHit[] hits;
 
         Vector3 distanceVector = (targetBody.position - transform.position + transperencySourcerayPositionOffset);
-        hits = Physics.RaycastAll(transform.position+ transperencySourcerayPositionOffset, targetBody.position- transform.position, Mathf.Infinity);
-        Debug.DrawRay(transform.position, distanceVector, Color.green );
+        float maginitude = distanceVector.magnitude;
+        hits = Physics.RaycastAll(transform.position, (targetBody.position + transperencySourcerayPositionOffset - transform.position).normalized, maginitude*1f);
+        Debug.DrawRay(transform.position, (targetBody.position + transperencySourcerayPositionOffset - transform.position).normalized * maginitude, Color.green);
 
 
-        foreach (RaycastHit hit in hits) {
-            if (hit.transform == targetBody || hit.transform.GetComponentInParent<CharachterModel>()){
+
+        //List<Transform> newTransforms = new List<Transform>();
+        //foreach (var hit in hits) {
+        //    newTransforms.Add(hit.transform);
+        //}
+
+        //for (int i = transformCollided.Count - 1; i >= 0; i--) {
+        //    Transform key = transformCollided.Keys.ElementAt(i);
+
+        //    if (!newTransforms.Contains(key))
+        //    {
+        //        transformCollided[key].MakeObjectNormal();
+        //        transformCollided.Remove(key);
+        //    }
+        //}
+
+
+        ///adding new transforms
+        for (int i = 0; i < hits.Length; i++) {
+            if (hits[i].transform == targetBody || hits[i].transform.GetComponentInParent<CharachterModel>())
+            {
                 continue;
             }
-
-            if ((hit.point - transform.position).sqrMagnitude < (targetBody.position - transform.position).sqrMagnitude -1) {
-                MakeTransparent makeTransparent = hit.transform.gameObject.AddComponent<MakeTransparent>();
-                occludingObjects.Add(makeTransparent);
+            //If the object with this transform has already been make transparent
+            if (transformCollided.ContainsKey(hits[i].transform))
+            {
+                continue;
+            }
+            //IF collided with a completely new object
+            else
+            {
+                MakeTransparent makeTransparent = hits[i].transform.gameObject.AddComponent<MakeTransparent>();
+                transformCollided.Add(hits[i].transform, makeTransparent);
             }
         } 
     }
@@ -221,6 +243,10 @@ public class CameraRestricted : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        
+        Debug.Log(other.transform);
+        if (transformCollided.ContainsKey(other.transform)) {
+            transformCollided[other.transform].MakeObjectNormal();
+            transformCollided.Remove(other.transform);
+        }
     }
 }
