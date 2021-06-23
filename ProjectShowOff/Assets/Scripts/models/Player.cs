@@ -60,22 +60,21 @@ public class Player : MonoBehaviour
         trashCount = FindObjectsOfType<Pickup>().Length;
     }
 
-    public bool AudioEnabled { get; set; } = false;
+    public bool AudioEnabled { get; set; } = true;
 
     public void ToggleAudio() {
         AudioEnabled = !AudioEnabled;
-        //FMODUnity.RuntimeManager.MuteAllEvents(AudioEnabled);
+
         if (AudioEnabled)
         {
             
             AudioListener.volume = 1;
-            
-            //FMODUnity.StudioListener studioListener;
-            //studioListener.
+            FMODUnity.RuntimeManager.PauseAllEvents(false);
         }
         else
         {
             AudioListener.volume = 0;
+            FMODUnity.RuntimeManager.PauseAllEvents(true);
         }
     }
 
