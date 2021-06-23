@@ -9,4 +9,7 @@ public class LevelManager : MonoBehaviour
     public void LoadLevel() {
         LevelLoader.LoadLevel(targetScene);
     }
+    public void Quit() {
+        Application.Quit();
+    }
 }
