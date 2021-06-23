@@ -1,8 +1,12 @@
 {
     "players": [
         {
-            "Name": "asd",
-            "trashCollectected": 6
+            "Name": "Test",
+            "trashCollectected": 0
+        },
+        {
+            "Name": "Test",
+            "trashCollectected": 0
         },
         {
             "Name": "asd",
@@ -11,6 +15,18 @@
         {
             "Name": "asd",
             "trashCollectected": 6
+        },
+        {
+            "Name": "asd",
+            "trashCollectected": 6
+        },
+        {
+            "Name": "Test",
+            "trashCollectected": 10
+        },
+        {
+            "Name": "Test",
+            "trashCollectected": 10
         },
         {
             "Name": "Artiom",
@@ -19,6 +35,10 @@
         {
             "Name": "Andrew",
             "trashCollectected": 25
+        },
+        {
+            "Name": "Test",
+            "trashCollectected": 50
         }
     ]
 }
