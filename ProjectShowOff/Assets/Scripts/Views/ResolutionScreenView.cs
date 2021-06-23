@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-
-
+using UnityEngine.UI;
 
 [System.Serializable]
 public class ImageScore {
@@ -36,7 +35,7 @@ public class ResolutionScreenView : MonoBehaviour
 
 
     [SerializeField]
-    private TextMeshProUGUI scoreText;
+    private Text scoreText;
 
 
     [SerializeField]
