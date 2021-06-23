@@ -90,7 +90,8 @@ public class CheckPoint : MonoBehaviour
 
     public void LoadLevel()
     {
-        SceneManager.LoadScene(targetScene);
+        LevelLoader.LoadLevel(targetScene);
+        //SceneManager.LoadScene(targetScene);
     }
 
 }
