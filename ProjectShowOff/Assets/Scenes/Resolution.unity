@@ -662,11 +662,11 @@ MonoBehaviour:
   scoreText: {fileID: 1805017091}
   ScoreImages:
   - scoreImage: {fileID: 1335357787}
-    score: 5
+    score: 66
   - scoreImage: {fileID: 865488417}
-    score: 10
+    score: 122
   - scoreImage: {fileID: 293717808}
-    score: 15
+    score: 188
 --- !u!1 &445394016
 GameObject:
   m_ObjectHideFlags: 0
