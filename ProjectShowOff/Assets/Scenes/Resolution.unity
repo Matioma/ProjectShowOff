@@ -719,7 +719,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NameList: {fileID: 780840486}
   NameTemplate: {fileID: 2923128508992751684, guid: 8d416c5cee1832749bde6a80b25921ba, type: 3}
-  scoreText: {fileID: 0}
+  scoreText: {fileID: 1805017091}
   ScoreImages:
   - scoreImage: {fileID: 1335357787}
     score: 0
@@ -1456,7 +1456,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 17, y: 0}
   m_SizeDelta: {x: 0, y: 537.42}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &780840488
