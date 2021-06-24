@@ -233,7 +233,7 @@ public class CameraRestricted : MonoBehaviour
 
     private void OnDestroy()
     {
-        playerModel.onSwitchCharacter.RemoveListener(UpdateFollowedCharacter);
+        playerModel?.onSwitchCharacter.RemoveListener(UpdateFollowedCharacter);
     }
 
     private void OnTriggerEnter(Collider other)
