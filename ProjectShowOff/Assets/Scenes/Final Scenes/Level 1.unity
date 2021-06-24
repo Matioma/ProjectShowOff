@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1118.5405, g: 371.37134, b: 99.573, a: 1}
+  m_IndirectSpecularColor: {r: 1118.522, g: 371.32886, b: 99.55151, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -21664,16 +21664,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1854655379862712787, guid: 8025de24f0ab96c40a2c03ecf2bdbf28, type: 3}
       propertyPath: onCheckPointReached.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1854655379862712787, guid: 8025de24f0ab96c40a2c03ecf2bdbf28, type: 3}
       propertyPath: onCheckPointReached.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1854655379862712787, guid: 8025de24f0ab96c40a2c03ecf2bdbf28, type: 3}
+      propertyPath: onCheckPointReached.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1854655379862712787, guid: 8025de24f0ab96c40a2c03ecf2bdbf28, type: 3}
       propertyPath: onCheckPointReached.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 878254407}
+    - target: {fileID: 1854655379862712787, guid: 8025de24f0ab96c40a2c03ecf2bdbf28, type: 3}
+      propertyPath: onCheckPointReached.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1378345012}
     - target: {fileID: 1854655379862712787, guid: 8025de24f0ab96c40a2c03ecf2bdbf28, type: 3}
       propertyPath: onCheckPointReached.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
@@ -21683,8 +21691,20 @@ PrefabInstance:
       value: LoadLevel
       objectReference: {fileID: 0}
     - target: {fileID: 1854655379862712787, guid: 8025de24f0ab96c40a2c03ecf2bdbf28, type: 3}
+      propertyPath: onCheckPointReached.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: SaveProgress
+      objectReference: {fileID: 0}
+    - target: {fileID: 1854655379862712787, guid: 8025de24f0ab96c40a2c03ecf2bdbf28, type: 3}
       propertyPath: onCheckPointReached.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: CheckPoint, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1854655379862712787, guid: 8025de24f0ab96c40a2c03ecf2bdbf28, type: 3}
+      propertyPath: onCheckPointReached.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: Player, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1854655379862712787, guid: 8025de24f0ab96c40a2c03ecf2bdbf28, type: 3}
+      propertyPath: onCheckPointReached.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1854655379862712787, guid: 8025de24f0ab96c40a2c03ecf2bdbf28, type: 3}
       propertyPath: onCheckPointReached.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
@@ -21692,6 +21712,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1854655379862712787, guid: 8025de24f0ab96c40a2c03ecf2bdbf28, type: 3}
       propertyPath: onCheckPointReached.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1854655379862712787, guid: 8025de24f0ab96c40a2c03ecf2bdbf28, type: 3}
+      propertyPath: onCheckPointReached.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2287823906586329543, guid: 8025de24f0ab96c40a2c03ecf2bdbf28, type: 3}
@@ -34887,6 +34911,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8102638679887913731, guid: f4de830e9efbaa6409b3c3e8633c10d1, type: 3}
   m_PrefabInstance: {fileID: 1378345010}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1378345012 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8102638679887913729, guid: f4de830e9efbaa6409b3c3e8633c10d1, type: 3}
+  m_PrefabInstance: {fileID: 1378345010}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a279066fc76854438aa5ecef989b9d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1380485509 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2235137599443799686, guid: be4be5c7284756343a26c2f71c24f588, type: 3}
