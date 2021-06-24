@@ -44,6 +44,7 @@ public class ScoreBoard
         }
 
         if (data.trashCollectected > players[players.Count - 1].trashCollectected) {
+            players.Sort();
             players.RemoveAt(players.Count - 1);
             players.Add(data);
             players.Sort();
